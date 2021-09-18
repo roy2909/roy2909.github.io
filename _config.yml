@@ -1,8 +1,8 @@
 # Site
-name: "Mediumish"
+name: "Anna Garverick"
 title: "Mediumish"
-description: "Jekyll template, Medium styled, free for bloggers."
-logo: 'assets/images/logo.png'
+description: "Project profile of an interdisciplinary, aspiring roboticist"
+logo: 'assets/images/headshot.jpeg'
 favicon: 'assets/images/logo.png'
 url: algarv.github.io
 baseurl: /Portfolio
