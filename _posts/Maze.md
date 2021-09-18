@@ -8,4 +8,4 @@ image: assets/images/maze.gif
 
 I made a maze
 
-
+![walking]({{ site.baseurl }}/assets/images/8.jpg)
