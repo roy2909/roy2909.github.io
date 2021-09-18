@@ -3,37 +3,27 @@ name: "Anna Garverick"
 title: "Project Portfolio"
 description: "Project portfolio of an aspiring roboticist."
 logo: 'assets/images/logo.png'
-title: "Mediumish"
+title: "Anna Garverick"
 description: "Project profile of an interdisciplinary, aspiring roboticist"
 logo: 'assets/images/headshot.jpeg'
-favicon: 'assets/images/logo.png'
+favicon: 'assets/images/headshot.jpeg'
 url: algarv.github.io
 baseurl: /Portfolio
-google_analytics: 'UA-46278016-1'
-disqus: 'demowebsite'
-mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+google_analytics:
+disqus: 'portfolio'
 include: ["_pages"]
 permalink: /:title/
 
 # Authors
 authors:
-  sal:
-    name: Sal
-    display_name: Sal
-    gravatar: e56154546cf4be74e393c62d1ae9f9d4
-    email: wowthemesnet@gmail.com
+  Anna:
+    name: Anna
+    display_name: Anna
+    gravatar:
+    email: AnnaGarverick2022@u.northwestern.edu
     web: https://www.wowthemes.net
     twitter: https://twitter.com/wowthemesnet
-    description: "Author of Mediumish, a Bootstrap Medium styled template available for WordPress, HTML, Ghost and Jekyll. You are currently previewing Jekyll template demo."
-  john:
-    name: John
-    display_name: John    
-    avatar: 'assets/images/avatar.png'
-    gravatar: b1cc14991db7a456fcd761680bbc8f81
-    email: wowthemesnet@gmail.com
-    web: https://www.wowthemes.net
-    twitter: https://twitter.com/wowthemesnet
-    description: "This is the author box. Write a short description of the author here. You are currently previewing Mediumish demo, a Jekyll template compatible with Github pages."
+    description: 
 
 # Plugins
 plugins:
