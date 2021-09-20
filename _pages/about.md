@@ -1,23 +1,17 @@
 ---
 layout: page
-title: Mediumish Template for Jekyll
-permalink: /about
+title: Anna Garverick
+permalink: /aboutme
 comments: true
 ---
 
 <div class="row justify-content-between">
 <div class="col-md-8 pr-5">
 
-<p>This website is built with Jekyll and Mediumish template for Jekyll. It's for demonstration purposes, no real content can be found. Mediumish template for Jekyll is compatible with Github pages, in fact even this demo is created with Github Pages and hosted with Github.</p>
+<p>I am a high-energy, motivated masters student interested in biomechanics, assistive technology, medical robotics, and making these technologies smarter. Orthopedic research first introduced me to the exciting intersection of engineering and healthcare, and I explored my excitement for data-informed, engineering-centered healthcare further with Sports Medicine. I love tinkering with coding and microcontroller projects, and am thrilled to be a part of Northwestern’s Masters of Science in Robotics 2021-22 cohort.</p>
 
-<p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/mediumish-jekyll-template.png" alt="jekyll template mediumish" /></p>
+<p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/headshot.jpeg" alt="Headshot" /></p>
 <h4>Documentation</h4>
-
-<p>Please, read the docs <a href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/">here</a>.</p>
-
-<h4>Questions or bug reports?</h4>
-
-<p>Head over to our <a href="https://github.com/wowthemesnet/mediumish-theme-jekyll">Github repository</a>!</p>
 
 </div>
 
