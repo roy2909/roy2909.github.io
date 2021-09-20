@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Anna Garverick
-permalink: /aboutme
+permalink: /about
 comments: true
 ---
 
