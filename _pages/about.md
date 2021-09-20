@@ -10,8 +10,8 @@ comments: true
 
 <p>I am a high-energy, motivated masters student interested in biomechanics, assistive technology, medical robotics, and making these technologies smarter. Orthopedic research first introduced me to the exciting intersection of engineering and healthcare, and I explored my excitement for data-informed, engineering-centered healthcare further with Sports Medicine. I love tinkering with coding and microcontroller projects, and am thrilled to be a part of Northwestern’s Masters of Science in Robotics 2021-22 cohort.</p>
 
-<p class="mb-5"><img class="shadow-lg" src="assets/images/headshot.jpeg" alt="Headshot" /></p>
-<h4>Documentation</h4>
+#<p class="mb-5"><img class="shadow-lg" src="assets/images/headshot.jpeg" alt="Headshot" /></p>
+#<h4>Documentation</h4>
 
 </div>
 </div>
