@@ -8,7 +8,7 @@ url: algarv.github.io
 baseurl: /Portfolio
 google_analytics:
 include: ["_pages"]
-permalink: /:title/
+permalink: /Portfolio/
 
 # Authors
 authors:
