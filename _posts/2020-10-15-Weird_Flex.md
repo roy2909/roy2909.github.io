@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Orientation Hackathon: Pen Thief"
-categories: [ Computer Vision, Python, Hack-a-Thon 2021, PincherX 100, Intel Realsense ]
-image: assets/images/pen.gif
-featured: true
-hidden: true
+title:  "Interactive Squat Training Device"
+categories: [Arduino, Java]
+image: assets/images/arduino.jpeg
+featured: false
+hidden: false
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xA6W0VcwkKw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/y7gj5ZHXqNU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-For the final challenge of our hackathon orientation, we used Intel Realsense D435i cameras to locate a pen and direct a Trossen PincherX 100 robot to grab it. This was an individual challenge, and my first experience with computer vision algorithms. I leveraged the purple color of the pen to identify pixels within a color threshold, and the OpenCv and PyRealsense libraries to estimate the position of the pen in 3D space. Then, I incrementally increased or decreased the angle of the arm's base joint until it was determined to be within range of the pen, and finally increased the elbow and shoulder joint angles to extend the end effector to reach the depth of the target pixels and close the grabbers. No pens were seriously harmed in this assigned (though one was dropped many times).
+For my final project in BIM 174: Microcontrollers Lab, I set out to dynamically measure knee flexion inspired by my experience interning in sports medicine. Using the Arduino IDE and simple hardware including a potentiometer, piezo buzzer, and RBG LED, I constructed a wearable device that continuously tracked the angle of the wearer's knee and provided audio and visual feedback when they were in the target flexion range. With the Java language in Processing, I created a GUI for the user to control a character dodging bananas and view metrics displayed in real time.
