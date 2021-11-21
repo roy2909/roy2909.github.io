@@ -8,10 +8,9 @@ comments: false
 
 **ANNA GARVERICK**
 
-<p> (650) 888-3816 </p>
 <p> annagarverick2022@u.northwestern.edu</p>
 
-github.com/algarv
+[github.com/algarv](https://www.github.com/algarv)
 
 [linkedin.com/in/annagarv](https://www.linkedin.com/in/annagarv/)
  
