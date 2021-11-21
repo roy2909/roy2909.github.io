@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Resume
-permalink: /resume
+permalink: /AnnaGarverick_Resume
 comments: false
 ---
 
