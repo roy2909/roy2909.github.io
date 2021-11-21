@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About Me
+title: Resume
 permalink: /about
 comments: false
 ---
@@ -8,8 +8,11 @@ comments: false
 
 **ANNA GARVERICK**
 
-
-(650) 888-3816 | annagarverick2022@u.northwestern.edu | algarv.github.io/Portfolio | https://github.com/algarv | [linkedin.com/in/annagarv](https://www.linkedin.com/in/annagarv/) 
+<p> algarv.github.io/Portfolio</p>
+<p>[github.com/algarv](https://www.github.com/algarv)</p>
+<p>[linkedin.com/in/annagarv](https://www.linkedin.com/in/annagarv/)</p> 
+<p> (650) 888-3816 </p>
+<p> annagarverick2022@u.northwestern.edu</p>
 
 **Education**
 
