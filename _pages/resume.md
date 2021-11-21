@@ -1,18 +1,20 @@
 ---
 layout: page
 title: Resume
-permalink: /about
+permalink: /resume
 comments: false
 ---
 
 
 **ANNA GARVERICK**
 
-<p> algarv.github.io/Portfolio</p>
-<p>[github.com/algarv](https://www.github.com/algarv)</p>
-<p>[linkedin.com/in/annagarv](https://www.linkedin.com/in/annagarv/)</p> 
 <p> (650) 888-3816 </p>
 <p> annagarverick2022@u.northwestern.edu</p>
+
+github.com/algarv
+
+[linkedin.com/in/annagarv](https://www.linkedin.com/in/annagarv/)
+ 
 
 **Education**
 
