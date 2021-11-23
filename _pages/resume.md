@@ -22,7 +22,7 @@ comments: false
 
 
 * Completed Courses:  Embedded Systems in Robotics, Intro to Computer Vision, Robotic Manipulation, Machine Dynamics 
-* In Progress Courses:  Sensing, Navigation, and Machine Learning for Robotics, Intro to Mechatronics
+* In Progress Courses:  Sensing, Navigation, and Machine Learning for Robotics (SLAM and C++), Intro to Mechatronics (C)
 
 **University of California, Davis**, B.S. in Biomedical Engineering, June 2021, 3.77 GPA with Honors
 
