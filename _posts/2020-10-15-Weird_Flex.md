@@ -6,7 +6,7 @@ image: assets/images/arduino.jpeg
 featured: true
 hidden: true
 ---
-Arduino | Java
+Arduino / Java
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/y7gj5ZHXqNU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
