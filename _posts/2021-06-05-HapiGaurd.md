@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'HapiGuard: Addressing Hospital-Acquired Pressure Injuries due to Mechanical Ventilation'
-categories: [3D Printing, Solidworks, group project]
+categories: [3D Printing, Solidworks, Group Project]
 image: assets/images/Prototype.png
 featured: True
 hidden: True
