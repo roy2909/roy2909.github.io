@@ -7,7 +7,7 @@ featured: True
 hidden: True
 ---
 
-3D Printing | Solidworks
+3D Printing / Solidworks
 
 ![HapiGaurd Poster](HapiGaurd.jpg)
 
