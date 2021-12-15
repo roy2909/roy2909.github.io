@@ -43,11 +43,11 @@ Python, MATLAB, C, C++, Robotic Operating System (ROS), Git Version Control, Lin
 
 ---
 
-**Making Pancakes with a Franka Emika Panda Robot** In Progress
+**Making Pancakes with a Franka Emika Panda Robot** December 2021
 
+* Integrated contributions from 4 teammates to successfully automate pancake making from batter to plate
 * Utilized MoveIt Python interface and a ROS action client to to grasp a squeeze bottle, move it over a griddle, invert it, apply pressure to dispense batter, and return it to its original location
 * Calibrated a RealSense camera to transform coordinates into the robot frame and generate target trajectories to pick-up tools
-* Maintained a Git repository to manage contributions from 4 teammates working on 5 interconnected sub-tasks
 
 **Finding and Grabbing a Pen with a PincherX 100 Robot** September 2021
 
@@ -60,7 +60,7 @@ Python, MATLAB, C, C++, Robotic Operating System (ROS), Git Version Control, Lin
 * Sought-out and surveyed 7 stakeholders to hone in on an unmet clinical need and define design constraints 
 * Prototyped using Solidworks CAD and Polyjet and SLA 3D printers through 4 iterations
 * Tested applied force on the device using an Arduino microcontroller and simulated the resulting material fatigue with FEA analysis
-* Awarded** Outstanding Senior Design Project **for developing a functional prototype that uniquely solves a demonstrated need
+* Awarded **Outstanding Senior Design Project** for developing a functional prototype that uniquely solves a demonstrated need
 
 **Experience**
 
