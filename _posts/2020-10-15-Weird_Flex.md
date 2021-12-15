@@ -2,7 +2,7 @@
 layout: post
 title:  "Interactive Squat Training Device"
 categories: [Arduino, Java]
-image: assets/images/BIM_174_Final.gif
+image: assets/images/Cropped_BIM_174_Final.gif
 featured: true
 hidden: true
 ---
