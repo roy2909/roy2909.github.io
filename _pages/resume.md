@@ -5,7 +5,7 @@ permalink: /AnnaGarverick_Resume
 comments: false
 ---
 
-[Download Resume as a PDF](AnnaGarverick_ResumeNov2021.pdf)
+[Download Resume as a PDF](Garverick_Anna_Resume_Dec21.pdf)
 
 **ANNA GARVERICK**
 
