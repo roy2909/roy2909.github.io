@@ -74,7 +74,7 @@ Previous: Vice President, Mentor/Mentee Program Chair
 * Managed a 16 officer team for a club with over 200 members, focussing on strengthening the community through new student outreach, collaborating with administration, organizing a career exploration conference and other targeted events
 * Won the **BMES Outstanding Mentoring Program Award** and presented ‘Best Practices’ at the 2019 BMES Annual Meeting 
 
-**Intern - UC Davis Biomedical Engineering Department Summer Innovation Internship** UCDMC & VMTH June 2018 - August 2018
+**Intern - UC Davis Biomedical Engineering Department Summer Innovation Internship** UCDMC & VMTH June 2018 - Aug. 2018
 
 
 * Acted as a student observer while immersed in six different medical and veterinary clinics and practiced biomedical needs finding within a clinical setting, evaluating workflow, procedures, and devices, ultimately working towards developing needs statements
