@@ -1,10 +1,10 @@
 # Site
-name: "Anna Garverick"
-title: "Anna Garverick's Project Portfolio"
+name: "James Oubre"
+title: "James' Portfolio"
 description: "Northwestern MS in Robotics Student Portfolio"
 logo: 'assets/images/headshot.jpeg'
 favicon: 'assets/images/headshot.jpeg'
-url: algarv.github.io
+url: oubrejames.github.io
 baseurl: /Portfolio
 google_analytics:
 include: ["_pages"]
@@ -13,10 +13,10 @@ permalink: /:title/
 # Authors
 authors:
   Anna:
-    name: Anna Garverick
-    display_name: Anna Garverick
+    name: James Oubre
+    display_name: James Oubre
     gravatar:
-    email: AnnaGarverick2022@u.northwestern.edu
+    email: jamesoubre2023@u.northwestern.edu
     LinkedIn: https://www.linkedin.com/in/annagarv/
     description: 
 
