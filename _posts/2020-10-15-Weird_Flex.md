@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Interactive Squat Training Device"
+title:  "Some_title"
 categories: [Arduino, Java]
-image: assets/images/Cropped_BIM_174_Final.gif
+image: assets/images/pen_detection.GIF
 featured: true
 hidden: true
 ---
