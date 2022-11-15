@@ -3,7 +3,7 @@ layout: post
 title:  "Some_title"
 categories: [Arduino, Java]
 image: assets/images/pen_detection.GIF
-featured: true
+featured: false
 hidden: false
 ---
 Arduino / Java
