@@ -4,7 +4,7 @@ title:  "Some_title"
 categories: [Arduino, Java]
 image: assets/images/pen.GIF
 featured: true
-hidden: true
+hidden: false
 ---
 Arduino / Java
 
