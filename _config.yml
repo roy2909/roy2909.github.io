@@ -5,7 +5,7 @@ description: "Northwestern MS in Robotics Student Portfolio"
 logo: 'assets/images/headshot.jpeg'
 favicon: 'assets/images/headshot.jpeg'
 url: oubrejames.github.io
-baseurl: /Portfolio
+baseurl: 
 google_analytics:
 include: ["_pages"]
 permalink: /:title/
