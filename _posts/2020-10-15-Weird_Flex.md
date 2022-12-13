@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Some_title"
+title:  "BotChocolate"
 categories: [Arduino, Java]
-image: assets/images/pen_detection.GIF
-featured: false
+image: assets/images/botchoc.gif
+featured: true
 hidden: false
 ---
 Arduino / Java
