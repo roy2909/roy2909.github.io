@@ -4,7 +4,7 @@ title:  "BotChocolate"
 categories: [Arduino, Java]
 image: assets/images/botchoc.gif
 featured: true
-hidden: false
+hidden: true
 ---
 Arduino / Java
 
