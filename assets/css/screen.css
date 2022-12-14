@@ -9,6 +9,7 @@ License: https://www.wowthemes.net/freebies-license/
 }
 .mainheading {
     padding: 1rem 0rem;
+    background: rgb(42, 40, 94);
 }
 
 a {
@@ -39,7 +40,8 @@ pre {
 }
 
 .mediumnavigation {
-    background: rgba(255, 255, 255, .97);
+    background: #fff;
+    color: #fff;
     box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .15);
     transition: top 0.2s ease-in-out;
 }
@@ -53,7 +55,7 @@ pre {
     padding-top: 1.5rem;
     margin-top: 57px;
     transition: all 0.4s;
-    background: rgb(42, 40, 94)
+    background:rgb(42, 40, 94)
 }
 
 section {
@@ -65,15 +67,16 @@ section.recent-posts {
 }
 
 .section-title h2 {
-    border-bottom: 1px solid rgba(0, 0, 0, .125);
+    border-bottom: 1px solid rgba(251, 245, 245, 0.762);
     margin-bottom: 25px;
     font-weight: 700;
     font-size: 1.4rem;
     margin-bottom: 27px;
+    color: rgb(235, 235, 244);
 }
 
 .section-title span {
-    border-bottom: 1px solid rgba(0, 0, 0, .44);
+    border-bottom: 1px solid rgba(251, 245, 245, 0.762);
     display: inline-block;
     padding-bottom: 20px;
     margin-bottom: -1px;
@@ -146,6 +149,7 @@ section.recent-posts {
     font-size: 1.3rem;
     font-weight: 700;
     line-height: 1.25;
+    color: rgba(251, 245, 245, 0.762);
 }
 
 .listfeaturedtag h4.card-text,
@@ -175,6 +179,7 @@ section.recent-posts {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
+    color: rgba(251, 245, 245, 0.762);
 }
 
 .author-thumb {
@@ -207,6 +212,8 @@ section.recent-posts {
     margin-bottom: 5px;
     margin-top: 5px;
     font-size: 0.95rem;
+    color: rgba(251, 245, 245, 0.762);
+    background: rgba(251, 245, 245, 0.762);
 }
 
 .toc ul {
@@ -258,7 +265,7 @@ span.post-read-more a:hover {
     font-size: 0.8rem;
     border-radius: 30px;
     overflow: hidden;
-    border: 1px solid rgba(0, 0, 0, 0.09);
+    border: 1px solid rgba(164, 158, 158, 0.762);
     min-width: 180px;
 }
 
@@ -307,23 +314,29 @@ span.post-read-more a:hover {
 
 .mainheading h1.sitetitle {
     font-family: Righteous;
+    color: rgb(235, 235, 244);
 }
-
+.mainheading p.lead {
+    font-family: Righteous;
+    color: rgb(235, 235, 244);
+}
 .mainheading h1.posttitle {
     font-weight: 700;
     margin-bottom: 1rem;
+    color: rgb(235, 235, 244);
 }
+
 
 .footer {
     border-top: 1px solid rgba(0, 0, 0, .05) !important;
     padding-top: 15px;
     padding-bottom: 12px;
     font-size: 0.8rem;
-    color: rgba(0, 0, 0, .44);
+    color: rgba(251, 245, 245, 0.762);
     margin-top: 50px;
     margin-bottom: 62px;
     position: relative;
-    background: #fff;
+    background: rgb(42, 40, 94);
 }
 
 .link-dark {
@@ -334,7 +347,7 @@ span.post-read-more a:hover {
     font-family: Merriweather;
     font-size: 1.1rem;
     line-height: 1.84;
-    color: rgba(0, 0, 0, .8);
+    color: rgba(245, 244, 244, 0.8);
 }
 
 blockquote {
@@ -557,7 +570,7 @@ ul.tags li a:hover {
     position: fixed;
     bottom: 0;
     left: 0;
-    background-color: #fff;
+    background-color: rgb(42, 40, 94);
     width: 100%;
     padding: 14px 0;
     z-index: 1;
@@ -628,7 +641,7 @@ ul.tags li a:hover {
 
 .authorpage .author-description {
     font-size: 1rem;
-    color: rgba(0, 0, 0, .6);
+    color: rgba(251, 245, 245, 0.762);
 }
 
 .post-top-meta.authorpage .btn.follow {

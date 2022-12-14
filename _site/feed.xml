@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>James&apos; Portfolio</title>
+    <description>Northwestern MS in Robotics Student Portfolio</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 14 Dec 2022 11:17:20 -0600</pubDate>
+    <lastBuildDate>Wed, 14 Dec 2022 11:17:20 -0600</lastBuildDate>
+    <generator>Jekyll v3.9.0</generator>
+    
+      <item>
+        <title>EMG Gripper</title>
+        <description>&lt;p&gt;There are lots of powerful things you can do with the Markdown editor. If you’ve gotten pretty comfortable with writing in Markdown, then you may enjoy some more advanced tips about the types of things you can do with Markdown!&lt;/p&gt;
+
+&lt;p&gt;As with the last post about the editor, you’ll want to be actually editing this post as you read it so that you can see all the Markdown code we’re using.&lt;/p&gt;
+
+&lt;h2 id=&quot;special-formatting&quot;&gt;Special formatting&lt;/h2&gt;
+
+&lt;p&gt;As well as bold and italics, you can also use some other special formatting in Markdown when the need arises, for example:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;del&gt;strike through&lt;/del&gt;&lt;/li&gt;
+  &lt;li&gt;==highlight==&lt;/li&gt;
+  &lt;li&gt;*escaped characters*&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;writing-code-blocks&quot;&gt;Writing code blocks&lt;/h2&gt;
+
+&lt;p&gt;There are two types of code elements which can be inserted in Markdown, the first is inline, and the other is block. Inline code is formatted by wrapping any word or words in back-ticks, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;like this&lt;/code&gt;. Larger snippets of code can be displayed across multiple lines using triple back ticks:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;.my-link {
+    text-decoration: underline;
+}
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;html&quot;&gt;HTML&lt;/h4&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;li&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ml-1 mr-1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;target=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;_blank&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;i&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fab fa-twitter&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/i&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;css&quot;&gt;CSS&lt;/h4&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nc&quot;&gt;.highlight&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.c&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#999988&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;font-style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;italic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.highlight&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.err&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#a61717&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#e3d2d2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;js&quot;&gt;JS&lt;/h4&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c1&quot;&gt;// alertbar later&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;scroll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;scrollTop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;280&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;.alertbar&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fadeIn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;.alertbar&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fadeOut&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;python&quot;&gt;Python&lt;/h4&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello World&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;ruby&quot;&gt;Ruby&lt;/h4&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;redcarpet&apos;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;markdown&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Redcarpet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Hello World!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;markdown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_html&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;c&quot;&gt;C&lt;/h4&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello World&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/8.jpg&quot; alt=&quot;walking&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reference-lists&quot;&gt;Reference lists&lt;/h2&gt;
+
+&lt;p&gt;The quick brown jumped over the lazy.&lt;/p&gt;
+
+&lt;p&gt;Another way to insert links in markdown is using reference lists. You might want to use this style of linking to cite reference material in a Wikipedia-style. All of the links are listed at the end of the document, so you can maintain full separation between content and its source or reference.&lt;/p&gt;
+
+&lt;h2 id=&quot;full-html&quot;&gt;Full HTML&lt;/h2&gt;
+
+&lt;p&gt;Perhaps the best part of Markdown is that you’re never limited to just Markdown. You can write HTML directly in the Markdown editor and it will just work as HTML usually does. No limits! Here’s a standard YouTube embed code as an example:&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe style=&quot;width:100%;&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Cniqsc9QfDo?rel=0&amp;amp;showinfo=0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 11 Dec 2022 00:00:00 -0600</pubDate>
+        <link>http://localhost:4000/Gripper/</link>
+        <guid isPermaLink="true">http://localhost:4000/Gripper/</guid>
+        
+        
+        <category>Jekyll</category>
+        
+        <category>tutorial</category>
+        
+      </item>
+    
+      <item>
+        <title>BotChocolate</title>
+        <description>&lt;p&gt;Arduino / Java&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/y7gj5ZHXqNU&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;In my undergraduate microcontrollers course I set out to dynamically measure knee flexion inspired by my experience interning in sports medicine. Using the Arduino IDE and simple hardware including a potentiometer, piezo buzzer, and RBG LED, I constructed a wearable device that continuously tracked the angle of the wearer’s knee and provided audio and visual feedback when they were in the target flexion range. With the Java language in Processing, I created a GUI for the user to control a character dodging bananas and view metrics displayed in real time.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/arduino.jpeg&quot; alt=&quot;Prototype&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 09 Dec 2022 00:00:00 -0600</pubDate>
+        <link>http://localhost:4000/Botchoc/</link>
+        <guid isPermaLink="true">http://localhost:4000/Botchoc/</guid>
+        
+        
+        <category>Arduino</category>
+        
+        <category>Java</category>
+        
+      </item>
+    
+      <item>
+        <title>Jack in the box</title>
+        <description>&lt;p&gt;Python / PyGame&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/r4uDLioyMAk&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;I worked with a team to generate and solve a maze using recursive backtracking. My teammate generated solveable mazes represented by numerical arrays, and I used PyGame to create the maze graphics of wall (black), open path (white), the start (green), and end (red) squares along with a visual indicator of which index the solver visits (blue). The solver starts at the “start” index and randomly selects an adjacent index. If the selected index has a value of 1, it is added to the wall list and a different index is chosen. If the index is open (value of 0), the algorithm “moves” to the index and chooses a new adjacent index. Any index that the algorithm finds and moves to is added to a path list, which are only allowed to be selected again if no other open index exists. Any index that leads to backtracking is added to a wall list. The blue searching square becomes cyan when it is forced to backtrack.&lt;/p&gt;
+
+&lt;p&gt;https://github.com/algarv/Maze&lt;/p&gt;
+</description>
+        <pubDate>Sun, 04 Dec 2022 00:00:00 -0600</pubDate>
+        <link>http://localhost:4000/dynamics/</link>
+        <guid isPermaLink="true">http://localhost:4000/dynamics/</guid>
+        
+        
+        <category>Python</category>
+        
+        <category>Hack-a-Thon 2021</category>
+        
+        <category>Group Project</category>
+        
+      </item>
+    
+      <item>
+        <title>Mobile Manipulator Simulation</title>
+        <description>&lt;p&gt;Mobile Manipulation / CoppeliaSim / PI Control&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/449Final.gif&quot; alt=&quot;Block Pick and Place&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As the capstone for the Robotic Manipulation course, I created a software package to direct a Kuka YouBot to pick up and move a block in CoppeliaSim. This required first generating a trajectory for the end effector to reach the initial and final block locations, with intermediate stand-off and gripping poses, and then using inverse kinematics to determine the arm and chassis configurations. Additionally, I implemented a proportional integral controller to help correct for deviation from the planned trajectory.&lt;/p&gt;
+
+&lt;h4 id=&quot;controller-tuning&quot;&gt;Controller Tuning&lt;/h4&gt;
+
+&lt;h5 id=&quot;best-performance-kp--3-ki--0&quot;&gt;Best performance: Kp = 3, Ki = 0&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/best.png&quot; alt=&quot;Best Controller Graph&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For the best performance, I chose a proportional gain of 3 and an integral gain of 0.&lt;/p&gt;
+
+&lt;h5 id=&quot;initial-overshoot-kp--3-ki--4&quot;&gt;Initial Overshoot: Kp = 3, Ki = 4&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/overshoot.png&quot; alt=&quot;Overshoot Controller Graph&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To simulate an initial overshoot, I chose a proportional gain of 3 and an integral gain of 4.&lt;/p&gt;
+
+&lt;p&gt;https://github.com/algarv/Mobile_Manipulation&lt;/p&gt;
+</description>
+        <pubDate>Thu, 01 Dec 2022 00:00:00 -0600</pubDate>
+        <link>http://localhost:4000/robman/</link>
+        <guid isPermaLink="true">http://localhost:4000/robman/</guid>
+        
+        
+        <category>CoppeliaSim</category>
+        
+        <category>Controls</category>
+        
+        <category>Python</category>
+        
+      </item>
+    
+      <item>
+        <title>Orientation Hackathon: Pen Thief</title>
+        <description>&lt;p&gt;Computer Vision / Python / PincherX 100 / Intel Realsense&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/xA6W0VcwkKw&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;For the final challenge of our hackathon orientation, we used Intel Realsense D435i cameras to locate a pen and direct a Trossen PincherX 100 robot to grab it. This was an individual challenge, and my first experience with computer vision algorithms. I leveraged the purple color of the pen to identify pixels within a color threshold, and the OpenCv and PyRealsense libraries to estimate the position of the pen in 3D space. Then, the algorithm incrementally increased or decreased the angle of the arm’s base joint until it was determined to be within range of the pen, and finally increased the elbow and shoulder joint angles to extend the end effector to reach the depth of the target pixels and close the grabbers. No pens were seriously harmed in this project (though one was dropped many times).&lt;/p&gt;
+
+&lt;p&gt;https://github.com/algarv/Pen-Grabber&lt;/p&gt;
+</description>
+        <pubDate>Thu, 15 Sep 2022 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/Pen/</link>
+        <guid isPermaLink="true">http://localhost:4000/Pen/</guid>
+        
+        
+        <category>Computer Vision</category>
+        
+        <category>Python</category>
+        
+        <category>Hack-a-Thon 2021</category>
+        
+        <category>PincherX 100</category>
+        
+        <category>Intel Realsense</category>
+        
+      </item>
+    
+      <item>
+        <title>Reasearch</title>
+        <description>&lt;p&gt;3D Printing / Solidworks&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/HapiGaurd.jpg&quot; alt=&quot;HapiGaurd Poster&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;HapiGuard aims to eliminate facial hospital acquired pressure injuries (HAPIs) associated with invasive mechanical ventilation by supporting the endotracheal tube (ETT) without creating pressure points on the skin. Pressure injuries increase the risk of infection, patient discomfort, cost of care, and length of hospital stays, making these injuries a crucial problem to address. Current methods to support endotracheal tubes still involve multiple skin contact points, while  HapiGuard eliminates the risk for skin damage entirely with a completely oral design. HapiGuard is designed to be simple to implement and have a universal fit for both the patient and the ETT size to alleviate the burden of pressure injury prevention from overworked nurses in crowded ICUs.&lt;/p&gt;
+
+&lt;p&gt;For this project, my team and I sought-out and surveyed seven stakeholders to define and hone in on an unmet clinical need and establish design constraints. Throughout the 6 month project, we worked through 4 device iterations prototyping with Solidworks CAD and Polyjet and SLA 3D printers. I assisted with the CAD design and developed protocols to confirm the safety and efficacy of the device. I set-up a force sensor to mesure the average applied force on the device using an Arduino microcontroller and simulated the resulting material fatigue overtime with regular use using FEA analysis. At the end of the year, we were awarded Outstanding Senior Design Project for developing a functional prototype that uniquely solves a demonstrated need.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 15 May 2022 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/icore/</link>
+        <guid isPermaLink="true">http://localhost:4000/icore/</guid>
+        
+        
+        <category>3D Printing</category>
+        
+        <category>Solidworks</category>
+        
+        <category>Group Project</category>
+        
+      </item>
+    
+      <item>
+        <title>Cocktail Maker</title>
+        <description>&lt;p&gt;ROS / MoveIt / Python / Computer Vision / Intel Realsense / Franka Emika Panda Arm&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/dICrFIctFxo&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;I worked with a team of 5 to program a Franka Emika Panda arm to make pancakes as our final project for ME 495: Embedded Systems in Robotics. As a team, we each took charge of a sub task and then worked together to integrate all the components into a fully autonomous product. I specifically was in charge of the batter dispensing task, and was heavily involved in developing strategies to increase the success rate of path planning in MoveIt. I utilized single joint control to include universal waypoints for each task and increase the success rate of path planning to tool locations found using computer vision. I additionally implemented action clients to control the gripper and grasp objects at a specified width with a given range of force, an element crucial to the reliability and safety of the batter pouring and flipping tasks. Lastly, I assisted with implementing the necessary transforms to translate coordinates found with our RealSense camera to coordinates in the robot’s frame. Object locations were determined using april tags, and the optimal time to begin the flipping process was determined with canny edge detection measuring the number and rate of change of the contours in the region of interest, much like a human pancake chef looking for bubbles.&lt;/p&gt;
+
+&lt;p&gt;https://github.com/algarv/FlipIt-the-Pancake-Flipping-Robot&lt;/p&gt;
+</description>
+        <pubDate>Wed, 13 Apr 2022 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/cocktail/</link>
+        <guid isPermaLink="true">http://localhost:4000/cocktail/</guid>
+        
+        
+        <category>ROS</category>
+        
+        <category>MoveIt</category>
+        
+        <category>Python</category>
+        
+        <category>Computer Vision</category>
+        
+        <category>Intel Realsense</category>
+        
+        <category>Franka Emika Panda Arm</category>
+        
+        <category>Group Project</category>
+        
+      </item>
+    
+      <item>
+        <title>FSAE</title>
+        <description>&lt;p&gt;Mechanical Design / Mechatronics / PID Control&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/7S1Z_5BLMUo&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;For my winter quarter independent study project, I set out to build my own version of a BallBot, a dynamically stable / statically unstable robot. I designed my bot from CAD to control algorithm, utilizing 3D printing, laser cutting, and C programming on an RP2040 microcontroller.&lt;/p&gt;
+
+&lt;h3 id=&quot;mechanical-design&quot;&gt;Mechanical Design&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/ballbot_CAD.png&quot; alt=&quot;CAD&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I designed my chassis with inspiration from similar projects using Solidwork CAD to create 4 part adjustable base. Each motor housing component is attached to the main chassis separately, so the angle can be adjusted, which allowed me to test on various sizes of balls.&lt;/p&gt;
+
+&lt;h3 id=&quot;building-the-structure-and-fundamental-electronics&quot;&gt;Building the Structure and Fundamental Electronics&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/circuit.png&quot; alt=&quot;Circuit Diagram&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After printing and assembling the chassis pieces, I mounted the 3 motors with 3 motor drivers and a RP2040 ThingPlus microcontroller and started with the basic control of one motor, working on a script to step one wheel at a time.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/spinning.gif&quot; alt=&quot;Spinning&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;simultaneous-motor-control&quot;&gt;Simultaneous Motor Control&lt;/h3&gt;
+
+&lt;p&gt;The next step was to simultaneously step three motors. This proved to be a more difficult task than anticipated, as it seemed one motor would interfere with the other’s power source. However, after switching to drivers with a higher voltage rating, I was able to step each motor sequentially.&lt;/p&gt;
+
+&lt;p&gt;Once I could send alternating stepping commands to each motor, the base could perform basic directional movement including spinning in place and uniaxial paths (forwards, backwards, sideways).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/simulatenous_spinning.gif&quot; alt=&quot;Simultaneous Spinning&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/first_steps.gif&quot; alt=&quot;First Steps&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;twist-commands&quot;&gt;Twist Commands&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/ballbot_calcs.png&quot; alt=&quot;Calculations&quot; /&gt;
+Deriving wheel rotation rate from a twist&lt;/p&gt;
+
+&lt;p&gt;To make a truly omnidirectional base, the next step was to follow any twist, which require stepping the motors at different frequencies. I started with the most basic form of a control algorithm, a polling loop that stepped each motor after a calculated number of sleep cycles resulting in a wheel RPM calculated by the omnidirectional base matrix equation.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/omnidirectional.gif&quot; alt=&quot;Mobile Base&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;position-control&quot;&gt;Position Control&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/control_diagram.png&quot; alt=&quot;Control Diagram&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once the mobile base was capable of following any twist command, it was time to integrate the IMU sensor and create a closed control loop. In my first iteration, only the accelerometer data from the IMU was used to calculate a roll and pitch, which were then used as inputs to the PD controller. The PD controller outputs an x and y velocity relative to the robot’s base frame, which are then converted to wheel speeds and finally step delays using the omnidirectional base equation shown above.&lt;/p&gt;
+
+&lt;h3 id=&quot;self-righting&quot;&gt;Self-Righting&lt;/h3&gt;
+
+&lt;p&gt;The first milestone on the way to balancing was having the robot self-right itself back to a stable position on a ball. During testing, it became apparent that the motors would need to be stepped much faster in order for the robot to catch itself when the ball is not stabilized.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/self_righting.gif&quot; alt=&quot;Self Righting&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;design-adjustments&quot;&gt;Design Adjustments&lt;/h3&gt;
+
+&lt;p&gt;I redesigned the initial concept and chose to try a much larger ball in order to reduce the angle of lean and therefor the lever arm of the robot’s body over its center of mass. This, along with reducing to half steps, resulted in a smoother self-righting action but the wheel stepping was still prohibitively slow.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/smoother.gif&quot; alt=&quot;A Little Smoother&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;control-adjustments-and-sensor-tuning&quot;&gt;Control Adjustments and Sensor Tuning&lt;/h3&gt;
+
+&lt;p&gt;I tried several different approaches to the control algorithm once it became apparent that a simple polling loop would not step the motors at the required frequency. When I realized system clock-based interrupts were not support on the rp2040, I attempted 3 separate timers, with each frequency updated after every update from the IMU. While this was successful in spinning the wheels much faster, three timers could not keep up with the step frequency and the reliability of the original polling loop was lost. This was most likely due to the constant resetting of the timers and the competing operations with no set priorities. Finally, I was able to merge the control strategies and create a single timer at a fixed frequency that then counted the number of cycles since the previous step and compared the count to the calculated step delay. This significantly increased the speed of the wheels without compromising a quick and accurate twist response.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/good_control.gif&quot; alt=&quot;Good Control&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The timer came with a trade off between the IMU measurement frequency and the maximum step frequency, but I found reading the IMU at approximately 10 Hz (a 100 ms delay between measurements) and polling the motors at 500 Hz (a 2 ms timer) was most successful in generating a fast enough reaction time while supporting a high motor stepping frequency.&lt;/p&gt;
+
+&lt;p&gt;With the wheels more reactive, noise in the IMU also became more apparent. I started with a rolling average filter, which worked well to smooth the signal and reduce spikes. The rolling average was effective at slower speeds, but with a much more reactive control loop, I wanted to explore more advanced methods of sensor fusion. A complementary filter allowed me to supplement the noisy accelerometer data with the steadier (but driftier) gyroscope data. This significantly reduced the steady state measurement spikes from up to +/- 40 degree spikes to negligible noise when the bot is stable.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/complimentary_filter.gif&quot; alt=&quot;Getting Smoother&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/final.gif&quot; alt=&quot;Last Run&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ultimately, after carefully tuning the PD gains and tweaking timer frequencies, my ballbot could balance for about 2 seconds before tipping over and losing control. I believe my biggest limitation was the tradeoff between measurement frequency and stepping frequency, and would like to try timer-based interrupts in future iteration or even separating the controller into multiple cores that could run the motor stepping commands and read the IMU simultaneously.&lt;/p&gt;
+
+&lt;p&gt;https://github.com/algarv/Ball_Balancing_Robot/&lt;/p&gt;
+</description>
+        <pubDate>Sun, 23 May 2021 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/fsae/</link>
+        <guid isPermaLink="true">http://localhost:4000/fsae/</guid>
+        
+        
+        <category>Mechatronics</category>
+        
+        <category>Controls</category>
+        
+        <category>Solidworks</category>
+        
+        <category>C</category>
+        
+      </item>
+    
+      <item>
+        <title>Robotics minor</title>
+        <description>&lt;p&gt;Mechanical Design / Mechatronics / PID Control&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/7S1Z_5BLMUo&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;For my winter quarter independent study project, I set out to build my own version of a BallBot, a dynamically stable / statically unstable robot. I designed my bot from CAD to control algorithm, utilizing 3D printing, laser cutting, and C programming on an RP2040 microcontroller.&lt;/p&gt;
+
+&lt;h3 id=&quot;mechanical-design&quot;&gt;Mechanical Design&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/ballbot_CAD.png&quot; alt=&quot;CAD&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I designed my chassis with inspiration from similar projects using Solidwork CAD to create 4 part adjustable base. Each motor housing component is attached to the main chassis separately, so the angle can be adjusted, which allowed me to test on various sizes of balls.&lt;/p&gt;
+
+&lt;h3 id=&quot;building-the-structure-and-fundamental-electronics&quot;&gt;Building the Structure and Fundamental Electronics&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/circuit.png&quot; alt=&quot;Circuit Diagram&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After printing and assembling the chassis pieces, I mounted the 3 motors with 3 motor drivers and a RP2040 ThingPlus microcontroller and started with the basic control of one motor, working on a script to step one wheel at a time.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/spinning.gif&quot; alt=&quot;Spinning&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;simultaneous-motor-control&quot;&gt;Simultaneous Motor Control&lt;/h3&gt;
+
+&lt;p&gt;The next step was to simultaneously step three motors. This proved to be a more difficult task than anticipated, as it seemed one motor would interfere with the other’s power source. However, after switching to drivers with a higher voltage rating, I was able to step each motor sequentially.&lt;/p&gt;
+
+&lt;p&gt;Once I could send alternating stepping commands to each motor, the base could perform basic directional movement including spinning in place and uniaxial paths (forwards, backwards, sideways).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/simulatenous_spinning.gif&quot; alt=&quot;Simultaneous Spinning&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/first_steps.gif&quot; alt=&quot;First Steps&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;twist-commands&quot;&gt;Twist Commands&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/ballbot_calcs.png&quot; alt=&quot;Calculations&quot; /&gt;
+Deriving wheel rotation rate from a twist&lt;/p&gt;
+
+&lt;p&gt;To make a truly omnidirectional base, the next step was to follow any twist, which require stepping the motors at different frequencies. I started with the most basic form of a control algorithm, a polling loop that stepped each motor after a calculated number of sleep cycles resulting in a wheel RPM calculated by the omnidirectional base matrix equation.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/omnidirectional.gif&quot; alt=&quot;Mobile Base&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;position-control&quot;&gt;Position Control&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/control_diagram.png&quot; alt=&quot;Control Diagram&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once the mobile base was capable of following any twist command, it was time to integrate the IMU sensor and create a closed control loop. In my first iteration, only the accelerometer data from the IMU was used to calculate a roll and pitch, which were then used as inputs to the PD controller. The PD controller outputs an x and y velocity relative to the robot’s base frame, which are then converted to wheel speeds and finally step delays using the omnidirectional base equation shown above.&lt;/p&gt;
+
+&lt;h3 id=&quot;self-righting&quot;&gt;Self-Righting&lt;/h3&gt;
+
+&lt;p&gt;The first milestone on the way to balancing was having the robot self-right itself back to a stable position on a ball. During testing, it became apparent that the motors would need to be stepped much faster in order for the robot to catch itself when the ball is not stabilized.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/self_righting.gif&quot; alt=&quot;Self Righting&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;design-adjustments&quot;&gt;Design Adjustments&lt;/h3&gt;
+
+&lt;p&gt;I redesigned the initial concept and chose to try a much larger ball in order to reduce the angle of lean and therefor the lever arm of the robot’s body over its center of mass. This, along with reducing to half steps, resulted in a smoother self-righting action but the wheel stepping was still prohibitively slow.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/smoother.gif&quot; alt=&quot;A Little Smoother&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;control-adjustments-and-sensor-tuning&quot;&gt;Control Adjustments and Sensor Tuning&lt;/h3&gt;
+
+&lt;p&gt;I tried several different approaches to the control algorithm once it became apparent that a simple polling loop would not step the motors at the required frequency. When I realized system clock-based interrupts were not support on the rp2040, I attempted 3 separate timers, with each frequency updated after every update from the IMU. While this was successful in spinning the wheels much faster, three timers could not keep up with the step frequency and the reliability of the original polling loop was lost. This was most likely due to the constant resetting of the timers and the competing operations with no set priorities. Finally, I was able to merge the control strategies and create a single timer at a fixed frequency that then counted the number of cycles since the previous step and compared the count to the calculated step delay. This significantly increased the speed of the wheels without compromising a quick and accurate twist response.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/good_control.gif&quot; alt=&quot;Good Control&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The timer came with a trade off between the IMU measurement frequency and the maximum step frequency, but I found reading the IMU at approximately 10 Hz (a 100 ms delay between measurements) and polling the motors at 500 Hz (a 2 ms timer) was most successful in generating a fast enough reaction time while supporting a high motor stepping frequency.&lt;/p&gt;
+
+&lt;p&gt;With the wheels more reactive, noise in the IMU also became more apparent. I started with a rolling average filter, which worked well to smooth the signal and reduce spikes. The rolling average was effective at slower speeds, but with a much more reactive control loop, I wanted to explore more advanced methods of sensor fusion. A complementary filter allowed me to supplement the noisy accelerometer data with the steadier (but driftier) gyroscope data. This significantly reduced the steady state measurement spikes from up to +/- 40 degree spikes to negligible noise when the bot is stable.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/complimentary_filter.gif&quot; alt=&quot;Getting Smoother&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/final.gif&quot; alt=&quot;Last Run&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ultimately, after carefully tuning the PD gains and tweaking timer frequencies, my ballbot could balance for about 2 seconds before tipping over and losing control. I believe my biggest limitation was the tradeoff between measurement frequency and stepping frequency, and would like to try timer-based interrupts in future iteration or even separating the controller into multiple cores that could run the motor stepping commands and read the IMU simultaneously.&lt;/p&gt;
+
+&lt;p&gt;https://github.com/algarv/Ball_Balancing_Robot/&lt;/p&gt;
+</description>
+        <pubDate>Sat, 22 May 2021 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/robotics_minor/</link>
+        <guid isPermaLink="true">http://localhost:4000/robotics_minor/</guid>
+        
+        
+        <category>Mechatronics</category>
+        
+        <category>Controls</category>
+        
+        <category>Solidworks</category>
+        
+        <category>C</category>
+        
+      </item>
+    
+      <item>
+        <title>Computer Vision Golf Range Finder</title>
+        <description>&lt;p&gt;OpenCV / MediaPipe Pose Estimation&lt;/p&gt;
+
+&lt;h2&gt; Project Goal &lt;/h2&gt;
+&lt;p&gt; Detect yoga poses performed by a user and overlay a corresponding icon image. Running the main script starts the videostream with automatic pose detection. &lt;/p&gt;
+
+&lt;h3&gt; Part 1: Pose Detection &lt;/h3&gt;
+
+&lt;p&gt; I use the 32 body landmarks provided by MediaPipe to measure joint angles, then determine yoga poses based on key joint angles for each pose. For example, in the star pose, the angle between the shoulder, elbow, and wrist landmarks (elbow flexion) are below 20 degrees and the angle of the elbow, shoulder, and opposite shoulder (shoulder flexion) are also below 20 degrees. &lt;/p&gt;
+
+&lt;h3&gt; Part 2: Icon Image Transformation &lt;/h3&gt;
+
+&lt;p&gt; To transform the icon image that will be overlayed over the user, I first preprocess the icon image then apply an affine transform. To preprocess the icon, I resize the icon image to be roughly the same heigt as the user, a metric also calculated with MediaPie&apos;s landmarks. I then apply a border to the icon image so that its image array has the same dimensions as the video stream frames. These steps help make the affine transform more effective. I select three key pose landmarks for each pose, then find three key points on the icon that should match these points. For example, I chose to match the nose and ankles of the person with the top tip and bottom two tips of the star. &lt;/p&gt;
+
+&lt;h3&gt; Part 3: Image Overlay &lt;/h3&gt;
+
+&lt;p&gt; I overlayed just the icon pixels (the icon background is ignored) by summing .5 of the icon pixel value with .5 of the the video frame value, resulting in a transparent overlay of just the icon. &lt;/p&gt;
+
+&lt;h2&gt; Results &lt;/h2&gt;
+
+&lt;h3&gt;Star Pose&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/star.gif&quot; alt=&quot;Star Gif&quot; /&gt;&lt;/p&gt;
+
+&lt;h3&gt;Tree Pose&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/tree.gif&quot; alt=&quot;Tree Gif&quot; /&gt;&lt;/p&gt;
+
+&lt;h3&gt;Chair pose&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/chair.gif&quot; alt=&quot;Chair Gif&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 21 May 2021 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/golf/</link>
+        <guid isPermaLink="true">http://localhost:4000/golf/</guid>
+        
+        
+        <category>Computer Vision</category>
+        
+        <category>Pose Estimation</category>
+        
+        <category>MediaPipe</category>
+        
+      </item>
+    
+  </channel>
+</rss>
