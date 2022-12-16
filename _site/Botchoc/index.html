@@ -13,8 +13,8 @@
 <meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="BotChocolate" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Arduino / Java" />
-<meta property="og:description" content="Arduino / Java" />
+<meta name="description" content="The hot chocolate making robot!" />
+<meta property="og:description" content="The hot chocolate making robot!" />
 <link rel="canonical" href="http://localhost:4000/Botchoc/" />
 <meta property="og:url" content="http://localhost:4000/Botchoc/" />
 <meta property="og:site_name" content="James’ Portfolio" />
@@ -25,7 +25,7 @@
 <meta property="twitter:image" content="http://localhost:4000/assets/images/botchoc.gif" />
 <meta property="twitter:title" content="BotChocolate" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-12-09T00:00:00-06:00","datePublished":"2022-12-09T00:00:00-06:00","description":"Arduino / Java","headline":"BotChocolate","image":"http://localhost:4000/assets/images/botchoc.gif","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/Botchoc/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo3.png"}},"url":"http://localhost:4000/Botchoc/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-12-09T00:00:00-06:00","datePublished":"2022-12-09T00:00:00-06:00","description":"The hot chocolate making robot!","headline":"BotChocolate","image":"http://localhost:4000/assets/images/botchoc.gif","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/Botchoc/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo3.png"}},"url":"http://localhost:4000/Botchoc/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -158,13 +158,26 @@
                 <!-- Toc if any -->
                 
                 <!-- End Toc -->
-                <p>Arduino / Java</p>
+                <p>The hot chocolate making robot!</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y7gj5ZHXqNU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Q_aNWWe4h5M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
-<p>In my undergraduate microcontrollers course I set out to dynamically measure knee flexion inspired by my experience interning in sports medicine. Using the Arduino IDE and simple hardware including a potentiometer, piezo buzzer, and RBG LED, I constructed a wearable device that continuously tracked the angle of the wearer’s knee and provided audio and visual feedback when they were in the target flexion range. With the Java language in Processing, I created a GUI for the user to control a character dodging bananas and view metrics displayed in real time.</p>
+<h2 id="overview">Overview</h2>
+<p>The purpose of this project was to create hot chocolate using the Franka Emika 7 DOF robot arm. To perceive the environment, the system utilizes an Intel D435i camera AprilTags. Upon initial setup, a calibration process must be completed. After this, the process consisted of using AprilTags to locate a scoop of cocoa, a mug, a spoon, and a kettle relative to the robot. Next, using our custom MoveIt API for Python, movebot, the robot is able to perform path planning between all of these objects. It turns on the kettle, dumps the cocoa powder into the mug, pours the hot water over the power, and stirs the mixture it with the spoon.</p>
 
-<p><img src="https://algarv.github.io/Portfolio/assets/images/arduino.jpeg" alt="Prototype" /></p>
+<h3 id="botchocolate-github"><a href="https://github.com/oubrejames/botchocolate">BotChocolate Github</a></h3>
+
+<h2 id="moveit-api">Moveit API</h2>
+<p>Because the ROS2 MoveIt package does not have a Python API yet, the first step in this project was to
+create one. By looking into the MoveIt ROS2 actions and services, we were able to create an API that
+takes either Cartesian coordinates of the Franka end-efffector or joint-state positions of each joint
+ and creates a path to the specified position. It also allows for the choice of moving in a Cartesian path.</p>
+
+<h2 id="vision">Vision</h2>
+
+<h2 id="motion-planning">Motion Planning</h2>
+
+<h2 id="the-team">The Team</h2>
 
 
             </div>
@@ -186,11 +199,31 @@
                     
                     
                     <li>
-                        <a class="smoothscroll" href="/categories#Arduino">Arduino</a>
+                        <a class="smoothscroll" href="/categories#Computer-Vision">Computer Vision</a>
                     </li>
                     
                     <li>
-                        <a class="smoothscroll" href="/categories#Java">Java</a>
+                        <a class="smoothscroll" href="/categories#Emika-Franka-Robot-Arm">Emika Franka Robot Arm</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#Intel-Realsense">Intel Realsense</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#Motion-Planning">Motion Planning</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#Moveit">Moveit</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#Python">Python</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#ROS2">ROS2</a>
                     </li>
                     
                 </ul>
@@ -245,7 +278,7 @@ https://search.google.com/structured-data/testing-tool/u/0/
             
             
                 
-                    <a class="mt-1 mb-1" href="/categories#Computer-Vision">Computer Vision (3)</a>
+                    <a class="mt-1 mb-1" href="/categories#Computer-Vision">Computer Vision (4)</a>
                 
                     <a class="mt-1 mb-1" href="/categories#Pose-Estimation">Pose Estimation (1)</a>
                 
@@ -263,9 +296,9 @@ https://search.google.com/structured-data/testing-tool/u/0/
                 
                     <a class="mt-1 mb-1" href="/categories#MoveIt">MoveIt (1)</a>
                 
-                    <a class="mt-1 mb-1" href="/categories#Python">Python (4)</a>
+                    <a class="mt-1 mb-1" href="/categories#Python">Python (5)</a>
                 
-                    <a class="mt-1 mb-1" href="/categories#Intel-Realsense">Intel Realsense (2)</a>
+                    <a class="mt-1 mb-1" href="/categories#Intel-Realsense">Intel Realsense (3)</a>
                 
                     <a class="mt-1 mb-1" href="/categories#Franka-Emika-Panda-Arm">Franka Emika Panda Arm (1)</a>
                 
@@ -279,9 +312,13 @@ https://search.google.com/structured-data/testing-tool/u/0/
                 
                     <a class="mt-1 mb-1" href="/categories#CoppeliaSim">CoppeliaSim (1)</a>
                 
-                    <a class="mt-1 mb-1" href="/categories#Arduino">Arduino (1)</a>
+                    <a class="mt-1 mb-1" href="/categories#ROS2">ROS2 (1)</a>
                 
-                    <a class="mt-1 mb-1" href="/categories#Java">Java (1)</a>
+                    <a class="mt-1 mb-1" href="/categories#Motion-Planning">Motion Planning (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Moveit">Moveit (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Emika-Franka-Robot-Arm">Emika Franka Robot Arm (1)</a>
                 
                     <a class="mt-1 mb-1" href="/categories#Jekyll">Jekyll (1)</a>
                 

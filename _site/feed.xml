@@ -5,8 +5,8 @@
     <description>Northwestern MS in Robotics Student Portfolio</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 14 Dec 2022 13:23:45 -0600</pubDate>
-    <lastBuildDate>Wed, 14 Dec 2022 13:23:45 -0600</lastBuildDate>
+    <pubDate>Fri, 16 Dec 2022 17:04:20 -0600</pubDate>
+    <lastBuildDate>Fri, 16 Dec 2022 17:04:20 -0600</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -142,13 +142,26 @@
     
       <item>
         <title>BotChocolate</title>
-        <description>&lt;p&gt;Arduino / Java&lt;/p&gt;
+        <description>&lt;p&gt;The hot chocolate making robot!&lt;/p&gt;
 
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/y7gj5ZHXqNU&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Q_aNWWe4h5M&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
-&lt;p&gt;In my undergraduate microcontrollers course I set out to dynamically measure knee flexion inspired by my experience interning in sports medicine. Using the Arduino IDE and simple hardware including a potentiometer, piezo buzzer, and RBG LED, I constructed a wearable device that continuously tracked the angle of the wearer’s knee and provided audio and visual feedback when they were in the target flexion range. With the Java language in Processing, I created a GUI for the user to control a character dodging bananas and view metrics displayed in real time.&lt;/p&gt;
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;The purpose of this project was to create hot chocolate using the Franka Emika 7 DOF robot arm. To perceive the environment, the system utilizes an Intel D435i camera AprilTags. Upon initial setup, a calibration process must be completed. After this, the process consisted of using AprilTags to locate a scoop of cocoa, a mug, a spoon, and a kettle relative to the robot. Next, using our custom MoveIt API for Python, movebot, the robot is able to perform path planning between all of these objects. It turns on the kettle, dumps the cocoa powder into the mug, pours the hot water over the power, and stirs the mixture it with the spoon.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/arduino.jpeg&quot; alt=&quot;Prototype&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;botchocolate-github&quot;&gt;&lt;a href=&quot;https://github.com/oubrejames/botchocolate&quot;&gt;BotChocolate Github&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h2 id=&quot;moveit-api&quot;&gt;Moveit API&lt;/h2&gt;
+&lt;p&gt;Because the ROS2 MoveIt package does not have a Python API yet, the first step in this project was to
+create one. By looking into the MoveIt ROS2 actions and services, we were able to create an API that
+takes either Cartesian coordinates of the Franka end-efffector or joint-state positions of each joint
+ and creates a path to the specified position. It also allows for the choice of moving in a Cartesian path.&lt;/p&gt;
+
+&lt;h2 id=&quot;vision&quot;&gt;Vision&lt;/h2&gt;
+
+&lt;h2 id=&quot;motion-planning&quot;&gt;Motion Planning&lt;/h2&gt;
+
+&lt;h2 id=&quot;the-team&quot;&gt;The Team&lt;/h2&gt;
 
 </description>
         <pubDate>Fri, 09 Dec 2022 00:00:00 -0600</pubDate>
@@ -156,9 +169,19 @@
         <guid isPermaLink="true">http://localhost:4000/Botchoc/</guid>
         
         
-        <category>Arduino</category>
+        <category>Computer Vision</category>
         
-        <category>Java</category>
+        <category>ROS2</category>
+        
+        <category>Python</category>
+        
+        <category>Motion Planning</category>
+        
+        <category>Moveit</category>
+        
+        <category>Intel Realsense</category>
+        
+        <category>Emika Franka Robot Arm</category>
         
       </item>
     
