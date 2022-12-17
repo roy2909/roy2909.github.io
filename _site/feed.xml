@@ -5,8 +5,8 @@
     <description>Northwestern MS in Robotics Student Portfolio</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 16 Dec 2022 18:21:37 -0600</pubDate>
-    <lastBuildDate>Fri, 16 Dec 2022 18:21:37 -0600</lastBuildDate>
+    <pubDate>Fri, 16 Dec 2022 18:35:47 -0600</pubDate>
+    <lastBuildDate>Fri, 16 Dec 2022 18:35:47 -0600</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -147,21 +147,21 @@
 &lt;div align=&quot;center&quot;&gt;&lt;iframe width=&quot;720&quot; height=&quot;400&quot; src=&quot;https://www.youtube.com/embed/Q_aNWWe4h5M&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
-&lt;p&gt;The purpose of this project was to create hot chocolate using the Franka Emika 7 DOF robot arm. To perceive the environment, the system utilizes an Intel D435i camera AprilTags. Upon initial setup, a calibration process must be completed. After this, the process consisted of using AprilTags to locate a scoop of cocoa, a mug, a spoon, and a kettle relative to the robot. Next, using our custom MoveIt API for Python, movebot, the robot is able to perform path planning between all of these objects. It turns on the kettle, dumps the cocoa powder into the mug, pours the hot water over the power, and stirs the mixture it with the spoon.&lt;/p&gt;
+&lt;p&gt;The purpose of this project was to create hot chocolate using the Franka Emika 7 DOF robot arm. To perceive its environment, the system utilizes an Intel D435i camera AprilTags. Upon initial setup, a calibration process must be completed. After this, the process consisted of using AprilTags to locate a scoop of cocoa, a mug, a spoon, and a kettle relative to the robot. Next, using our custom MoveIt API for Python, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;movebot&lt;/code&gt;, the robot is able to perform path planning between all of these objects. It turns on the kettle, dumps the cocoa powder into the mug, pours the hot water over the power, and stirs the mixture it with the spoon.&lt;/p&gt;
 
 &lt;h3 id=&quot;botchocolate-github&quot;&gt;&lt;a href=&quot;https://github.com/oubrejames/botchocolate&quot;&gt;BotChocolate Github&lt;/a&gt;&lt;/h3&gt;
 
 &lt;h2 id=&quot;moveit-api&quot;&gt;Moveit API&lt;/h2&gt;
-&lt;p&gt;Because the ROS2 MoveIt package does not have a Python API yet, the first step in this project was to
-create one. By looking into the MoveIt ROS2 actions and services, we were able to create an API that
-takes either Cartesian coordinates of the Franka end-efffector or joint-state positions of each joint
-and creates a path to the specified position. It also allows for the choice of moving in a Cartesian path.&lt;/p&gt;
+&lt;p&gt;Because the ROS2 MoveIt package does not have a Python API yet, creating one was the first step. By 
+looking into the MoveIt ROS2 actions and services, we were able to create an API that takes either 
+Cartesian coordinates of the Franka end-efffector or joint-state positions of each joint and creates
+a path to the specified position. It also allows for the choice of moving in a Cartesian path.&lt;/p&gt;
 
 &lt;div align=&quot;center&quot;&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Sed9XwHT-7c&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;vision&quot;&gt;Vision&lt;/h2&gt;
-&lt;p&gt;The vision system is comprised of two major parts: calibration and component location. To detect where
-each of the hot chocolate making components are, AprilTags are used. The AprilTags are located using
+&lt;p&gt;The vision system is comprised of two major parts: calibration and component location. AprilTags are
+used to detect where each of the hot chocolate making components are. The AprilTags are located using
 the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;apriltag_ros&lt;/code&gt; package.&lt;/p&gt;
 
 &lt;p&gt;There is one tag fixed to a kettle and one tag fixed to a jig that has slots for a mug, cocoa scooper,
@@ -169,16 +169,22 @@ and a spoon. Once these tags are found in the camera frame, there are two transf
 describing where all the hot chocolate components are relative to the camera and where each link of
 the Franka robot arm is relative to the robot’s base. However, we need to connect these trees to 
 get the location of each component relative to the robot’s base. This is where the calibration is 
-used. To calibrate, an AprilTag must be placed in the robot’s gripper, aligned with the gripper’s
-coordinate frame and in view of the camera. We then wrote a program that finds the location of the tag
+used. An AprilTag must be placed in the robot’s gripper, aligned with the gripper’s
+coordinate frame and in view of the camera to calibrate. We then wrote a program that finds the location of the tag
 and relates it to the position of the base, connecting the robot frame to the camera frame. We then
-save this transformation to a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.yaml&lt;/code&gt; file to be used later on when running the main hot chocalate
+save this transformation to a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.yaml&lt;/code&gt; file to be used later on when running the main hot chocolate
 making sequence.&lt;/p&gt;
 
 &lt;p&gt;After obtaining the transformation from the camera to the robot, the robot can now use the locations
 of the two AprilTags to locate and manipulate the hot chocolate components as necessary.&lt;/p&gt;
 
 &lt;h2 id=&quot;motion-planning&quot;&gt;Motion Planning&lt;/h2&gt;
+&lt;p&gt;Once the locations of all the components are known, it’s time to make hot chocolate. Cartesian paths
+are used to move the robot in straight lines and rotational path planning is used for achieving motions
+like tilting to grab the scoop and dumping the cocoa. Both Cartesian and rotational motion are used to achieve pouring.
+To make a cup of hot chocolate, the robot first turns on the kettle to heat the water, grab the cocoa scoop, 
+pours it in a mug, pours the hot water over the powder, and stirs. We also used serval intermediate 
+waypoints to help avoid reaching the joint limits of the robot.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-team&quot;&gt;The Team&lt;/h2&gt;
 &lt;ul&gt;
@@ -190,7 +196,6 @@ of the two AprilTags to locate and manipulate the hot chocolate components as ne
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/206768445-4503edc2-2075-48b4-baf7-e6dc7bd3ca86.png&quot; alt=&quot;bot_choc-min&quot; /&gt;&lt;/p&gt;
-
 </description>
         <pubDate>Fri, 09 Dec 2022 00:00:00 -0600</pubDate>
         <link>http://localhost:4000/Botchoc/</link>
