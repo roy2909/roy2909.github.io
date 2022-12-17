@@ -1,14 +1,14 @@
 ---
 layout: page
-title: Resume
+title: Resume and Contact Info
 permalink: /JamesOubre_Resume
 comments: false
 ---
-## Resume
+### Resume
 
 [Download Resume as a PDF](James_Oubre_resume.pdf)
 
-## Contact
+### Contact
 
 jamesoubre2023@u.northwestern.edu
 
