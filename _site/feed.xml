@@ -5,8 +5,8 @@
     <description>Northwestern MS in Robotics Student Portfolio</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 16 Dec 2022 18:35:47 -0600</pubDate>
-    <lastBuildDate>Fri, 16 Dec 2022 18:35:47 -0600</lastBuildDate>
+    <pubDate>Fri, 16 Dec 2022 21:25:10 -0600</pubDate>
+    <lastBuildDate>Fri, 16 Dec 2022 21:25:10 -0600</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -313,7 +313,7 @@ waypoints to help avoid reaching the joint limits of the robot.&lt;/p&gt;
 
 &lt;p&gt;For this project, my team and I sought-out and surveyed seven stakeholders to define and hone in on an unmet clinical need and establish design constraints. Throughout the 6 month project, we worked through 4 device iterations prototyping with Solidworks CAD and Polyjet and SLA 3D printers. I assisted with the CAD design and developed protocols to confirm the safety and efficacy of the device. I set-up a force sensor to mesure the average applied force on the device using an Arduino microcontroller and simulated the resulting material fatigue overtime with regular use using FEA analysis. At the end of the year, we were awarded Outstanding Senior Design Project for developing a functional prototype that uniquely solves a demonstrated need.&lt;/p&gt;
 </description>
-        <pubDate>Sun, 15 May 2022 00:00:00 -0500</pubDate>
+        <pubDate>Sun, 22 May 2022 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/icore/</link>
         <guid isPermaLink="true">http://localhost:4000/icore/</guid>
         
@@ -524,9 +524,9 @@ Deriving wheel rotation rate from a twist&lt;/p&gt;
 
 &lt;p&gt;https://github.com/algarv/Ball_Balancing_Robot/&lt;/p&gt;
 </description>
-        <pubDate>Sat, 22 May 2021 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/robotics_minor/</link>
-        <guid isPermaLink="true">http://localhost:4000/robotics_minor/</guid>
+        <pubDate>Fri, 21 May 2021 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/a_robotics_minor/</link>
+        <guid isPermaLink="true">http://localhost:4000/a_robotics_minor/</guid>
         
         
         <category>Mechatronics</category>
@@ -572,7 +572,7 @@ Deriving wheel rotation rate from a twist&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/chair.gif&quot; alt=&quot;Chair Gif&quot; /&gt;&lt;/p&gt;
 </description>
-        <pubDate>Fri, 21 May 2021 00:00:00 -0500</pubDate>
+        <pubDate>Thu, 20 May 2021 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/golf/</link>
         <guid isPermaLink="true">http://localhost:4000/golf/</guid>
         
