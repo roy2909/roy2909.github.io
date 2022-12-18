@@ -234,7 +234,10 @@ span.author-meta {
     display: inline-block;
 }
 
-span.post-date,
+span.post-date{
+    color: rgba(236, 221, 221, 0.962);
+}
+
 span.post-read {
     color: rgba(0, 0, 0, .44);
 }
@@ -328,7 +331,7 @@ span.post-read-more a:hover {
 
 
 .footer {
-    border-top: 1px solid rgba(0, 0, 0, .05) !important;
+    border-top: 1px solid rgba(243, 18, 18, 0.05) !important;
     padding-top: 15px;
     padding-bottom: 12px;
     font-size: 0.8rem;
@@ -515,8 +518,8 @@ ul.tags li {
 }
 
 ul.tags li a {
-    background: rgba(0, 0, 0, .05);
-    color: rgba(0, 0, 0, .6);
+    background: rgba(118, 118, 118, 0.05);
+    color: rgba(245, 231, 231, 0.6);
     border-radius: 3px;
     padding: 5px 10px;
 }
