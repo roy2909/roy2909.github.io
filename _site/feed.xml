@@ -5,8 +5,8 @@
     <description>Northwestern MS in Robotics Student Portfolio</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 16 Dec 2022 21:25:10 -0600</pubDate>
-    <lastBuildDate>Fri, 16 Dec 2022 21:25:10 -0600</lastBuildDate>
+    <pubDate>Sat, 17 Dec 2022 17:13:41 -0600</pubDate>
+    <lastBuildDate>Sat, 17 Dec 2022 17:13:41 -0600</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -142,7 +142,7 @@
     
       <item>
         <title>BotChocolate</title>
-        <description>&lt;p&gt;The hot chocolate making robot!&lt;/p&gt;
+        <description>&lt;p&gt;Computer Vision, OpenCV, ROS2, Python, Motion Planning, Moveit, Intel Realsense, Emika Franka Robot Arm&lt;/p&gt;
 
 &lt;div align=&quot;center&quot;&gt;&lt;iframe width=&quot;720&quot; height=&quot;400&quot; src=&quot;https://www.youtube.com/embed/Q_aNWWe4h5M&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 
@@ -204,6 +204,8 @@ waypoints to help avoid reaching the joint limits of the robot.&lt;/p&gt;
         
         <category>Computer Vision</category>
         
+        <category>OpenCV</category>
+        
         <category>ROS2</category>
         
         <category>Python</category>
@@ -219,18 +221,18 @@ waypoints to help avoid reaching the joint limits of the robot.&lt;/p&gt;
       </item>
     
       <item>
-        <title>Jack in the box</title>
+        <title>Physics Simulation</title>
         <description>&lt;p&gt;Python / PyGame&lt;/p&gt;
 
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/r4uDLioyMAk&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/oubrejames/oubrejames.github.io/4b9a9bb1b282e894d9406c93f0adbf26e34a60b5/assets/images/cropped_jack.gif&quot; alt=&quot;jack_box_gif&quot; width=&quot;500&quot; /&gt;&lt;/div&gt;
 
 &lt;p&gt;I worked with a team to generate and solve a maze using recursive backtracking. My teammate generated solveable mazes represented by numerical arrays, and I used PyGame to create the maze graphics of wall (black), open path (white), the start (green), and end (red) squares along with a visual indicator of which index the solver visits (blue). The solver starts at the “start” index and randomly selects an adjacent index. If the selected index has a value of 1, it is added to the wall list and a different index is chosen. If the index is open (value of 0), the algorithm “moves” to the index and chooses a new adjacent index. Any index that the algorithm finds and moves to is added to a path list, which are only allowed to be selected again if no other open index exists. Any index that leads to backtracking is added to a wall list. The blue searching square becomes cyan when it is forced to backtrack.&lt;/p&gt;
 
-&lt;p&gt;https://github.com/algarv/Maze&lt;/p&gt;
+&lt;h3 id=&quot;view-it-on-github&quot;&gt;&lt;a href=&quot;https://github.com/oubrejames/physics-simulator&quot;&gt;View it on Github&lt;/a&gt;&lt;/h3&gt;
 </description>
         <pubDate>Sun, 04 Dec 2022 00:00:00 -0600</pubDate>
-        <link>http://localhost:4000/dynamics/</link>
-        <guid isPermaLink="true">http://localhost:4000/dynamics/</guid>
+        <link>http://localhost:4000/physics_simulator/</link>
+        <guid isPermaLink="true">http://localhost:4000/physics_simulator/</guid>
         
         
         <category>Python</category>
