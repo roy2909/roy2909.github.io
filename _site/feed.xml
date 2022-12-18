@@ -5,8 +5,8 @@
     <description>Northwestern MS in Robotics Student Portfolio</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 17 Dec 2022 20:04:32 -0600</pubDate>
-    <lastBuildDate>Sat, 17 Dec 2022 20:04:32 -0600</lastBuildDate>
+    <pubDate>Sat, 17 Dec 2022 21:05:14 -0600</pubDate>
+    <lastBuildDate>Sat, 17 Dec 2022 21:05:14 -0600</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -222,11 +222,21 @@ waypoints to help avoid reaching the joint limits of the robot.&lt;/p&gt;
     
       <item>
         <title>Physics Simulation</title>
-        <description>&lt;p&gt;Python / PyGame&lt;/p&gt;
+        <description>&lt;p&gt;Python, Dynamic Systems, Simulation, Jupyter Notebook&lt;/p&gt;
 
-&lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/oubrejames/oubrejames.github.io/4b9a9bb1b282e894d9406c93f0adbf26e34a60b5/assets/images/cropped_jack.gif&quot; alt=&quot;jack_box_gif&quot; width=&quot;500&quot; /&gt;&lt;/div&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/oubrejames/oubrejames.github.io/4b9a9bb1b282e894d9406c93f0adbf26e34a60b5/assets/images/cropped_jack.gif&quot; alt=&quot;jack_box_gif&quot; width=&quot;600&quot; /&gt;&lt;/div&gt;
 
-&lt;p&gt;I worked with a team to generate and solve a maze using recursive backtracking. My teammate generated solveable mazes represented by numerical arrays, and I used PyGame to create the maze graphics of wall (black), open path (white), the start (green), and end (red) squares along with a visual indicator of which index the solver visits (blue). The solver starts at the “start” index and randomly selects an adjacent index. If the selected index has a value of 1, it is added to the wall list and a different index is chosen. If the index is open (value of 0), the algorithm “moves” to the index and chooses a new adjacent index. Any index that the algorithm finds and moves to is added to a path list, which are only allowed to be selected again if no other open index exists. Any index that leads to backtracking is added to a wall list. The blue searching square becomes cyan when it is forced to backtrack.&lt;/p&gt;
+&lt;p&gt;Using Lagrangian dynamics, I was able to simulate a box bouncing around within a larger box. First,
+I calculated the potential and kinetic energies of the system to obtain its Lagrangian and later on,
+the Euler-Lagrange equations. These equations describe the dynamics of the system while not
+experiencing impact. To detect impact the following coordinate frames were used.&lt;/p&gt;
+
+&lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/208279053-1a1dd404-148d-4dbd-aadc-0b7c9d14c366.png&quot; alt=&quot;jack_box_gif&quot; width=&quot;500&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;Using the transformation matrices between these frames, I am able to detect impact if any of the 
+smaller box’s vertices intersect the larger box’s walls. Each vertex is checked against each wall 
+for every time step of the simulation. If an impact is detected, the dynamic equations are updated and
+the simulation continues.&lt;/p&gt;
 
 &lt;h3 id=&quot;view-it-on-github&quot;&gt;&lt;a href=&quot;https://github.com/oubrejames/physics-simulator&quot;&gt;View it on Github&lt;/a&gt;&lt;/h3&gt;
 </description>
@@ -237,9 +247,11 @@ waypoints to help avoid reaching the joint limits of the robot.&lt;/p&gt;
         
         <category>Python</category>
         
-        <category>Hack-a-Thon 2021</category>
+        <category>Dynamic Systems</category>
         
-        <category>Group Project</category>
+        <category>Simulation</category>
+        
+        <category>Jupyter Notebook</category>
         
       </item>
     
