@@ -5,30 +5,52 @@
     <description>Northwestern MS in Robotics Student Portfolio</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 17 Dec 2022 22:41:02 -0600</pubDate>
-    <lastBuildDate>Sat, 17 Dec 2022 22:41:02 -0600</lastBuildDate>
+    <pubDate>Mon, 19 Dec 2022 14:01:14 -0600</pubDate>
+    <lastBuildDate>Mon, 19 Dec 2022 14:01:14 -0600</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
         <title>Motion Mirroring Robotic Arm</title>
-        <description>&lt;p&gt;Put tags&lt;/p&gt;
+        <description>&lt;p&gt;C, Mechatronics, Embedded Systems, I2C&lt;/p&gt;
 
 &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
-&lt;p&gt;Blah Blah Blah&lt;/p&gt;
+&lt;p&gt;As part of Northwestern’s microprocessor design course, my group and I created an Electromyography
+(EMG) controlled robotic manipulator. This allows a user to connect an EMG sensor to their arm to
+open and close a robotic gripper by simply opening and closing their hand. We also combined project with 
+another group in the class who were controlling a 2 DOF robotic arm’s motion based off of IMU data.
+By combining these projects, we were able to create a system that would move a robot arm and control 
+the gripper based off of the user’s motion.&lt;/p&gt;
 
 &lt;h2 id=&quot;emg-gripper&quot;&gt;EMG Gripper&lt;/h2&gt;
 
 &lt;div align=&quot;center&quot;&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/6Y9bxQ33sTY&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 
-&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;This project was developed around the Microbit V2. Code is typically written to the Microbit in Python,
+however, we were writing directly to the Microbit’s microcontroller (nRF52833) in C. The end-effector
+itself is a mechanical gripper that opens and closes based off of the position of a connected servo.
+We controlled this servo with a PCA9685 servo driver over I2C. Additionally, we used two sensors
+in this project: an EMG sensor and a force sensitive resistor (FSR). The EMG sensor measures electrical 
+signals in muscles that are generated from movement. This is attached to the users arm with electrodes
+and used to detect if the hand is closed or not. The FSR measures the amount of
+force that is applied to it. This is placed on the inside of the gripper and used to detect if the 
+gripper is actively gripping something.&lt;/p&gt;
 
-&lt;h3 id=&quot;emg-gripper-github&quot;&gt;&lt;a href=&quot;https://github.com/oubrejames/botchocolate&quot;&gt;EMG Gripper Github&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The basic operation of this system is that the output of the two sensors are constantly being read
+by the Microbit. If the EMG sensor gives a high signal, then the user is trying to grasp. When this
+is detected, PWM signals are sent to the servo driver over I2C in a loop, closing the gripper incrementally
+with each iteration. When an item is grasped, a forced is applied to the FSR, producing a 
+high signal that is used to break the grasping loop and hold the gripper at a constant position.
+Once, the user releases their grasp, the gripper will then start to incrementally open, unless
+interrupted by another grasp command.&lt;/p&gt;
+
+&lt;div align=&quot;center&quot;&gt;&lt;h2&gt; &lt;a href=&quot;https://github.com/oubrejames/emgripper&quot;&gt;View EMG Gripper Github&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;emg-gripper--imu-arm&quot;&gt;EMG Gripper + IMU Arm&lt;/h2&gt;
 
 &lt;div align=&quot;center&quot;&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/xjytBSXibu4&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 
-&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;When the EMG gripper is combined with the IMU controlled arm, the resulting system allows a user to
+manipulate the robot to perform various actions just by moving their own arm and hand.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-team&quot;&gt;The Team&lt;/h2&gt;
 &lt;h4 id=&quot;emg-gripper-1&quot;&gt;EMG Gripper&lt;/h4&gt;
@@ -40,20 +62,23 @@
 
 &lt;h4 id=&quot;imu-arm&quot;&gt;IMU Arm&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;Nick&lt;/li&gt;
-  &lt;li&gt;Hang&lt;/li&gt;
-  &lt;li&gt;Felippe&lt;/li&gt;
+  &lt;li&gt;Nicolas Morales&lt;/li&gt;
+  &lt;li&gt;Hang Yin&lt;/li&gt;
+  &lt;li&gt;Felipe Jannarone&lt;/li&gt;
 &lt;/ul&gt;
-
 </description>
         <pubDate>Sun, 11 Dec 2022 00:00:00 -0600</pubDate>
         <link>http://localhost:4000/Gripper/</link>
         <guid isPermaLink="true">http://localhost:4000/Gripper/</guid>
         
         
-        <category>Jekyll</category>
+        <category>C</category>
         
-        <category>tutorial</category>
+        <category>Mechatronics</category>
+        
+        <category>Embedded Systems</category>
+        
+        <category>I2C</category>
         
       </item>
     
@@ -66,7 +91,7 @@
 &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;The purpose of this project was to create hot chocolate using the Franka Emika 7 DOF robot arm. To perceive its environment, the system utilizes an Intel D435i camera AprilTags. Upon initial setup, a calibration process must be completed. After this, the process consisted of using AprilTags to locate a scoop of cocoa, a mug, a spoon, and a kettle relative to the robot. Next, using our custom MoveIt API for Python, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;movebot&lt;/code&gt;, the robot is able to perform path planning between all of these objects. It turns on the kettle, dumps the cocoa powder into the mug, pours the hot water over the power, and stirs the mixture it with the spoon.&lt;/p&gt;
 
-&lt;h3 id=&quot;botchocolate-github&quot;&gt;&lt;a href=&quot;https://github.com/oubrejames/botchocolate&quot;&gt;BotChocolate Github&lt;/a&gt;&lt;/h3&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;h2&gt; &lt;a href=&quot;https://github.com/oubrejames/botchocolate&quot;&gt;View BotChocolate Github&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;moveit-api&quot;&gt;Moveit API&lt;/h2&gt;
 &lt;p&gt;Because the ROS2 MoveIt package does not have a Python API yet, creating one was the first step. By 
@@ -155,7 +180,7 @@ smaller box’s vertices intersect the larger box’s walls. Each vertex is chec
 for every time step of the simulation. If an impact is detected, the dynamic equations are updated and
 the simulation continues.&lt;/p&gt;
 
-&lt;h3 id=&quot;view-it-on-github&quot;&gt;&lt;a href=&quot;https://github.com/oubrejames/physics-simulator&quot;&gt;View it on Github&lt;/a&gt;&lt;/h3&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;h2&gt; &lt;a href=&quot;https://github.com/oubrejames/physics-simulator&quot;&gt;View it on Github&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt;
 </description>
         <pubDate>Sun, 04 Dec 2022 00:00:00 -0600</pubDate>
         <link>http://localhost:4000/physics_simulator/</link>

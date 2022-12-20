@@ -24,4 +24,4 @@ smaller box's vertices intersect the larger box's walls. Each vertex is checked 
 for every time step of the simulation. If an impact is detected, the dynamic equations are updated and
 the simulation continues.
 
-### [View it on Github](https://github.com/oubrejames/physics-simulator)
+<div align="center"><h2> <a href="https://github.com/oubrejames/physics-simulator">View it on Github</a></h2></div>

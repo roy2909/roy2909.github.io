@@ -13,8 +13,8 @@
 <meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Motion Mirroring Robotic Arm" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Put tags" />
-<meta property="og:description" content="Put tags" />
+<meta name="description" content="C, Mechatronics, Embedded Systems, I2C" />
+<meta property="og:description" content="C, Mechatronics, Embedded Systems, I2C" />
 <link rel="canonical" href="http://localhost:4000/Gripper/" />
 <meta property="og:url" content="http://localhost:4000/Gripper/" />
 <meta property="og:site_name" content="James’ Portfolio" />
@@ -25,7 +25,7 @@
 <meta property="twitter:image" content="http://localhost:4000/assets/images/imugrip.gif" />
 <meta property="twitter:title" content="Motion Mirroring Robotic Arm" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-12-11T00:00:00-06:00","datePublished":"2022-12-11T00:00:00-06:00","description":"Put tags","headline":"Motion Mirroring Robotic Arm","image":"http://localhost:4000/assets/images/imugrip.gif","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/Gripper/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo3.png"}},"url":"http://localhost:4000/Gripper/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-12-11T00:00:00-06:00","datePublished":"2022-12-11T00:00:00-06:00","description":"C, Mechatronics, Embedded Systems, I2C","headline":"Motion Mirroring Robotic Arm","image":"http://localhost:4000/assets/images/imugrip.gif","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/Gripper/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo3.png"}},"url":"http://localhost:4000/Gripper/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -158,24 +158,46 @@
                 <!-- Toc if any -->
                 
                 <!-- End Toc -->
-                <p>Put tags</p>
+                <p>C, Mechatronics, Embedded Systems, I2C</p>
 
 <h2 id="overview">Overview</h2>
-<p>Blah Blah Blah</p>
+<p>As part of Northwestern’s microprocessor design course, my group and I created an Electromyography
+(EMG) controlled robotic manipulator. This allows a user to connect an EMG sensor to their arm to
+open and close a robotic gripper by simply opening and closing their hand. We also combined project with 
+another group in the class who were controlling a 2 DOF robotic arm’s motion based off of IMU data.
+By combining these projects, we were able to create a system that would move a robot arm and control 
+the gripper based off of the user’s motion.</p>
 
 <h2 id="emg-gripper">EMG Gripper</h2>
 
 <div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/6Y9bxQ33sTY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 
-<p>Description</p>
+<p>This project was developed around the Microbit V2. Code is typically written to the Microbit in Python,
+however, we were writing directly to the Microbit’s microcontroller (nRF52833) in C. The end-effector
+itself is a mechanical gripper that opens and closes based off of the position of a connected servo.
+We controlled this servo with a PCA9685 servo driver over I2C. Additionally, we used two sensors
+in this project: an EMG sensor and a force sensitive resistor (FSR). The EMG sensor measures electrical 
+signals in muscles that are generated from movement. This is attached to the users arm with electrodes
+and used to detect if the hand is closed or not. The FSR measures the amount of
+force that is applied to it. This is placed on the inside of the gripper and used to detect if the 
+gripper is actively gripping something.</p>
 
-<h3 id="emg-gripper-github"><a href="https://github.com/oubrejames/botchocolate">EMG Gripper Github</a></h3>
+<p>The basic operation of this system is that the output of the two sensors are constantly being read
+by the Microbit. If the EMG sensor gives a high signal, then the user is trying to grasp. When this
+is detected, PWM signals are sent to the servo driver over I2C in a loop, closing the gripper incrementally
+with each iteration. When an item is grasped, a forced is applied to the FSR, producing a 
+high signal that is used to break the grasping loop and hold the gripper at a constant position.
+Once, the user releases their grasp, the gripper will then start to incrementally open, unless
+interrupted by another grasp command.</p>
+
+<div align="center"><h2> <a href="https://github.com/oubrejames/emgripper">View EMG Gripper Github</a></h2></div>
 
 <h2 id="emg-gripper--imu-arm">EMG Gripper + IMU Arm</h2>
 
 <div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/xjytBSXibu4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 
-<p>Description</p>
+<p>When the EMG gripper is combined with the IMU controlled arm, the resulting system allows a user to
+manipulate the robot to perform various actions just by moving their own arm and hand.</p>
 
 <h2 id="the-team">The Team</h2>
 <h4 id="emg-gripper-1">EMG Gripper</h4>
@@ -187,11 +209,10 @@
 
 <h4 id="imu-arm">IMU Arm</h4>
 <ul>
-  <li>Nick</li>
-  <li>Hang</li>
-  <li>Felippe</li>
+  <li>Nicolas Morales</li>
+  <li>Hang Yin</li>
+  <li>Felipe Jannarone</li>
 </ul>
-
 
             </div>
 
@@ -212,11 +233,19 @@
                     
                     
                     <li>
-                        <a class="smoothscroll" href="/categories#Jekyll">Jekyll</a>
+                        <a class="smoothscroll" href="/categories#C">C</a>
                     </li>
                     
                     <li>
-                        <a class="smoothscroll" href="/categories#tutorial">tutorial</a>
+                        <a class="smoothscroll" href="/categories#Embedded-Systems">Embedded Systems</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#I2C">I2C</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#Mechatronics">Mechatronics</a>
                     </li>
                     
                 </ul>
@@ -275,13 +304,13 @@ https://search.google.com/structured-data/testing-tool/u/0/
                 
                     <a class="mt-1 mb-1" href="/categories#MediaPipe">MediaPipe (1)</a>
                 
-                    <a class="mt-1 mb-1" href="/categories#Mechatronics">Mechatronics (2)</a>
+                    <a class="mt-1 mb-1" href="/categories#Mechatronics">Mechatronics (3)</a>
                 
                     <a class="mt-1 mb-1" href="/categories#Controls">Controls (3)</a>
                 
                     <a class="mt-1 mb-1" href="/categories#Solidworks">Solidworks (3)</a>
                 
-                    <a class="mt-1 mb-1" href="/categories#C">C (2)</a>
+                    <a class="mt-1 mb-1" href="/categories#C">C (3)</a>
                 
                     <a class="mt-1 mb-1" href="/categories#ROS">ROS (1)</a>
                 
@@ -317,9 +346,9 @@ https://search.google.com/structured-data/testing-tool/u/0/
                 
                     <a class="mt-1 mb-1" href="/categories#Emika-Franka-Robot-Arm">Emika Franka Robot Arm (1)</a>
                 
-                    <a class="mt-1 mb-1" href="/categories#Jekyll">Jekyll (1)</a>
+                    <a class="mt-1 mb-1" href="/categories#Embedded-Systems">Embedded Systems (1)</a>
                 
-                    <a class="mt-1 mb-1" href="/categories#tutorial">tutorial (1)</a>
+                    <a class="mt-1 mb-1" href="/categories#I2C">I2C (1)</a>
                 
             
             
