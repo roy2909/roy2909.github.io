@@ -5,8 +5,8 @@
     <description>Northwestern MS in Robotics Student Portfolio</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 19 Dec 2022 14:01:14 -0600</pubDate>
-    <lastBuildDate>Mon, 19 Dec 2022 14:01:14 -0600</lastBuildDate>
+    <pubDate>Wed, 21 Dec 2022 14:53:34 -0600</pubDate>
+    <lastBuildDate>Wed, 21 Dec 2022 14:53:34 -0600</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -91,7 +91,7 @@ manipulate the robot to perform various actions just by moving their own arm and
 &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;The purpose of this project was to create hot chocolate using the Franka Emika 7 DOF robot arm. To perceive its environment, the system utilizes an Intel D435i camera AprilTags. Upon initial setup, a calibration process must be completed. After this, the process consisted of using AprilTags to locate a scoop of cocoa, a mug, a spoon, and a kettle relative to the robot. Next, using our custom MoveIt API for Python, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;movebot&lt;/code&gt;, the robot is able to perform path planning between all of these objects. It turns on the kettle, dumps the cocoa powder into the mug, pours the hot water over the power, and stirs the mixture it with the spoon.&lt;/p&gt;
 
-&lt;div align=&quot;center&quot;&gt;&lt;h2&gt; &lt;a href=&quot;https://github.com/oubrejames/botchocolate&quot;&gt;View BotChocolate Github&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;h2&gt; &lt;a href=&quot;https://github.com/oubrejames/bot_chocolate&quot;&gt;View BotChocolate Github&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;moveit-api&quot;&gt;Moveit API&lt;/h2&gt;
 &lt;p&gt;Because the ROS2 MoveIt package does not have a Python API yet, creating one was the first step. By 
@@ -268,21 +268,92 @@ https://github.com/algarv/Pen-Grabber&lt;/p&gt;
     
       <item>
         <title>Reasearch</title>
-        <description>&lt;p&gt;3D Printing / Solidworks&lt;/p&gt;
+        <description>&lt;p&gt;Computer Vision, OpenCV, UR5 Robot Arm, Manufacturing, Research, Intel Realsense&lt;/p&gt;
 
-&lt;div align=&quot;center&quot;&gt;&lt;iframe width=&quot;1184&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/gyQQtJ2jm6k&quot; title=&quot;robotic_sanding&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;iframe width=&quot;1080&quot; height=&quot;620&quot; src=&quot;https://www.youtube.com/embed/gyQQtJ2jm6k&quot; title=&quot;robotic_sanding&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;While getting my bachelor’s degree at Louisiana State University I worked as an undergraduate researcher
+in the Innovation in Control and Robotics Engineering Lab (iCORE Lab). My main area of research was
+computer vision for robotic systems. Specifically, as part of an NSF funded research project, I
+created a computer vision system to detect surface defects in fiber glass for autonomous sanding.
+Once, the locations of the defects were found, two types of path planning were used to create a sanding
+path. The path waypoints were then relayed to a UR5e 6 DOF robot arm with a sander attachment to 
+sand the defected areas.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/208994781-0e1e5a9e-4540-45f4-ad3e-13374b4bca35.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;System Pipeline&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/208988986-65a70827-1d47-4bcf-aab6-9a6e2c07246c.png&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;System Components&lt;/p&gt;
+
+&lt;!-- &lt;div align=&quot;center&quot;&gt;&lt;h2&gt; &lt;a href=&quot;https://github.com/oubrejames/physics-simulator&quot;&gt;View it on Github&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt; --&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;h2&gt; &lt;a href=&quot;https://doi.org/10.1016/j.ifacol.2022.07.620&quot;&gt;Read the paper&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;vision&quot;&gt;Vision&lt;/h2&gt;
+&lt;p&gt;Using traditional computer vision techniques like canny edge detection, morphological closing, 
+contour detection, and binary mapping I was able to detect and isolate defects present on the surface
+of a fiber glass panel.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/208990411-230117af-4a57-4276-bc6e-0b72b197a123.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;Computer Vision Pipeline&lt;/p&gt;
+
+&lt;p&gt;First, an Intel D435i camera captures the RGB and depth images of the fiber glass sample. A canny 
+edge detector is applied to the RGB image to separate the inherit pattern visible underneath the 
+surface of the fiber glass from the defects present on the surface. After this step, the surface 
+defects become easily visible. To create a general region of the defective area, I use morphological
+closing to merge nearby edges and fill openings within a certain area to create a blob like structure
+where defects reside. Next I use contour detection to get the pixel locations of everything within
+the defective regions.&lt;/p&gt;
+
+&lt;h2 id=&quot;path-planning&quot;&gt;Path Planning&lt;/h2&gt;
+&lt;p&gt;Once the locations of the defects are known, a path must be created so the robot can sand over all
+of the defective areas. Two different types of path planning were implemented. Multi-goal path planning
+was needed to make sure the robot goes to each of the separate defective regions and coverage path
+planning was used to ensure the robot sanded all of the defects within a given region.&lt;/p&gt;
+
+&lt;p&gt;For multi-goal path planning, a nearest neighbor algorithm was implemented to create a path that 
+went to each region based off of the location of the regions centroid. Next, a grid-based sweeping 
+algorithm is used to create a path that covers the entire area. Finally, the two plans are combined
+and the robot’s sander is pressed against the piece for the coverage paths to ensure sanding and it 
+is offset from the piece during multi-goal movements so that smooth sections are not sanded erroneously.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/208995195-854b8fea-4304-4bf5-8cb5-7975b003edc2.png&quot; height=&quot;425&quot; width=&quot;425&quot; /&gt; &lt;img src=&quot;https://user-images.githubusercontent.com/46512429/208995475-84289c70-9f8f-4b67-a78f-b1ce5674cb63.png&quot; height=&quot;425&quot; width=&quot;425&quot; /&gt; &lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;Example of Finalized Path in 2D and 3D&lt;/p&gt;
+
+&lt;h2 id=&quot;results&quot;&gt;Results&lt;/h2&gt;
+&lt;p&gt;The system successfully detected the defected areas and we quantified the results by having a person
+manually label defects in one of the fiber glass image samples and compared that to what the system
+detected. Fifteen fiber glass panels were used and the calculated average sensitivity obtained was 
+66.24%, the average specificity was 78.20%, and the resulting accuracy was 81.02%. Furthermore, 
+using a profilometer, I measured the surface roughness of certain defected areas before and after 
+sanding and found that the average roughness at these areas was about half as rough after performing
+autonomous sanding.&lt;/p&gt;
+
+&lt;h2 id=&quot;contributors&quot;&gt;Contributors&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;William Ard&lt;/li&gt;
+  &lt;li&gt;Corina Barbalata&lt;/li&gt;
+  &lt;li&gt;Joshua Nguyen&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Sun, 22 May 2022 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/icore/</link>
         <guid isPermaLink="true">http://localhost:4000/icore/</guid>
         
         
-        <category>3D Printing</category>
+        <category>Computer Vision</category>
         
-        <category>Solidworks</category>
+        <category>OpenCV</category>
         
-        <category>Group Project</category>
+        <category>UR5 Robot Arm</category>
+        
+        <category>Manufacturing</category>
+        
+        <category>Research</category>
+        
+        <category>Intel Realsense</category>
         
       </item>
     
