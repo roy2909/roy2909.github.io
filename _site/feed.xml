@@ -5,8 +5,8 @@
     <description>Northwestern MS in Robotics Student Portfolio</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 21 Dec 2022 14:53:34 -0600</pubDate>
-    <lastBuildDate>Wed, 21 Dec 2022 14:53:34 -0600</lastBuildDate>
+    <pubDate>Sat, 24 Dec 2022 15:38:27 -0600</pubDate>
+    <lastBuildDate>Sat, 24 Dec 2022 15:38:27 -0600</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -237,17 +237,22 @@ the simulation continues.&lt;/p&gt;
       </item>
     
       <item>
-        <title>Orientation Hackathon: Pen Thief</title>
+        <title>Pen Stealing Robot</title>
         <description>&lt;p&gt;Computer Vision, OpenCV, Python, PincherX 100, Intel Realsense&lt;/p&gt;
 
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/JoxrQ2MmBp4&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/JoxrQ2MmBp4&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 
-&lt;p&gt;DELETE AND REDO THIS&lt;/p&gt;
+&lt;p&gt;As part of Northwestern’s orientation hackathon, I used an Intel Realsense D435i camera to detect
+the location of a purple Northwestern pen and grab it with a Trossen PincherX 100 robot arm. 
+To detect the pen, I converted the RGB image from the Realsense to an HSV image and used the HSV values
+to find all purple pixels. Next, I created a binary map where the detected pixels were shown as 
+white and all other pixels black. Using this and OpenCv’s contour detection I found the pixel location
+of the centroid of pen. This allowed me to find the location of the pen relative to the camera using 
+the aligned depth image generated from the Realsense. I then convert the pen position from the camera’s
+frame to the robot’s frame and control the robot to move to the pen and grasp it.&lt;/p&gt;
 
-&lt;p&gt;For the final challenge of our hackathon orientation, we used Intel Realsense D435i cameras to locate a pen and direct a Trossen PincherX 100 robot to grab it. This was an individual challenge, and my first experience with computer vision algorithms. I leveraged the purple color of the pen to identify pixels within a color threshold, and the OpenCv and PyRealsense libraries to estimate the position of the pen in 3D space. Then, the algorithm incrementally increased or decreased the angle of the arm’s base joint until it was determined to be within range of the pen, and finally increased the elbow and shoulder joint angles to extend the end effector to reach the depth of the target pixels and close the grabbers. No pens were seriously harmed in this project (though one was dropped many times).&lt;/p&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;h2&gt; &lt;a href=&quot;https://github.com/oubrejames/pen_challenge&quot;&gt;View it on Github&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt;
 
-&lt;p&gt;BETTER LINK
-https://github.com/algarv/Pen-Grabber&lt;/p&gt;
 </description>
         <pubDate>Thu, 15 Sep 2022 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/Pen/</link>
@@ -288,7 +293,7 @@ sand the defected areas.&lt;/p&gt;
 &lt;p align=&quot;center&quot;&gt;System Components&lt;/p&gt;
 
 &lt;!-- &lt;div align=&quot;center&quot;&gt;&lt;h2&gt; &lt;a href=&quot;https://github.com/oubrejames/physics-simulator&quot;&gt;View it on Github&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt; --&gt;
-&lt;div align=&quot;center&quot;&gt;&lt;h2&gt; &lt;a href=&quot;https://doi.org/10.1016/j.ifacol.2022.07.620&quot;&gt;Read the paper&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;h2&gt; &lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/S240589632201031X/pdf?md5=6790ab4229b08c78bb91bb6a34d5e885&amp;amp;pid=1-s2.0-S240589632201031X-main.pdf&quot;&gt;Read the paper&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;vision&quot;&gt;Vision&lt;/h2&gt;
 &lt;p&gt;Using traditional computer vision techniques like canny edge detection, morphological closing, 
@@ -363,9 +368,13 @@ autonomous sanding.&lt;/p&gt;
 
 &lt;div align=&quot;center&quot;&gt;&lt;iframe width=&quot;424&quot; height=&quot;754&quot; src=&quot;https://www.youtube.com/embed/AqyQ7yTlyfM&quot; title=&quot;cocktail maker&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 
-&lt;p&gt;I worked with a team of 5 to program a Franka Emika Panda arm to make pancakes as our final project for ME 495: Embedded Systems in Robotics. As a team, we each took charge of a sub task and then worked together to integrate all the components into a fully autonomous product. I specifically was in charge of the batter dispensing task, and was heavily involved in developing strategies to increase the success rate of path planning in MoveIt. I utilized single joint control to include universal waypoints for each task and increase the success rate of path planning to tool locations found using computer vision. I additionally implemented action clients to control the gripper and grasp objects at a specified width with a given range of force, an element crucial to the reliability and safety of the batter pouring and flipping tasks. Lastly, I assisted with implementing the necessary transforms to translate coordinates found with our RealSense camera to coordinates in the robot’s frame. Object locations were determined using april tags, and the optimal time to begin the flipping process was determined with canny edge detection measuring the number and rate of change of the contours in the region of interest, much like a human pancake chef looking for bubbles.&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/209448159-8fa2b899-9e08-43c5-86b6-f411c93f6046.png&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;Electrical Schematic&lt;/p&gt;
 
-&lt;p&gt;https://github.com/algarv/FlipIt-the-Pancake-Flipping-Robot&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/209448153-3b40e4dd-774a-401b-9d44-19efafc30134.png&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;System Pipeline&lt;/p&gt;
+
+&lt;div align=&quot;center&quot;&gt;&lt;h2&gt; &lt;a href=&quot;https://github.com/oubrejames/pen_challenge&quot;&gt;View it on Github&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt;
 </description>
         <pubDate>Wed, 13 Apr 2022 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/cocktail/</link>
@@ -483,77 +492,33 @@ Deriving wheel rotation rate from a twist&lt;/p&gt;
         <title>Robotics minor</title>
         <description>&lt;p&gt;Mechanical Design / Mechatronics / PID Control&lt;/p&gt;
 
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/7S1Z_5BLMUo&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/oubrejames/oubrejames.github.io/gh-pages/assets/images/rob_minor.gif
+&quot; alt=&quot;rob_minor_gif&quot; width=&quot;700&quot; /&gt;&lt;/div&gt;
 
-&lt;p&gt;For my winter quarter independent study project, I set out to build my own version of a BallBot, a dynamically stable / statically unstable robot. I designed my bot from CAD to control algorithm, utilizing 3D printing, laser cutting, and C programming on an RP2040 microcontroller.&lt;/p&gt;
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
 
-&lt;h3 id=&quot;mechanical-design&quot;&gt;Mechanical Design&lt;/h3&gt;
+&lt;h2 id=&quot;projects&quot;&gt;Projects&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Maze solving robot (Leftmost gif) (description)&lt;/li&gt;
+  &lt;li&gt;Hexapod (Middle gif) (description)&lt;/li&gt;
+  &lt;li&gt;Description of how this project is trying to increase the amount th erobot could push by messing
+with gear ratios and stuff (rightmost gif)&lt;/li&gt;
+  &lt;li&gt;EKF Slam&lt;/li&gt;
+  &lt;li&gt;Golf range finder&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/ballbot_CAD.png&quot; alt=&quot;CAD&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;relavent-classes&quot;&gt;Relavent Classes&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Intro to Robotics Engineering&lt;/strong&gt;-&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Autonomous Robotic Vehicles&lt;/strong&gt;-&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Sensors and Actuators&lt;/strong&gt;-&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Intro Computer Vision&lt;/strong&gt;-&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Adjustable Speed Drives&lt;/strong&gt;-&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Microprocessor Systems&lt;/strong&gt;-&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Advanced Control System Design&lt;/strong&gt;-&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Discrete Control System Design&lt;/strong&gt;-&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;I designed my chassis with inspiration from similar projects using Solidwork CAD to create 4 part adjustable base. Each motor housing component is attached to the main chassis separately, so the angle can be adjusted, which allowed me to test on various sizes of balls.&lt;/p&gt;
-
-&lt;h3 id=&quot;building-the-structure-and-fundamental-electronics&quot;&gt;Building the Structure and Fundamental Electronics&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/circuit.png&quot; alt=&quot;Circuit Diagram&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;After printing and assembling the chassis pieces, I mounted the 3 motors with 3 motor drivers and a RP2040 ThingPlus microcontroller and started with the basic control of one motor, working on a script to step one wheel at a time.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/spinning.gif&quot; alt=&quot;Spinning&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;simultaneous-motor-control&quot;&gt;Simultaneous Motor Control&lt;/h3&gt;
-
-&lt;p&gt;The next step was to simultaneously step three motors. This proved to be a more difficult task than anticipated, as it seemed one motor would interfere with the other’s power source. However, after switching to drivers with a higher voltage rating, I was able to step each motor sequentially.&lt;/p&gt;
-
-&lt;p&gt;Once I could send alternating stepping commands to each motor, the base could perform basic directional movement including spinning in place and uniaxial paths (forwards, backwards, sideways).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/simulatenous_spinning.gif&quot; alt=&quot;Simultaneous Spinning&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/first_steps.gif&quot; alt=&quot;First Steps&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;twist-commands&quot;&gt;Twist Commands&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/ballbot_calcs.png&quot; alt=&quot;Calculations&quot; /&gt;
-Deriving wheel rotation rate from a twist&lt;/p&gt;
-
-&lt;p&gt;To make a truly omnidirectional base, the next step was to follow any twist, which require stepping the motors at different frequencies. I started with the most basic form of a control algorithm, a polling loop that stepped each motor after a calculated number of sleep cycles resulting in a wheel RPM calculated by the omnidirectional base matrix equation.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/omnidirectional.gif&quot; alt=&quot;Mobile Base&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;position-control&quot;&gt;Position Control&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/control_diagram.png&quot; alt=&quot;Control Diagram&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Once the mobile base was capable of following any twist command, it was time to integrate the IMU sensor and create a closed control loop. In my first iteration, only the accelerometer data from the IMU was used to calculate a roll and pitch, which were then used as inputs to the PD controller. The PD controller outputs an x and y velocity relative to the robot’s base frame, which are then converted to wheel speeds and finally step delays using the omnidirectional base equation shown above.&lt;/p&gt;
-
-&lt;h3 id=&quot;self-righting&quot;&gt;Self-Righting&lt;/h3&gt;
-
-&lt;p&gt;The first milestone on the way to balancing was having the robot self-right itself back to a stable position on a ball. During testing, it became apparent that the motors would need to be stepped much faster in order for the robot to catch itself when the ball is not stabilized.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/self_righting.gif&quot; alt=&quot;Self Righting&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;design-adjustments&quot;&gt;Design Adjustments&lt;/h3&gt;
-
-&lt;p&gt;I redesigned the initial concept and chose to try a much larger ball in order to reduce the angle of lean and therefor the lever arm of the robot’s body over its center of mass. This, along with reducing to half steps, resulted in a smoother self-righting action but the wheel stepping was still prohibitively slow.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/smoother.gif&quot; alt=&quot;A Little Smoother&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;control-adjustments-and-sensor-tuning&quot;&gt;Control Adjustments and Sensor Tuning&lt;/h3&gt;
-
-&lt;p&gt;I tried several different approaches to the control algorithm once it became apparent that a simple polling loop would not step the motors at the required frequency. When I realized system clock-based interrupts were not support on the rp2040, I attempted 3 separate timers, with each frequency updated after every update from the IMU. While this was successful in spinning the wheels much faster, three timers could not keep up with the step frequency and the reliability of the original polling loop was lost. This was most likely due to the constant resetting of the timers and the competing operations with no set priorities. Finally, I was able to merge the control strategies and create a single timer at a fixed frequency that then counted the number of cycles since the previous step and compared the count to the calculated step delay. This significantly increased the speed of the wheels without compromising a quick and accurate twist response.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/good_control.gif&quot; alt=&quot;Good Control&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The timer came with a trade off between the IMU measurement frequency and the maximum step frequency, but I found reading the IMU at approximately 10 Hz (a 100 ms delay between measurements) and polling the motors at 500 Hz (a 2 ms timer) was most successful in generating a fast enough reaction time while supporting a high motor stepping frequency.&lt;/p&gt;
-
-&lt;p&gt;With the wheels more reactive, noise in the IMU also became more apparent. I started with a rolling average filter, which worked well to smooth the signal and reduce spikes. The rolling average was effective at slower speeds, but with a much more reactive control loop, I wanted to explore more advanced methods of sensor fusion. A complementary filter allowed me to supplement the noisy accelerometer data with the steadier (but driftier) gyroscope data. This significantly reduced the steady state measurement spikes from up to +/- 40 degree spikes to negligible noise when the bot is stable.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/complimentary_filter.gif&quot; alt=&quot;Getting Smoother&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/final.gif&quot; alt=&quot;Last Run&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Ultimately, after carefully tuning the PD gains and tweaking timer frequencies, my ballbot could balance for about 2 seconds before tipping over and losing control. I believe my biggest limitation was the tradeoff between measurement frequency and stepping frequency, and would like to try timer-based interrupts in future iteration or even separating the controller into multiple cores that could run the motor stepping commands and read the IMU simultaneously.&lt;/p&gt;
-
-&lt;p&gt;https://github.com/algarv/Ball_Balancing_Robot/&lt;/p&gt;
 </description>
         <pubDate>Fri, 21 May 2021 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/a_robotics_minor/</link>
