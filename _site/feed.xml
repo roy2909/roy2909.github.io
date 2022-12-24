@@ -5,8 +5,8 @@
     <description>Northwestern MS in Robotics Student Portfolio</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 24 Dec 2022 15:38:27 -0600</pubDate>
-    <lastBuildDate>Sat, 24 Dec 2022 15:38:27 -0600</lastBuildDate>
+    <pubDate>Sat, 24 Dec 2022 17:00:09 -0600</pubDate>
+    <lastBuildDate>Sat, 24 Dec 2022 17:00:09 -0600</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -199,40 +199,34 @@ the simulation continues.&lt;/p&gt;
     
       <item>
         <title>Mobile Manipulator Simulation</title>
-        <description>&lt;p&gt;Mobile Manipulation / CoppeliaSim / PI Control&lt;/p&gt;
-
-&lt;p&gt;GO THROGUH AND CHANGE EVERYTHING (BUT VIDEO)&lt;/p&gt;
+        <description>&lt;p&gt;Mobile Manipulation / CoppeliaSim / PID Control / Python&lt;/p&gt;
 
 &lt;div align=&quot;center&quot;&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/QY0E-IW8qvQ&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 
-&lt;p&gt;DELETE BELOW++++++++++++++++++++++++++&lt;/p&gt;
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;As the capstone project for Northwestern’s Robotic Manipulation course I simulated a KUKA youBot
+moving to a cube, grasping it, and then placing it in a desired position. First, I created a function
+to generate trajectories from the robot’s starting position to all the different waypoints to 
+complete the task. The homogeneous transformation matrices between waypoints are used to create a 
+screw or Cartesian trajectories between points. These trajectories are then stored in a matrix representing 
+the desired movement of the robot’s chassis and end effector. Next, I implemented a PID feedback
+controller based off of the robot’s current position and odometry to ensure that the robot can self
+correct if error is introduced. Lastly, the actual positions of the robot are stored in a CSV file
+and used to simulate the robot in Coppeliasim.&lt;/p&gt;
 
-&lt;p&gt;As the capstone for the Robotic Manipulation course, I created a software package to direct a Kuka YouBot to pick up and move a block in CoppeliaSim. This required first generating a trajectory for the end effector to reach the initial and final block locations, with intermediate stand-off and gripping poses, and then using inverse kinematics to determine the arm and chassis configurations. Additionally, I implemented a proportional integral controller to help correct for deviation from the planned trajectory.&lt;/p&gt;
+&lt;h2 id=&quot;results&quot;&gt;Results&lt;/h2&gt;
+&lt;p&gt;The simulation completed the task in three different scenarios: with poor PID gains, tuned
+PID gains, and a different start and end configuration for the cube.  Overall, each 
+simulation is able to reduce to zero error before the robot gets the the cube’s standoff position.&lt;/p&gt;
 
-&lt;h4 id=&quot;controller-tuning&quot;&gt;Controller Tuning&lt;/h4&gt;
-
-&lt;h5 id=&quot;best-performance-kp--3-ki--0&quot;&gt;Best performance: Kp = 3, Ki = 0&lt;/h5&gt;
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/best.png&quot; alt=&quot;Best Controller Graph&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;For the best performance, I chose a proportional gain of 3 and an integral gain of 0.&lt;/p&gt;
-
-&lt;h5 id=&quot;initial-overshoot-kp--3-ki--4&quot;&gt;Initial Overshoot: Kp = 3, Ki = 4&lt;/h5&gt;
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/overshoot.png&quot; alt=&quot;Overshoot Controller Graph&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;To simulate an initial overshoot, I chose a proportional gain of 3 and an integral gain of 4.&lt;/p&gt;
-
-&lt;p&gt;https://github.com/algarv/Mobile_Manipulation&lt;/p&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;h2&gt; &lt;a href=&quot;https://github.com/oubrejames/youbot_simulation&quot;&gt;View it on Github&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt;
 </description>
         <pubDate>Thu, 01 Dec 2022 00:00:00 -0600</pubDate>
         <link>http://localhost:4000/robman/</link>
         <guid isPermaLink="true">http://localhost:4000/robman/</guid>
         
         
-        <category>CoppeliaSim</category>
-        
-        <category>Controls</category>
-        
-        <category>Python</category>
+        <category>Mobile Manipulation / CoppeliaSim / PID Control / Python</category>
         
       </item>
     
