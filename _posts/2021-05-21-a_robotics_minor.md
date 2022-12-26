@@ -46,7 +46,15 @@ Activitybot and retrofitted its drivetrain with different gears to increase its 
 push heavier objects
 
 * <ins>**Extended Kalman Filter SLAM on Turtlebot**</ins>:  Implemented EKF SLAM using Python and ROS 
-to navigate through a maze, map it, and localize itself.
+to navigate through a maze, map it, and localize itself
+
+* <ins>**<a href="https://oubrejames.github.io/golf/">Golf Range Finder</a>**</ins>:  Created a computer
+vision system that tells a user how far they are from a golf flag using just an image of the flag
+
+* <ins>**<a href="https://oubrejames.github.io/cocktail/">Automated Cocktail Maker</a>**</ins>:  Designed
+and created an automatic cocktail machine that can serve different drinks based off the glass inserted 
+into it
+
 
 ## Relevant Classes
 * Intro to Robotics Engineering

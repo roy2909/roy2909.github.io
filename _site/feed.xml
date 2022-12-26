@@ -5,8 +5,8 @@
     <description>Northwestern MS in Robotics Student Portfolio</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 25 Dec 2022 18:07:56 -0600</pubDate>
-    <lastBuildDate>Sun, 25 Dec 2022 18:07:56 -0600</lastBuildDate>
+    <pubDate>Mon, 26 Dec 2022 13:11:02 -0600</pubDate>
+    <lastBuildDate>Mon, 26 Dec 2022 13:11:02 -0600</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -528,7 +528,16 @@ push heavier objects&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;ins&gt;&lt;strong&gt;Extended Kalman Filter SLAM on Turtlebot&lt;/strong&gt;&lt;/ins&gt;:  Implemented EKF SLAM using Python and ROS 
-to navigate through a maze, map it, and localize itself.&lt;/p&gt;
+to navigate through a maze, map it, and localize itself&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;ins&gt;&lt;strong&gt;&lt;a href=&quot;https://oubrejames.github.io/golf/&quot;&gt;Golf Range Finder&lt;/a&gt;&lt;/strong&gt;&lt;/ins&gt;:  Created a computer
+vision system that tells a user how far they are from a golf flag using just an image of the flag&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;ins&gt;&lt;strong&gt;&lt;a href=&quot;https://oubrejames.github.io/cocktail/&quot;&gt;Automated Cocktail Maker&lt;/a&gt;&lt;/strong&gt;&lt;/ins&gt;:  Designed
+and created an automatic cocktail machine that can serve different drinks based off the glass inserted 
+into it&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -564,36 +573,41 @@ to navigate through a maze, map it, and localize itself.&lt;/p&gt;
     
       <item>
         <title>Computer Vision Golf Range Finder</title>
-        <description>&lt;p&gt;OpenCV / MediaPipe Pose Estimation&lt;/p&gt;
+        <description>&lt;p&gt;Computer Vision, OpenCV, Python&lt;/p&gt;
 
-&lt;h2&gt; Project Goal &lt;/h2&gt;
-&lt;p&gt; Detect yoga poses performed by a user and overlay a corresponding icon image. Running the main script starts the videostream with automatic pose detection. &lt;/p&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;iframe width=&quot;925&quot; height=&quot;550&quot; src=&quot;https://www.youtube.com/embed/dGjaLse-M8g&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 
-&lt;h3&gt; Part 1: Pose Detection &lt;/h3&gt;
+&lt;!-- &lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/oubrejames/oubrejames.github.io/gh-pages/assets/images/cropped_golf.gif&quot; alt=&quot;golf_pipeline&quot; width=&quot;1000&quot;/&gt;&lt;/div&gt; --&gt;
 
-&lt;p&gt; I use the 32 body landmarks provided by MediaPipe to measure joint angles, then determine yoga poses based on key joint angles for each pose. For example, in the star pose, the angle between the shoulder, elbow, and wrist landmarks (elbow flexion) are below 20 degrees and the angle of the elbow, shoulder, and opposite shoulder (shoulder flexion) are also below 20 degrees. &lt;/p&gt;
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
 
-&lt;h3&gt; Part 2: Icon Image Transformation &lt;/h3&gt;
+&lt;p&gt;The purpose of this project is to imitate a golf range finder using a normal, non-depth, camera. The
+program was written using Python and OpenCV and the algorithm pipeline is shown below.&lt;/p&gt;
 
-&lt;p&gt; To transform the icon image that will be overlayed over the user, I first preprocess the icon image then apply an affine transform. To preprocess the icon, I resize the icon image to be roughly the same heigt as the user, a metric also calculated with MediaPie&apos;s landmarks. I then apply a border to the icon image so that its image array has the same dimensions as the video stream frames. These steps help make the affine transform more effective. I select three key pose landmarks for each pose, then find three key points on the icon that should match these points. For example, I chose to match the nose and ankles of the person with the top tip and bottom two tips of the star. &lt;/p&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/209574627-5a9833e3-39d1-4991-bada-10430d3c5eb4.png&quot; alt=&quot;golf_pipeline&quot; width=&quot;1000&quot; /&gt;&lt;/div&gt;
+&lt;p align=&quot;center&quot;&gt;System Pipeline&lt;/p&gt;
 
-&lt;h3&gt; Part 3: Image Overlay &lt;/h3&gt;
+&lt;p&gt;First, the user takes an image of the flag and draws a rectangle around the flag. This region is 
+cropped out and the color of the flag is then detected. After the color of the flag is found, the 
+flag is cropped out using contour detection and the pixel length of the side of the flag is measured.
+ Using this pixel length, the distance to the flag could be calculated using triangle similarity and
+displayed on the user’s screen.&lt;/p&gt;
 
-&lt;p&gt; I overlayed just the icon pixels (the icon background is ignored) by summing .5 of the icon pixel value with .5 of the the video frame value, resulting in a transparent overlay of just the icon. &lt;/p&gt;
+&lt;h2 id=&quot;results&quot;&gt;Results&lt;/h2&gt;
 
-&lt;h2&gt; Results &lt;/h2&gt;
+&lt;p&gt;Overall, the range finder worked well. It was very precise and accurate for smaller distances. 
+However, as the distances began to increase, the program was less successful. Test results can be 
+seen below. One reason this could be happening is that the farther away the flag is, the smaller it 
+is on the picture. This makes it much more difficult get an accurate pixel count to calculate the 
+distance to the flag. Using a higher resolution image could help mitigate this problem.&lt;/p&gt;
 
-&lt;h3&gt;Star Pose&lt;/h3&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/209575075-0e07e18b-a700-41f2-b51d-886c69e905d1.png&quot; alt=&quot;results1&quot; width=&quot;600&quot; /&gt;&lt;/div&gt;
+&lt;p align=&quot;center&quot;&gt;Test Results for 5-35 yards&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/star.gif&quot; alt=&quot;Star Gif&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/209575091-a12b24c1-39eb-491a-beb1-a5a8d6fe8962.png&quot; alt=&quot;results2&quot; width=&quot;600&quot; /&gt;&lt;/div&gt;
+&lt;p align=&quot;center&quot;&gt;Test Results for 44-132 yards&lt;/p&gt;
 
-&lt;h3&gt;Tree Pose&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/tree.gif&quot; alt=&quot;Tree Gif&quot; /&gt;&lt;/p&gt;
-
-&lt;h3&gt;Chair pose&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/chair.gif&quot; alt=&quot;Chair Gif&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;h2&gt; &lt;a href=&quot;https://github.com/oubrejames/range_finder&quot;&gt;View it on Github&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt;
 </description>
         <pubDate>Thu, 20 May 2021 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/golf/</link>
@@ -602,9 +616,9 @@ to navigate through a maze, map it, and localize itself.&lt;/p&gt;
         
         <category>Computer Vision</category>
         
-        <category>Pose Estimation</category>
+        <category>OpenCV</category>
         
-        <category>MediaPipe</category>
+        <category>Python</category>
         
       </item>
     

@@ -13,8 +13,8 @@
 <meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Computer Vision Golf Range Finder" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="OpenCV / MediaPipe Pose Estimation" />
-<meta property="og:description" content="OpenCV / MediaPipe Pose Estimation" />
+<meta name="description" content="Computer Vision, OpenCV, Python" />
+<meta property="og:description" content="Computer Vision, OpenCV, Python" />
 <link rel="canonical" href="http://localhost:4000/golf/" />
 <meta property="og:url" content="http://localhost:4000/golf/" />
 <meta property="og:site_name" content="James’ Portfolio" />
@@ -25,7 +25,7 @@
 <meta property="twitter:image" content="http://localhost:4000/assets/images/cropped_golf.gif" />
 <meta property="twitter:title" content="Computer Vision Golf Range Finder" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2021-05-20T00:00:00-05:00","datePublished":"2021-05-20T00:00:00-05:00","description":"OpenCV / MediaPipe Pose Estimation","headline":"Computer Vision Golf Range Finder","image":"http://localhost:4000/assets/images/cropped_golf.gif","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/golf/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo3.png"}},"url":"http://localhost:4000/golf/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2021-05-20T00:00:00-05:00","datePublished":"2021-05-20T00:00:00-05:00","description":"Computer Vision, OpenCV, Python","headline":"Computer Vision Golf Range Finder","image":"http://localhost:4000/assets/images/cropped_golf.gif","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/golf/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo3.png"}},"url":"http://localhost:4000/golf/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -158,36 +158,41 @@
                 <!-- Toc if any -->
                 
                 <!-- End Toc -->
-                <p>OpenCV / MediaPipe Pose Estimation</p>
+                <p>Computer Vision, OpenCV, Python</p>
 
-<h2> Project Goal </h2>
-<p> Detect yoga poses performed by a user and overlay a corresponding icon image. Running the main script starts the videostream with automatic pose detection. </p>
+<div align="center"><iframe width="925" height="550" src="https://www.youtube.com/embed/dGjaLse-M8g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 
-<h3> Part 1: Pose Detection </h3>
+<!-- <div align="center"><img src="https://raw.githubusercontent.com/oubrejames/oubrejames.github.io/gh-pages/assets/images/cropped_golf.gif" alt="golf_pipeline" width="1000"/></div> -->
 
-<p> I use the 32 body landmarks provided by MediaPipe to measure joint angles, then determine yoga poses based on key joint angles for each pose. For example, in the star pose, the angle between the shoulder, elbow, and wrist landmarks (elbow flexion) are below 20 degrees and the angle of the elbow, shoulder, and opposite shoulder (shoulder flexion) are also below 20 degrees. </p>
+<h2 id="overview">Overview</h2>
 
-<h3> Part 2: Icon Image Transformation </h3>
+<p>The purpose of this project is to imitate a golf range finder using a normal, non-depth, camera. The
+program was written using Python and OpenCV and the algorithm pipeline is shown below.</p>
 
-<p> To transform the icon image that will be overlayed over the user, I first preprocess the icon image then apply an affine transform. To preprocess the icon, I resize the icon image to be roughly the same heigt as the user, a metric also calculated with MediaPie's landmarks. I then apply a border to the icon image so that its image array has the same dimensions as the video stream frames. These steps help make the affine transform more effective. I select three key pose landmarks for each pose, then find three key points on the icon that should match these points. For example, I chose to match the nose and ankles of the person with the top tip and bottom two tips of the star. </p>
+<div align="center"><img src="https://user-images.githubusercontent.com/46512429/209574627-5a9833e3-39d1-4991-bada-10430d3c5eb4.png" alt="golf_pipeline" width="1000" /></div>
+<p align="center">System Pipeline</p>
 
-<h3> Part 3: Image Overlay </h3>
+<p>First, the user takes an image of the flag and draws a rectangle around the flag. This region is 
+cropped out and the color of the flag is then detected. After the color of the flag is found, the 
+flag is cropped out using contour detection and the pixel length of the side of the flag is measured.
+ Using this pixel length, the distance to the flag could be calculated using triangle similarity and
+displayed on the user’s screen.</p>
 
-<p> I overlayed just the icon pixels (the icon background is ignored) by summing .5 of the icon pixel value with .5 of the the video frame value, resulting in a transparent overlay of just the icon. </p>
+<h2 id="results">Results</h2>
 
-<h2> Results </h2>
+<p>Overall, the range finder worked well. It was very precise and accurate for smaller distances. 
+However, as the distances began to increase, the program was less successful. Test results can be 
+seen below. One reason this could be happening is that the farther away the flag is, the smaller it 
+is on the picture. This makes it much more difficult get an accurate pixel count to calculate the 
+distance to the flag. Using a higher resolution image could help mitigate this problem.</p>
 
-<h3>Star Pose</h3>
+<div align="center"><img src="https://user-images.githubusercontent.com/46512429/209575075-0e07e18b-a700-41f2-b51d-886c69e905d1.png" alt="results1" width="600" /></div>
+<p align="center">Test Results for 5-35 yards</p>
 
-<p><img src="https://algarv.github.io/Portfolio/assets/images/star.gif" alt="Star Gif" /></p>
+<div align="center"><img src="https://user-images.githubusercontent.com/46512429/209575091-a12b24c1-39eb-491a-beb1-a5a8d6fe8962.png" alt="results2" width="600" /></div>
+<p align="center">Test Results for 44-132 yards</p>
 
-<h3>Tree Pose</h3>
-
-<p><img src="https://algarv.github.io/Portfolio/assets/images/tree.gif" alt="Tree Gif" /></p>
-
-<h3>Chair pose</h3>
-
-<p><img src="https://algarv.github.io/Portfolio/assets/images/chair.gif" alt="Chair Gif" /></p>
+<div align="center"><h2> <a href="https://github.com/oubrejames/range_finder">View it on Github</a></h2></div>
 
             </div>
 
@@ -212,11 +217,11 @@
                     </li>
                     
                     <li>
-                        <a class="smoothscroll" href="/categories#MediaPipe">MediaPipe</a>
+                        <a class="smoothscroll" href="/categories#OpenCV">OpenCV</a>
                     </li>
                     
                     <li>
-                        <a class="smoothscroll" href="/categories#Pose-Estimation">Pose Estimation</a>
+                        <a class="smoothscroll" href="/categories#Python">Python</a>
                     </li>
                     
                 </ul>
@@ -271,17 +276,15 @@ https://search.google.com/structured-data/testing-tool/u/0/
                 
                     <a class="mt-1 mb-1" href="/categories#Computer-Vision">Computer Vision (5)</a>
                 
-                    <a class="mt-1 mb-1" href="/categories#Pose-Estimation">Pose Estimation (1)</a>
+                    <a class="mt-1 mb-1" href="/categories#OpenCV">OpenCV (4)</a>
                 
-                    <a class="mt-1 mb-1" href="/categories#MediaPipe">MediaPipe (1)</a>
+                    <a class="mt-1 mb-1" href="/categories#Python">Python (6)</a>
                 
                     <a class="mt-1 mb-1" href="/categories#Mechatronics">Mechatronics (3)</a>
                 
                     <a class="mt-1 mb-1" href="/categories#SLAM">SLAM (1)</a>
                 
                     <a class="mt-1 mb-1" href="/categories#Controls">Controls (2)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Python">Python (5)</a>
                 
                     <a class="mt-1 mb-1" href="/categories#C++">C++ (1)</a>
                 
@@ -298,8 +301,6 @@ https://search.google.com/structured-data/testing-tool/u/0/
                     <a class="mt-1 mb-1" href="/categories#Franka-Emika-Panda-Arm">Franka Emika Panda Arm (1)</a>
                 
                     <a class="mt-1 mb-1" href="/categories#Group-Project">Group Project (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#OpenCV">OpenCV (3)</a>
                 
                     <a class="mt-1 mb-1" href="/categories#UR5-Robot-Arm">UR5 Robot Arm (1)</a>
                 
