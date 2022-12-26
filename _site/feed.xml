@@ -5,8 +5,8 @@
     <description>Northwestern MS in Robotics Student Portfolio</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 24 Dec 2022 17:00:09 -0600</pubDate>
-    <lastBuildDate>Sat, 24 Dec 2022 17:00:09 -0600</lastBuildDate>
+    <pubDate>Sun, 25 Dec 2022 18:07:56 -0600</pubDate>
+    <lastBuildDate>Sun, 25 Dec 2022 18:07:56 -0600</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -484,33 +484,64 @@ Deriving wheel rotation rate from a twist&lt;/p&gt;
     
       <item>
         <title>Robotics minor</title>
-        <description>&lt;p&gt;Mechanical Design / Mechatronics / PID Control&lt;/p&gt;
+        <description>&lt;p&gt;Mechatronics, SLAM, Controls, Python, C++&lt;/p&gt;
 
 &lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/oubrejames/oubrejames.github.io/gh-pages/assets/images/rob_minor.gif
 &quot; alt=&quot;rob_minor_gif&quot; width=&quot;700&quot; /&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;While at LSU, I completed a minor in robotics engineering alongside my electrical engineering
+major. For this minor I took a number of robotics related classes covering a range of topics. Many 
+of these classes were very hands on and I got a lot of useful project experience. Two of the 
+courses that I found particularly useful were Intro to Robotics Engineering and Autonomous Robotic Vehicles&lt;/p&gt;
+
+&lt;p&gt;In Intro to Robotics Engineering we learned about a broad array of topics from mechanical design to 
+software. We learned about robotic actuators and mobility mechanisms, robot motion control, navigation 
+and mapping, and human-robot interaction. Particularly, we had many interesting projects involving 
+the Parallax Activitybots, hexapods, and Turtlebots. Furthermore, the class focused heavily on learning
+ROS and had many labs, classes, and assignments dedicated to learning it.&lt;/p&gt;
+
+&lt;p&gt;Autonomous Robotic Vehicles covered topics like vehicle kinematics, motion control, perception, 
+localization, path planning, and navigation. In the class we learned about and implemented different 
+probabilistic methods like Particle Filter and Extended Kalman Filter (EKF) for navigation. As our final 
+project of the class, we implemented an Extended Kalman Filter (EKF) SLAM using Python and ROS on a Turtlebot 
+to navigate through a maze, map it, and localize itself.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/209484859-2579aa0f-0024-4640-8194-f3b06593e2fa.PNG&quot; height=&quot;400&quot; width=&quot;430&quot; /&gt; &lt;img src=&quot;https://user-images.githubusercontent.com/46512429/209484862-2830e017-f679-415b-ab06-1b02ff7585c9.jpg&quot; height=&quot;400&quot; width=&quot;430&quot; /&gt; &lt;/p&gt;
+
+&lt;div align=&quot;center&quot;&gt;&lt;h2&gt; &lt;a href=&quot;https://github.com/oubrejames/slam_ENGR_4200&quot;&gt;View it on Github&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;projects&quot;&gt;Projects&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;Maze solving robot (Leftmost gif) (description)&lt;/li&gt;
-  &lt;li&gt;Hexapod (Middle gif) (description)&lt;/li&gt;
-  &lt;li&gt;Description of how this project is trying to increase the amount th erobot could push by messing
-with gear ratios and stuff (rightmost gif)&lt;/li&gt;
-  &lt;li&gt;EKF Slam&lt;/li&gt;
-  &lt;li&gt;Golf range finder&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;ins&gt;&lt;strong&gt;Maze solving robot (leftmost gif)&lt;/strong&gt;&lt;/ins&gt;:  Programmed Parallax Activitybot in C++ to navigate through a 
+maze, create a map of the maze, and save the quickest path to the end&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;ins&gt;&lt;strong&gt;Hexapod (middle gif)&lt;/strong&gt;&lt;/ins&gt;:  Explored different gaits and control to move the hexapod in 
+particular ways, achieve turning motions, and climb stairs&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;ins&gt;&lt;strong&gt;Increasing Activitybot Payload (rightmost gif)&lt;/strong&gt;&lt;/ins&gt;:  Created an external chassis for the
+Activitybot and retrofitted its drivetrain with different gears to increase its torque capacity to 
+push heavier objects&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;ins&gt;&lt;strong&gt;Extended Kalman Filter SLAM on Turtlebot&lt;/strong&gt;&lt;/ins&gt;:  Implemented EKF SLAM using Python and ROS 
+to navigate through a maze, map it, and localize itself.&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;relavent-classes&quot;&gt;Relavent Classes&lt;/h2&gt;
+&lt;h2 id=&quot;relevant-classes&quot;&gt;Relevant Classes&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Intro to Robotics Engineering&lt;/strong&gt;-&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Autonomous Robotic Vehicles&lt;/strong&gt;-&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Sensors and Actuators&lt;/strong&gt;-&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Intro Computer Vision&lt;/strong&gt;-&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Adjustable Speed Drives&lt;/strong&gt;-&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Microprocessor Systems&lt;/strong&gt;-&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Advanced Control System Design&lt;/strong&gt;-&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Discrete Control System Design&lt;/strong&gt;-&lt;/li&gt;
+  &lt;li&gt;Intro to Robotics Engineering&lt;/li&gt;
+  &lt;li&gt;Autonomous Robotic Vehicles&lt;/li&gt;
+  &lt;li&gt;Sensors and Actuators&lt;/li&gt;
+  &lt;li&gt;Intro Computer Vision&lt;/li&gt;
+  &lt;li&gt;Adjustable Speed Drives&lt;/li&gt;
+  &lt;li&gt;Microprocessor Systems&lt;/li&gt;
+  &lt;li&gt;Advanced Control System Design&lt;/li&gt;
+  &lt;li&gt;Discrete Control System Design&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -521,11 +552,13 @@ with gear ratios and stuff (rightmost gif)&lt;/li&gt;
         
         <category>Mechatronics</category>
         
+        <category>SLAM</category>
+        
         <category>Controls</category>
         
-        <category>Solidworks</category>
+        <category>Python</category>
         
-        <category>C</category>
+        <category>C++</category>
         
       </item>
     
