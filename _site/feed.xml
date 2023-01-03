@@ -5,8 +5,8 @@
     <description>Northwestern MS in Robotics Student Portfolio</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 26 Dec 2022 13:11:02 -0600</pubDate>
-    <lastBuildDate>Mon, 26 Dec 2022 13:11:02 -0600</lastBuildDate>
+    <pubDate>Tue, 03 Jan 2023 09:02:12 -0600</pubDate>
+    <lastBuildDate>Tue, 03 Jan 2023 09:02:12 -0600</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -266,7 +266,7 @@ frame to the robot’s frame and control the robot to move to the pen and grasp 
       </item>
     
       <item>
-        <title>Reasearch</title>
+        <title>Autonomous Sanding</title>
         <description>&lt;p&gt;Computer Vision, OpenCV, UR5 Robot Arm, Manufacturing, Research, Intel Realsense&lt;/p&gt;
 
 &lt;div align=&quot;center&quot;&gt;&lt;iframe width=&quot;1080&quot; height=&quot;620&quot; src=&quot;https://www.youtube.com/embed/gyQQtJ2jm6k&quot; title=&quot;robotic_sanding&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
@@ -358,36 +358,46 @@ autonomous sanding.&lt;/p&gt;
     
       <item>
         <title>Cocktail Maker</title>
-        <description>&lt;p&gt;ROS / MoveIt / Python / Computer Vision / Intel Realsense / Franka Emika Panda Arm&lt;/p&gt;
+        <description>&lt;p&gt;Arduino, Circuit Design, Sensors &amp;amp; Actuators&lt;/p&gt;
 
 &lt;div align=&quot;center&quot;&gt;&lt;iframe width=&quot;424&quot; height=&quot;754&quot; src=&quot;https://www.youtube.com/embed/AqyQ7yTlyfM&quot; title=&quot;cocktail maker&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/209448159-8fa2b899-9e08-43c5-86b6-f411c93f6046.png&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot;&gt;Electrical Schematic&lt;/p&gt;
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;As the final project for my Sensors and Actuators class at LSU, I designed an automated cocktail maker.
+Using three ultrasonic distance sensors offset at different heights, the system can detect three different 
+heights of cups corresponding to a wine glass, pint glass, and a cocktail glass. I implemented logic
+on an Arduino to decide what kind of glass is present based off the sensor outputs. Once the type of
+cup is known, the Arduino turns on pumps connected to the corresponding cocktail ingredients. Originally,
+the system was supposed to dispense wine for the wine glass, beer for the pint, and a mixed drink for
+the cocktail glass. However, beer did not dispense properly from the pump and it mostly dispensed
+foam so I changed it to dispense a different mixed drink. I also did not actually have any wine when 
+making the video so I used water. 
+The logic used is shown in the pipeline below.&lt;/p&gt;
 
 &lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/209448153-3b40e4dd-774a-401b-9d44-19efafc30134.png&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot;&gt;System Pipeline&lt;/p&gt;
 
-&lt;div align=&quot;center&quot;&gt;&lt;h2&gt; &lt;a href=&quot;https://github.com/oubrejames/pen_challenge&quot;&gt;View it on Github&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt;
+&lt;h2 id=&quot;electrical-design&quot;&gt;Electrical Design&lt;/h2&gt;
+&lt;p&gt;The electrical design is shown in the image below. The system is powered from a wall outlet to a 12
+V power supply. A 7 V voltage regulator is used to power the Arduino and the 12 volts powers a relay
+ module which, in turn, powers the pumps. To actually dispense the liquid, the Arduino sends a high
+ signal to the corresponding pin on the relay module to close the relay and turn on the pump.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/209448159-8fa2b899-9e08-43c5-86b6-f411c93f6046.png&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;Electrical Schematic&lt;/p&gt;
+
+&lt;!-- &lt;div align=&quot;center&quot;&gt;&lt;h2&gt; &lt;a href=&quot;https://github.com/oubrejames/pen_challenge&quot;&gt;View it on Github&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt; --&gt;
 </description>
         <pubDate>Wed, 13 Apr 2022 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/cocktail/</link>
         <guid isPermaLink="true">http://localhost:4000/cocktail/</guid>
         
         
-        <category>ROS</category>
+        <category>Arduino</category>
         
-        <category>MoveIt</category>
+        <category>Circuit Design</category>
         
-        <category>Python</category>
-        
-        <category>Computer Vision</category>
-        
-        <category>Intel Realsense</category>
-        
-        <category>Franka Emika Panda Arm</category>
-        
-        <category>Group Project</category>
+        <category>Sensors &amp; Actuators</category>
         
       </item>
     

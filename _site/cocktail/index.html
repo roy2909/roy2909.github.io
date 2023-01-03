@@ -13,8 +13,8 @@
 <meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Cocktail Maker" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="ROS / MoveIt / Python / Computer Vision / Intel Realsense / Franka Emika Panda Arm" />
-<meta property="og:description" content="ROS / MoveIt / Python / Computer Vision / Intel Realsense / Franka Emika Panda Arm" />
+<meta name="description" content="Arduino, Circuit Design, Sensors &amp; Actuators" />
+<meta property="og:description" content="Arduino, Circuit Design, Sensors &amp; Actuators" />
 <link rel="canonical" href="http://localhost:4000/cocktail/" />
 <meta property="og:url" content="http://localhost:4000/cocktail/" />
 <meta property="og:site_name" content="James’ Portfolio" />
@@ -25,7 +25,7 @@
 <meta property="twitter:image" content="http://localhost:4000/assets/images/ccocktail.gif" />
 <meta property="twitter:title" content="Cocktail Maker" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-04-13T00:00:00-05:00","datePublished":"2022-04-13T00:00:00-05:00","description":"ROS / MoveIt / Python / Computer Vision / Intel Realsense / Franka Emika Panda Arm","headline":"Cocktail Maker","image":"http://localhost:4000/assets/images/ccocktail.gif","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/cocktail/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo3.png"}},"url":"http://localhost:4000/cocktail/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-04-13T00:00:00-05:00","datePublished":"2022-04-13T00:00:00-05:00","description":"Arduino, Circuit Design, Sensors &amp; Actuators","headline":"Cocktail Maker","image":"http://localhost:4000/assets/images/ccocktail.gif","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/cocktail/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo3.png"}},"url":"http://localhost:4000/cocktail/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -158,17 +158,35 @@
                 <!-- Toc if any -->
                 
                 <!-- End Toc -->
-                <p>ROS / MoveIt / Python / Computer Vision / Intel Realsense / Franka Emika Panda Arm</p>
+                <p>Arduino, Circuit Design, Sensors &amp; Actuators</p>
 
 <div align="center"><iframe width="424" height="754" src="https://www.youtube.com/embed/AqyQ7yTlyfM" title="cocktail maker" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/46512429/209448159-8fa2b899-9e08-43c5-86b6-f411c93f6046.png" width="800" /></p>
-<p align="center">Electrical Schematic</p>
+<h2 id="overview">Overview</h2>
+<p>As the final project for my Sensors and Actuators class at LSU, I designed an automated cocktail maker.
+Using three ultrasonic distance sensors offset at different heights, the system can detect three different 
+heights of cups corresponding to a wine glass, pint glass, and a cocktail glass. I implemented logic
+on an Arduino to decide what kind of glass is present based off the sensor outputs. Once the type of
+cup is known, the Arduino turns on pumps connected to the corresponding cocktail ingredients. Originally,
+the system was supposed to dispense wine for the wine glass, beer for the pint, and a mixed drink for
+the cocktail glass. However, beer did not dispense properly from the pump and it mostly dispensed
+foam so I changed it to dispense a different mixed drink. I also did not actually have any wine when 
+making the video so I used water. 
+The logic used is shown in the pipeline below.</p>
 
 <p align="center"><img src="https://user-images.githubusercontent.com/46512429/209448153-3b40e4dd-774a-401b-9d44-19efafc30134.png" width="500" /></p>
 <p align="center">System Pipeline</p>
 
-<div align="center"><h2> <a href="https://github.com/oubrejames/pen_challenge">View it on Github</a></h2></div>
+<h2 id="electrical-design">Electrical Design</h2>
+<p>The electrical design is shown in the image below. The system is powered from a wall outlet to a 12
+V power supply. A 7 V voltage regulator is used to power the Arduino and the 12 volts powers a relay
+ module which, in turn, powers the pumps. To actually dispense the liquid, the Arduino sends a high
+ signal to the corresponding pin on the relay module to close the relay and turn on the pump.</p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/46512429/209448159-8fa2b899-9e08-43c5-86b6-f411c93f6046.png" width="800" /></p>
+<p align="center">Electrical Schematic</p>
+
+<!-- <div align="center"><h2> <a href="https://github.com/oubrejames/pen_challenge">View it on Github</a></h2></div> -->
 
             </div>
 
@@ -189,31 +207,15 @@
                     
                     
                     <li>
-                        <a class="smoothscroll" href="/categories#Computer-Vision">Computer Vision</a>
+                        <a class="smoothscroll" href="/categories#Arduino">Arduino</a>
                     </li>
                     
                     <li>
-                        <a class="smoothscroll" href="/categories#Franka-Emika-Panda-Arm">Franka Emika Panda Arm</a>
+                        <a class="smoothscroll" href="/categories#Circuit-Design">Circuit Design</a>
                     </li>
                     
                     <li>
-                        <a class="smoothscroll" href="/categories#Group-Project">Group Project</a>
-                    </li>
-                    
-                    <li>
-                        <a class="smoothscroll" href="/categories#Intel-Realsense">Intel Realsense</a>
-                    </li>
-                    
-                    <li>
-                        <a class="smoothscroll" href="/categories#MoveIt">MoveIt</a>
-                    </li>
-                    
-                    <li>
-                        <a class="smoothscroll" href="/categories#Python">Python</a>
-                    </li>
-                    
-                    <li>
-                        <a class="smoothscroll" href="/categories#ROS">ROS</a>
+                        <a class="smoothscroll" href="/categories#Sensors-&-Actuators">Sensors & Actuators</a>
                     </li>
                     
                 </ul>
@@ -235,7 +237,7 @@
             <a class="prev d-block col-md-6" href="//fsae/"> &laquo; FSAE</a>
             
             
-            <a class="next d-block col-md-6 text-lg-right" href="//icore/">Reasearch &raquo; </a>
+            <a class="next d-block col-md-6 text-lg-right" href="//icore/">Autonomous Sanding &raquo; </a>
             
             <div class="clearfix"></div>
             </div>
@@ -268,11 +270,11 @@ https://search.google.com/structured-data/testing-tool/u/0/
             
             
                 
-                    <a class="mt-1 mb-1" href="/categories#Computer-Vision">Computer Vision (5)</a>
+                    <a class="mt-1 mb-1" href="/categories#Computer-Vision">Computer Vision (4)</a>
                 
                     <a class="mt-1 mb-1" href="/categories#OpenCV">OpenCV (4)</a>
                 
-                    <a class="mt-1 mb-1" href="/categories#Python">Python (6)</a>
+                    <a class="mt-1 mb-1" href="/categories#Python">Python (5)</a>
                 
                     <a class="mt-1 mb-1" href="/categories#Mechatronics">Mechatronics (3)</a>
                 
@@ -286,21 +288,19 @@ https://search.google.com/structured-data/testing-tool/u/0/
                 
                     <a class="mt-1 mb-1" href="/categories#C">C (2)</a>
                 
-                    <a class="mt-1 mb-1" href="/categories#ROS">ROS (1)</a>
+                    <a class="mt-1 mb-1" href="/categories#Arduino">Arduino (1)</a>
                 
-                    <a class="mt-1 mb-1" href="/categories#MoveIt">MoveIt (1)</a>
+                    <a class="mt-1 mb-1" href="/categories#Circuit-Design">Circuit Design (1)</a>
                 
-                    <a class="mt-1 mb-1" href="/categories#Intel-Realsense">Intel Realsense (4)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Franka-Emika-Panda-Arm">Franka Emika Panda Arm (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Group-Project">Group Project (1)</a>
+                    <a class="mt-1 mb-1" href="/categories#Sensors-&-Actuators">Sensors & Actuators (1)</a>
                 
                     <a class="mt-1 mb-1" href="/categories#UR5-Robot-Arm">UR5 Robot Arm (1)</a>
                 
                     <a class="mt-1 mb-1" href="/categories#Manufacturing">Manufacturing (1)</a>
                 
                     <a class="mt-1 mb-1" href="/categories#Research">Research (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Intel-Realsense">Intel Realsense (3)</a>
                 
                     <a class="mt-1 mb-1" href="/categories#PincherX-100">PincherX 100 (1)</a>
                 
@@ -336,7 +336,7 @@ https://search.google.com/structured-data/testing-tool/u/0/
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-6 text-center text-lg-left">
-                Copyright © 2022 James Oubre 
+                Copyright © 2023 James Oubre 
             </div>
             <div class="col-md-6 col-sm-6 text-center text-lg-right">    
                 <a target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish Jekyll Theme</a> by WowThemes.net
