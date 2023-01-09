@@ -63,7 +63,7 @@ var documents = [{
     "id": 12,
     "url": "http://localhost:4000/fsae/",
     "title": "FSAE",
-    "body": "2021/05/23 -  Overview: Low Voltage Electrical: Design: Computer Vision Pipeline Computer Vision Pipeline Computer Vision Pipeline Computer Vision Pipeline Computer Vision Pipeline Manufacturing: Computer Vision Pipeline High Voltage Electrical: Design: Computer Vision Pipeline Computer Vision Pipeline Manufacturing:  Mechanical: "
+    "body": "2021/05/23 -  Overview: Low Voltage Electrical: Design: Safety Shutdown Circuit Low Voltage System Circuit Diagram Accelerator and Brake Pedal Fault Detection Logic Accelerator and Brake Pedal Fault Detection PCB 12 V Loads Manufacturing: Low Voltage PCBs High Voltage Electrical: Design: High Voltage Bus Battery Model Manufacturing:  Battery Segment Manufacturing Mechanical: Mechanical Systems "
     }, {
     "id": 13,
     "url": "http://localhost:4000/a_robotics_minor/",
