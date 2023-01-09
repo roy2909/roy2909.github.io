@@ -6,7 +6,7 @@ comments: false
 ---
 ### Resume
 
-[Download Resume as a PDF](James_Oubre_resume.pdf)
+[Download Resume as a PDF](James_Oubre_Resume_1_6_23.pdf)
 
 ### Contact
 

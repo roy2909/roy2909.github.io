@@ -5,8 +5,8 @@
     <description>Northwestern MS in Robotics Student Portfolio</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 03 Jan 2023 09:02:12 -0600</pubDate>
-    <lastBuildDate>Tue, 03 Jan 2023 09:02:12 -0600</lastBuildDate>
+    <pubDate>Mon, 09 Jan 2023 09:39:10 -0600</pubDate>
+    <lastBuildDate>Mon, 09 Jan 2023 09:39:10 -0600</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -403,79 +403,44 @@ V power supply. A 7 V voltage regulator is used to power the Arduino and the 12 
     
       <item>
         <title>FSAE</title>
-        <description>&lt;p&gt;Mechanical Design / Mechatronics / PID Control&lt;/p&gt;
+        <description>&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/oubrejames/oubrejames.github.io/gh-pages/assets/images/fsae_cropped.gif&quot; height=&quot;500&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
 
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/7S1Z_5BLMUo&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
 
-&lt;p&gt;For my winter quarter independent study project, I set out to build my own version of a BallBot, a dynamically stable / statically unstable robot. I designed my bot from CAD to control algorithm, utilizing 3D printing, laser cutting, and C programming on an RP2040 microcontroller.&lt;/p&gt;
+&lt;h2 id=&quot;low-voltage-electrical&quot;&gt;Low Voltage Electrical&lt;/h2&gt;
+&lt;h4 id=&quot;design&quot;&gt;Design&lt;/h4&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211060489-fb3fc2e4-7bef-4339-ba6c-8e091cb9c5dd.png&quot; height=&quot;500&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;Computer Vision Pipeline&lt;/p&gt;
 
-&lt;h3 id=&quot;mechanical-design&quot;&gt;Mechanical Design&lt;/h3&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211061123-7a96fe45-fb80-4c00-98a7-ed8b1cfdd7d9.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;Computer Vision Pipeline&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/ballbot_CAD.png&quot; alt=&quot;CAD&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211061209-42a0ebde-a9b6-4249-a42a-0e231c2c1890.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;Computer Vision Pipeline&lt;/p&gt;
 
-&lt;p&gt;I designed my chassis with inspiration from similar projects using Solidwork CAD to create 4 part adjustable base. Each motor housing component is attached to the main chassis separately, so the angle can be adjusted, which allowed me to test on various sizes of balls.&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211061318-c8f09262-0d12-4fa0-835a-5204ac204f21.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;Computer Vision Pipeline&lt;/p&gt;
 
-&lt;h3 id=&quot;building-the-structure-and-fundamental-electronics&quot;&gt;Building the Structure and Fundamental Electronics&lt;/h3&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211062386-db1ac433-20ec-4532-a877-260ac9ebe49a.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;Computer Vision Pipeline&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/circuit.png&quot; alt=&quot;Circuit Diagram&quot; /&gt;&lt;/p&gt;
+&lt;h4 id=&quot;manufacturing&quot;&gt;Manufacturing&lt;/h4&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211060715-f450c295-2451-442d-9807-a751f7e2a5b5.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;Computer Vision Pipeline&lt;/p&gt;
 
-&lt;p&gt;After printing and assembling the chassis pieces, I mounted the 3 motors with 3 motor drivers and a RP2040 ThingPlus microcontroller and started with the basic control of one motor, working on a script to step one wheel at a time.&lt;/p&gt;
+&lt;h2 id=&quot;high-voltage-electrical&quot;&gt;High Voltage Electrical&lt;/h2&gt;
+&lt;h4 id=&quot;design-1&quot;&gt;Design&lt;/h4&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211060599-3fcc09c2-3934-46d7-84e7-322f6446e71c.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;Computer Vision Pipeline&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/spinning.gif&quot; alt=&quot;Spinning&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211061422-5a3f2ce8-8b3e-4308-9254-78ec03287e79.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;Computer Vision Pipeline&lt;/p&gt;
 
-&lt;h3 id=&quot;simultaneous-motor-control&quot;&gt;Simultaneous Motor Control&lt;/h3&gt;
+&lt;h4 id=&quot;manufacturing-1&quot;&gt;Manufacturing&lt;/h4&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211060775-4c267d84-7744-4ab6-8959-b27025ffc28a.png&quot; height=&quot;425&quot; width=&quot;425&quot; /&gt; &lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211063614-2411203c-d497-4b3b-930b-90057dc83ef7.png&quot; height=&quot;425&quot; width=&quot;425&quot; /&gt; &lt;/p&gt;
 
-&lt;p&gt;The next step was to simultaneously step three motors. This proved to be a more difficult task than anticipated, as it seemed one motor would interfere with the other’s power source. However, after switching to drivers with a higher voltage rating, I was able to step each motor sequentially.&lt;/p&gt;
-
-&lt;p&gt;Once I could send alternating stepping commands to each motor, the base could perform basic directional movement including spinning in place and uniaxial paths (forwards, backwards, sideways).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/simulatenous_spinning.gif&quot; alt=&quot;Simultaneous Spinning&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/first_steps.gif&quot; alt=&quot;First Steps&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;twist-commands&quot;&gt;Twist Commands&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/ballbot_calcs.png&quot; alt=&quot;Calculations&quot; /&gt;
-Deriving wheel rotation rate from a twist&lt;/p&gt;
-
-&lt;p&gt;To make a truly omnidirectional base, the next step was to follow any twist, which require stepping the motors at different frequencies. I started with the most basic form of a control algorithm, a polling loop that stepped each motor after a calculated number of sleep cycles resulting in a wheel RPM calculated by the omnidirectional base matrix equation.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/omnidirectional.gif&quot; alt=&quot;Mobile Base&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;position-control&quot;&gt;Position Control&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/control_diagram.png&quot; alt=&quot;Control Diagram&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Once the mobile base was capable of following any twist command, it was time to integrate the IMU sensor and create a closed control loop. In my first iteration, only the accelerometer data from the IMU was used to calculate a roll and pitch, which were then used as inputs to the PD controller. The PD controller outputs an x and y velocity relative to the robot’s base frame, which are then converted to wheel speeds and finally step delays using the omnidirectional base equation shown above.&lt;/p&gt;
-
-&lt;h3 id=&quot;self-righting&quot;&gt;Self-Righting&lt;/h3&gt;
-
-&lt;p&gt;The first milestone on the way to balancing was having the robot self-right itself back to a stable position on a ball. During testing, it became apparent that the motors would need to be stepped much faster in order for the robot to catch itself when the ball is not stabilized.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/self_righting.gif&quot; alt=&quot;Self Righting&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;design-adjustments&quot;&gt;Design Adjustments&lt;/h3&gt;
-
-&lt;p&gt;I redesigned the initial concept and chose to try a much larger ball in order to reduce the angle of lean and therefor the lever arm of the robot’s body over its center of mass. This, along with reducing to half steps, resulted in a smoother self-righting action but the wheel stepping was still prohibitively slow.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/smoother.gif&quot; alt=&quot;A Little Smoother&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;control-adjustments-and-sensor-tuning&quot;&gt;Control Adjustments and Sensor Tuning&lt;/h3&gt;
-
-&lt;p&gt;I tried several different approaches to the control algorithm once it became apparent that a simple polling loop would not step the motors at the required frequency. When I realized system clock-based interrupts were not support on the rp2040, I attempted 3 separate timers, with each frequency updated after every update from the IMU. While this was successful in spinning the wheels much faster, three timers could not keep up with the step frequency and the reliability of the original polling loop was lost. This was most likely due to the constant resetting of the timers and the competing operations with no set priorities. Finally, I was able to merge the control strategies and create a single timer at a fixed frequency that then counted the number of cycles since the previous step and compared the count to the calculated step delay. This significantly increased the speed of the wheels without compromising a quick and accurate twist response.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/good_control.gif&quot; alt=&quot;Good Control&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The timer came with a trade off between the IMU measurement frequency and the maximum step frequency, but I found reading the IMU at approximately 10 Hz (a 100 ms delay between measurements) and polling the motors at 500 Hz (a 2 ms timer) was most successful in generating a fast enough reaction time while supporting a high motor stepping frequency.&lt;/p&gt;
-
-&lt;p&gt;With the wheels more reactive, noise in the IMU also became more apparent. I started with a rolling average filter, which worked well to smooth the signal and reduce spikes. The rolling average was effective at slower speeds, but with a much more reactive control loop, I wanted to explore more advanced methods of sensor fusion. A complementary filter allowed me to supplement the noisy accelerometer data with the steadier (but driftier) gyroscope data. This significantly reduced the steady state measurement spikes from up to +/- 40 degree spikes to negligible noise when the bot is stable.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/complimentary_filter.gif&quot; alt=&quot;Getting Smoother&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://algarv.github.io/Portfolio/assets/images/final.gif&quot; alt=&quot;Last Run&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Ultimately, after carefully tuning the PD gains and tweaking timer frequencies, my ballbot could balance for about 2 seconds before tipping over and losing control. I believe my biggest limitation was the tradeoff between measurement frequency and stepping frequency, and would like to try timer-based interrupts in future iteration or even separating the controller into multiple cores that could run the motor stepping commands and read the IMU simultaneously.&lt;/p&gt;
-
-&lt;p&gt;https://github.com/algarv/Ball_Balancing_Robot/&lt;/p&gt;
+&lt;h2 id=&quot;mechanical&quot;&gt;Mechanical&lt;/h2&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211065647-dfa76530-b426-4cb4-9a31-2b71c24d21be.png&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 23 May 2021 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/fsae/</link>
