@@ -5,8 +5,8 @@
     <description>Northwestern MS in Robotics Student Portfolio</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 09 Jan 2023 10:26:25 -0600</pubDate>
-    <lastBuildDate>Mon, 09 Jan 2023 10:26:25 -0600</lastBuildDate>
+    <pubDate>Mon, 09 Jan 2023 21:35:54 -0600</pubDate>
+    <lastBuildDate>Mon, 09 Jan 2023 21:35:54 -0600</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -402,60 +402,106 @@ V power supply. A 7 V voltage regulator is used to power the Arduino and the 12 
       </item>
     
       <item>
-        <title>FSAE</title>
-        <description>&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/oubrejames/oubrejames.github.io/gh-pages/assets/images/wide_fsae.gif&quot; height=&quot;500&quot; width=&quot;1000&quot; /&gt;&lt;/p&gt;
+        <title>Electric Formula Racecar</title>
+        <description>&lt;p&gt;Circuit Design, Power Systems, PCB Design, Digital Logic, Mechanical Design&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/oubrejames/oubrejames.github.io/gh-pages/assets/images/wide_fsae1.gif&quot; height=&quot;600&quot; width=&quot;1500&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;For my senior capstone project, I was a part of a group that converted an internal combustion FSAE
+racecar to be fully electric. The electrical side of the project consisted of creating a custom high
+voltage battery pack with a battery management system to power the vehicle’s motor. There was also 
+a low voltage subsystem composed of a device to check for braking and accelerating faults, a circuit
+to cut off high voltage power in case of errors, and 12 V bus for miscellaneous electronics. Furthermore,
+because we were converting an existing internal combustion vehicle, certain mechanical alterations
+were made. Personally, I was responsible for the low voltage subsystem and acted as team treasurer.&lt;/p&gt;
 
 &lt;h2 id=&quot;low-voltage-electrical&quot;&gt;Low Voltage Electrical&lt;/h2&gt;
-&lt;h4 id=&quot;design&quot;&gt;Design&lt;/h4&gt;
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211060489-fb3fc2e4-7bef-4339-ba6c-8e091cb9c5dd.png&quot; height=&quot;500&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot;&gt;Safety Shutdown Circuit&lt;/p&gt;
-
+&lt;ul&gt;
+  &lt;li&gt;Overview of low voltage&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211061123-7a96fe45-fb80-4c00-98a7-ed8b1cfdd7d9.png&quot; /&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot;&gt;Low Voltage System Circuit Diagram&lt;/p&gt;
 
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211062386-db1ac433-20ec-4532-a877-260ac9ebe49a.png&quot; height=&quot;500&quot; width=&quot;1000&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;12 V Load&lt;/p&gt;
+
+&lt;h3 id=&quot;acceleration-and-brake-fault-detection-device&quot;&gt;Acceleration and Brake Fault Detection Device&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Describe what the device did, why we needed it, and how I made it&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211351660-95b478a3-97a4-4c37-b137-3bf4f9780392.png&quot; /&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot;&gt;Accelerator and Brake Pedal Fault Detection Logic&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211061318-c8f09262-0d12-4fa0-835a-5204ac204f21.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211362295-e465339e-2c05-4d23-8f41-d82d6a0bb8dc.png
+&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;Accelerator and Brake Pedal Fault Detection Circuit Diagram&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211357816-5aa82aa4-6d7e-41ea-bdd8-5c02cca062bd.png&quot; height=&quot;500&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211358125-e0ebf7ab-ff7b-45c8-a981-e6278d53c633.png&quot; height=&quot;500&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211061318-c8f09262-0d12-4fa0-835a-5204ac204f21.png&quot; height=&quot;500&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot;&gt;Accelerator and Brake Pedal Fault Detection PCB&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211062386-db1ac433-20ec-4532-a877-260ac9ebe49a.png&quot; /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot;&gt;12 V Loads&lt;/p&gt;
+&lt;h3 id=&quot;safety-shutdown-circuit&quot;&gt;Safety Shutdown Circuit&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Describe purpose and circuit and implimentation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211060489-fb3fc2e4-7bef-4339-ba6c-8e091cb9c5dd.png&quot; height=&quot;800&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;Safety Shutdown Circuit&lt;/p&gt;
 
-&lt;h4 id=&quot;manufacturing&quot;&gt;Manufacturing&lt;/h4&gt;
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211060715-f450c295-2451-442d-9807-a751f7e2a5b5.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211060715-f450c295-2451-442d-9807-a751f7e2a5b5.png&quot; height=&quot;600&quot; width=&quot;600&quot; /&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot;&gt;Low Voltage PCBs&lt;/p&gt;
 
 &lt;h2 id=&quot;high-voltage-electrical&quot;&gt;High Voltage Electrical&lt;/h2&gt;
-&lt;h4 id=&quot;design-1&quot;&gt;Design&lt;/h4&gt;
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211060599-3fcc09c2-3934-46d7-84e7-322f6446e71c.png&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Describe the system -&amp;gt; motor, controller, battery, BMS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211060599-3fcc09c2-3934-46d7-84e7-322f6446e71c.png&quot; height=&quot;800&quot; width=&quot;700&quot; /&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot;&gt;High Voltage Bus&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211061422-5a3f2ce8-8b3e-4308-9254-78ec03287e79.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211061422-5a3f2ce8-8b3e-4308-9254-78ec03287e79.png&quot; height=&quot;500&quot; width=&quot;600&quot; /&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot;&gt;Battery Model&lt;/p&gt;
 
-&lt;h4 id=&quot;manufacturing-1&quot;&gt;Manufacturing&lt;/h4&gt;
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211060775-4c267d84-7744-4ab6-8959-b27025ffc28a.png&quot; height=&quot;425&quot; width=&quot;425&quot; /&gt; &lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211063614-2411203c-d497-4b3b-930b-90057dc83ef7.png&quot; height=&quot;425&quot; width=&quot;425&quot; /&gt; &lt;/p&gt;
+&lt;h3 id=&quot;manufacturing&quot;&gt;Manufacturing&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Describe battery manufacturing process&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211060775-4c267d84-7744-4ab6-8959-b27025ffc28a.png&quot; height=&quot;500&quot; width=&quot;425&quot; /&gt; &lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211063614-2411203c-d497-4b3b-930b-90057dc83ef7.png&quot; height=&quot;500&quot; width=&quot;425&quot; /&gt; &lt;/p&gt;
 &lt;p align=&quot;center&quot;&gt;Battery Segment Manufacturing&lt;/p&gt;
 
 &lt;h2 id=&quot;mechanical&quot;&gt;Mechanical&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Briefly Describe&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211065647-dfa76530-b426-4cb4-9a31-2b71c24d21be.png&quot; /&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot;&gt;Mechanical Systems&lt;/p&gt;
+
+&lt;h2 id=&quot;the-team&quot;&gt;The Team&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Doug&lt;/li&gt;
+  &lt;li&gt;Mo&lt;/li&gt;
+  &lt;li&gt;Esther&lt;/li&gt;
+  &lt;li&gt;Mike&lt;/li&gt;
+  &lt;li&gt;Felix&lt;/li&gt;
+  &lt;li&gt;JAcob&lt;/li&gt;
+  &lt;li&gt;Alejandro&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211373131-5975e0fe-ff09-467c-9f22-22d847f0455a.jpeg&quot; height=&quot;800&quot; width=&quot;1200&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 23 May 2021 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/fsae/</link>
         <guid isPermaLink="true">http://localhost:4000/fsae/</guid>
         
         
-        <category>Mechatronics</category>
+        <category>Circuit Design</category>
         
-        <category>Controls</category>
+        <category>Power Systems</category>
         
-        <category>Solidworks</category>
+        <category>PCB Design</category>
         
-        <category>C</category>
+        <category>Digital Logic</category>
+        
+        <category>Mechanical Design</category>
         
       </item>
     

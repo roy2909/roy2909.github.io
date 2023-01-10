@@ -6,15 +6,15 @@
 
 <link rel="icon" href="/assets/images/logo.png">
 
-<title>FSAE | James Oubre</title>
+<title>Electric Formula Racecar | James Oubre</title>
 
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>FSAE | James’ Portfolio</title>
+<title>Electric Formula Racecar | James’ Portfolio</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="FSAE" />
+<meta property="og:title" content="Electric Formula Racecar" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Northwestern MS in Robotics Student Portfolio" />
-<meta property="og:description" content="Northwestern MS in Robotics Student Portfolio" />
+<meta name="description" content="Circuit Design, Power Systems, PCB Design, Digital Logic, Mechanical Design" />
+<meta property="og:description" content="Circuit Design, Power Systems, PCB Design, Digital Logic, Mechanical Design" />
 <link rel="canonical" href="http://localhost:4000/fsae/" />
 <meta property="og:url" content="http://localhost:4000/fsae/" />
 <meta property="og:site_name" content="James’ Portfolio" />
@@ -23,9 +23,9 @@
 <meta property="article:published_time" content="2021-05-23T00:00:00-05:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="http://localhost:4000/assets/images/fsae_cropped.gif" />
-<meta property="twitter:title" content="FSAE" />
+<meta property="twitter:title" content="Electric Formula Racecar" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2021-05-23T00:00:00-05:00","datePublished":"2021-05-23T00:00:00-05:00","description":"Northwestern MS in Robotics Student Portfolio","headline":"FSAE","image":"http://localhost:4000/assets/images/fsae_cropped.gif","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/fsae/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo3.png"}},"url":"http://localhost:4000/fsae/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2021-05-23T00:00:00-05:00","datePublished":"2021-05-23T00:00:00-05:00","description":"Circuit Design, Power Systems, PCB Design, Digital Logic, Mechanical Design","headline":"Electric Formula Racecar","image":"http://localhost:4000/assets/images/fsae_cropped.gif","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/fsae/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo3.png"}},"url":"http://localhost:4000/fsae/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -145,7 +145,7 @@
                 
 
                 <!-- Post Title -->
-                <h1 class="posttitle">FSAE</h1>
+                <h1 class="posttitle">Electric Formula Racecar</h1>
 
             </div>
 
@@ -158,46 +158,90 @@
                 <!-- Toc if any -->
                 
                 <!-- End Toc -->
-                <p align="center"><img src="https://raw.githubusercontent.com/oubrejames/oubrejames.github.io/gh-pages/assets/images/wide_fsae.gif" height="500" width="1000" /></p>
+                <p>Circuit Design, Power Systems, PCB Design, Digital Logic, Mechanical Design</p>
+
+<p align="center"><img src="https://raw.githubusercontent.com/oubrejames/oubrejames.github.io/gh-pages/assets/images/wide_fsae1.gif" height="600" width="1500" /></p>
 
 <h2 id="overview">Overview</h2>
+<p>For my senior capstone project, I was a part of a group that converted an internal combustion FSAE
+racecar to be fully electric. The electrical side of the project consisted of creating a custom high
+voltage battery pack with a battery management system to power the vehicle’s motor. There was also 
+a low voltage subsystem composed of a device to check for braking and accelerating faults, a circuit
+to cut off high voltage power in case of errors, and 12 V bus for miscellaneous electronics. Furthermore,
+because we were converting an existing internal combustion vehicle, certain mechanical alterations
+were made. Personally, I was responsible for the low voltage subsystem and acted as team treasurer.</p>
 
 <h2 id="low-voltage-electrical">Low Voltage Electrical</h2>
-<h4 id="design">Design</h4>
-<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211060489-fb3fc2e4-7bef-4339-ba6c-8e091cb9c5dd.png" height="500" width="500" /></p>
-<p align="center">Safety Shutdown Circuit</p>
-
+<ul>
+  <li>Overview of low voltage</li>
+</ul>
 <p align="center"><img src="https://user-images.githubusercontent.com/46512429/211061123-7a96fe45-fb80-4c00-98a7-ed8b1cfdd7d9.png" /></p>
 <p align="center">Low Voltage System Circuit Diagram</p>
 
+<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211062386-db1ac433-20ec-4532-a877-260ac9ebe49a.png" height="500" width="1000" /></p>
+<p align="center">12 V Load</p>
+
+<h3 id="acceleration-and-brake-fault-detection-device">Acceleration and Brake Fault Detection Device</h3>
+<ul>
+  <li>Describe what the device did, why we needed it, and how I made it</li>
+</ul>
 <p align="center"><img src="https://user-images.githubusercontent.com/46512429/211351660-95b478a3-97a4-4c37-b137-3bf4f9780392.png" /></p>
 <p align="center">Accelerator and Brake Pedal Fault Detection Logic</p>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211061318-c8f09262-0d12-4fa0-835a-5204ac204f21.png" /></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211362295-e465339e-2c05-4d23-8f41-d82d6a0bb8dc.png
+" /></p>
+<p align="center">Accelerator and Brake Pedal Fault Detection Circuit Diagram</p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211357816-5aa82aa4-6d7e-41ea-bdd8-5c02cca062bd.png" height="500" width="300" /><img src="https://user-images.githubusercontent.com/46512429/211358125-e0ebf7ab-ff7b-45c8-a981-e6278d53c633.png" height="500" width="300" /><img src="https://user-images.githubusercontent.com/46512429/211061318-c8f09262-0d12-4fa0-835a-5204ac204f21.png" height="500" width="500" /></p>
 <p align="center">Accelerator and Brake Pedal Fault Detection PCB</p>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211062386-db1ac433-20ec-4532-a877-260ac9ebe49a.png" /></p>
-<p align="center">12 V Loads</p>
+<h3 id="safety-shutdown-circuit">Safety Shutdown Circuit</h3>
+<ul>
+  <li>Describe purpose and circuit and implimentation</li>
+</ul>
+<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211060489-fb3fc2e4-7bef-4339-ba6c-8e091cb9c5dd.png" height="800" width="800" /></p>
+<p align="center">Safety Shutdown Circuit</p>
 
-<h4 id="manufacturing">Manufacturing</h4>
-<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211060715-f450c295-2451-442d-9807-a751f7e2a5b5.png" /></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211060715-f450c295-2451-442d-9807-a751f7e2a5b5.png" height="600" width="600" /></p>
 <p align="center">Low Voltage PCBs</p>
 
 <h2 id="high-voltage-electrical">High Voltage Electrical</h2>
-<h4 id="design-1">Design</h4>
-<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211060599-3fcc09c2-3934-46d7-84e7-322f6446e71c.png" /></p>
+<ul>
+  <li>Describe the system -&gt; motor, controller, battery, BMS</li>
+</ul>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211060599-3fcc09c2-3934-46d7-84e7-322f6446e71c.png" height="800" width="700" /></p>
 <p align="center">High Voltage Bus</p>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211061422-5a3f2ce8-8b3e-4308-9254-78ec03287e79.png" /></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211061422-5a3f2ce8-8b3e-4308-9254-78ec03287e79.png" height="500" width="600" /></p>
 <p align="center">Battery Model</p>
 
-<h4 id="manufacturing-1">Manufacturing</h4>
-<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211060775-4c267d84-7744-4ab6-8959-b27025ffc28a.png" height="425" width="425" /> <img src="https://user-images.githubusercontent.com/46512429/211063614-2411203c-d497-4b3b-930b-90057dc83ef7.png" height="425" width="425" /> </p>
+<h3 id="manufacturing">Manufacturing</h3>
+<ul>
+  <li>Describe battery manufacturing process</li>
+</ul>
+<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211060775-4c267d84-7744-4ab6-8959-b27025ffc28a.png" height="500" width="425" /> <img src="https://user-images.githubusercontent.com/46512429/211063614-2411203c-d497-4b3b-930b-90057dc83ef7.png" height="500" width="425" /> </p>
 <p align="center">Battery Segment Manufacturing</p>
 
 <h2 id="mechanical">Mechanical</h2>
+<ul>
+  <li>Briefly Describe</li>
+</ul>
 <p align="center"><img src="https://user-images.githubusercontent.com/46512429/211065647-dfa76530-b426-4cb4-9a31-2b71c24d21be.png" /></p>
 <p align="center">Mechanical Systems</p>
+
+<h2 id="the-team">The Team</h2>
+<ul>
+  <li>Doug</li>
+  <li>Mo</li>
+  <li>Esther</li>
+  <li>Mike</li>
+  <li>Felix</li>
+  <li>JAcob</li>
+  <li>Alejandro</li>
+</ul>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211373131-5975e0fe-ff09-467c-9f22-22d847f0455a.jpeg" height="800" width="1200" /></p>
 
             </div>
 
@@ -218,19 +262,23 @@
                     
                     
                     <li>
-                        <a class="smoothscroll" href="/categories#C">C</a>
+                        <a class="smoothscroll" href="/categories#Circuit-Design">Circuit Design</a>
                     </li>
                     
                     <li>
-                        <a class="smoothscroll" href="/categories#Controls">Controls</a>
+                        <a class="smoothscroll" href="/categories#Digital-Logic">Digital Logic</a>
                     </li>
                     
                     <li>
-                        <a class="smoothscroll" href="/categories#Mechatronics">Mechatronics</a>
+                        <a class="smoothscroll" href="/categories#Mechanical-Design">Mechanical Design</a>
                     </li>
                     
                     <li>
-                        <a class="smoothscroll" href="/categories#Solidworks">Solidworks</a>
+                        <a class="smoothscroll" href="/categories#PCB-Design">PCB Design</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#Power-Systems">Power Systems</a>
                     </li>
                     
                 </ul>
@@ -291,21 +339,25 @@ https://search.google.com/structured-data/testing-tool/u/0/
                 
                     <a class="mt-1 mb-1" href="/categories#Python">Python (5)</a>
                 
-                    <a class="mt-1 mb-1" href="/categories#Mechatronics">Mechatronics (3)</a>
+                    <a class="mt-1 mb-1" href="/categories#Mechatronics">Mechatronics (2)</a>
                 
                     <a class="mt-1 mb-1" href="/categories#SLAM">SLAM (1)</a>
                 
-                    <a class="mt-1 mb-1" href="/categories#Controls">Controls (2)</a>
+                    <a class="mt-1 mb-1" href="/categories#Controls">Controls (1)</a>
                 
                     <a class="mt-1 mb-1" href="/categories#C++">C++ (1)</a>
                 
-                    <a class="mt-1 mb-1" href="/categories#Solidworks">Solidworks (1)</a>
+                    <a class="mt-1 mb-1" href="/categories#Circuit-Design">Circuit Design (2)</a>
                 
-                    <a class="mt-1 mb-1" href="/categories#C">C (2)</a>
+                    <a class="mt-1 mb-1" href="/categories#Power-Systems">Power Systems (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#PCB-Design">PCB Design (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Digital-Logic">Digital Logic (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Mechanical-Design">Mechanical Design (1)</a>
                 
                     <a class="mt-1 mb-1" href="/categories#Arduino">Arduino (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Circuit-Design">Circuit Design (1)</a>
                 
                     <a class="mt-1 mb-1" href="/categories#Sensors-&-Actuators">Sensors & Actuators (1)</a>
                 
@@ -334,6 +386,8 @@ https://search.google.com/structured-data/testing-tool/u/0/
                     <a class="mt-1 mb-1" href="/categories#Moveit">Moveit (1)</a>
                 
                     <a class="mt-1 mb-1" href="/categories#Emika-Franka-Robot-Arm">Emika Franka Robot Arm (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#C">C (1)</a>
                 
                     <a class="mt-1 mb-1" href="/categories#Embedded-Systems">Embedded Systems (1)</a>
                 
