@@ -3,10 +3,10 @@
   <channel>
     <title>James&apos; Portfolio</title>
     <description>Northwestern MS in Robotics Student Portfolio</description>
-    <link>http://localhost:4000/oubrejames.github.io/</link>
-    <atom:link href="http://localhost:4000/oubrejames.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 10 Jan 2023 20:58:58 -0600</pubDate>
-    <lastBuildDate>Tue, 10 Jan 2023 20:58:58 -0600</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 10 Jan 2023 21:40:14 -0600</pubDate>
+    <lastBuildDate>Tue, 10 Jan 2023 21:40:14 -0600</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -68,8 +68,8 @@ manipulate the robot to perform various actions just by moving their own arm and
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 11 Dec 2022 00:00:00 -0600</pubDate>
-        <link>http://localhost:4000/oubrejames.github.io/Gripper/</link>
-        <guid isPermaLink="true">http://localhost:4000/oubrejames.github.io/Gripper/</guid>
+        <link>http://localhost:4000/Gripper/</link>
+        <guid isPermaLink="true">http://localhost:4000/Gripper/</guid>
         
         
         <category>C</category>
@@ -140,8 +140,8 @@ waypoints to help avoid reaching the joint limits of the robot.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/206768445-4503edc2-2075-48b4-baf7-e6dc7bd3ca86.png&quot; alt=&quot;bot_choc-min&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 09 Dec 2022 00:00:00 -0600</pubDate>
-        <link>http://localhost:4000/oubrejames.github.io/Botchoc/</link>
-        <guid isPermaLink="true">http://localhost:4000/oubrejames.github.io/Botchoc/</guid>
+        <link>http://localhost:4000/Botchoc/</link>
+        <guid isPermaLink="true">http://localhost:4000/Botchoc/</guid>
         
         
         <category>Computer Vision</category>
@@ -183,8 +183,8 @@ the simulation continues.&lt;/p&gt;
 &lt;div align=&quot;center&quot;&gt;&lt;h2&gt; &lt;a href=&quot;https://github.com/oubrejames/physics-simulator&quot;&gt;View it on Github&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt;
 </description>
         <pubDate>Sun, 04 Dec 2022 00:00:00 -0600</pubDate>
-        <link>http://localhost:4000/oubrejames.github.io/physics_simulator/</link>
-        <guid isPermaLink="true">http://localhost:4000/oubrejames.github.io/physics_simulator/</guid>
+        <link>http://localhost:4000/physics_simulator/</link>
+        <guid isPermaLink="true">http://localhost:4000/physics_simulator/</guid>
         
         
         <category>Python</category>
@@ -222,8 +222,8 @@ simulation is able to reduce to zero error before the robot gets the the cube’
 &lt;div align=&quot;center&quot;&gt;&lt;h2&gt; &lt;a href=&quot;https://github.com/oubrejames/youbot_simulation&quot;&gt;View it on Github&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt;
 </description>
         <pubDate>Thu, 01 Dec 2022 00:00:00 -0600</pubDate>
-        <link>http://localhost:4000/oubrejames.github.io/robman/</link>
-        <guid isPermaLink="true">http://localhost:4000/oubrejames.github.io/robman/</guid>
+        <link>http://localhost:4000/robman/</link>
+        <guid isPermaLink="true">http://localhost:4000/robman/</guid>
         
         
         <category>Mobile Manipulation / CoppeliaSim / PID Control / Python</category>
@@ -249,8 +249,8 @@ frame to the robot’s frame and control the robot to move to the pen and grasp 
 
 </description>
         <pubDate>Thu, 15 Sep 2022 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/oubrejames.github.io/Pen/</link>
-        <guid isPermaLink="true">http://localhost:4000/oubrejames.github.io/Pen/</guid>
+        <link>http://localhost:4000/Pen/</link>
+        <guid isPermaLink="true">http://localhost:4000/Pen/</guid>
         
         
         <category>Computer Vision</category>
@@ -338,8 +338,8 @@ autonomous sanding.&lt;/p&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 22 May 2022 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/oubrejames.github.io/icore/</link>
-        <guid isPermaLink="true">http://localhost:4000/oubrejames.github.io/icore/</guid>
+        <link>http://localhost:4000/icore/</link>
+        <guid isPermaLink="true">http://localhost:4000/icore/</guid>
         
         
         <category>Computer Vision</category>
@@ -389,8 +389,8 @@ V power supply. A 7 V voltage regulator is used to power the Arduino and the 12 
 &lt;!-- &lt;div align=&quot;center&quot;&gt;&lt;h2&gt; &lt;a href=&quot;https://github.com/oubrejames/pen_challenge&quot;&gt;View it on Github&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt; --&gt;
 </description>
         <pubDate>Wed, 13 Apr 2022 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/oubrejames.github.io/cocktail/</link>
-        <guid isPermaLink="true">http://localhost:4000/oubrejames.github.io/cocktail/</guid>
+        <link>http://localhost:4000/cocktail/</link>
+        <guid isPermaLink="true">http://localhost:4000/cocktail/</guid>
         
         
         <category>Arduino</category>
@@ -540,8 +540,8 @@ to protect and insulate the battery segments.&lt;/p&gt;
 &lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/211373131-5975e0fe-ff09-467c-9f22-22d847f0455a.jpeg&quot; height=&quot;500&quot; width=&quot;1100&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 23 May 2021 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/oubrejames.github.io/fsae/</link>
-        <guid isPermaLink="true">http://localhost:4000/oubrejames.github.io/fsae/</guid>
+        <link>http://localhost:4000/fsae/</link>
+        <guid isPermaLink="true">http://localhost:4000/fsae/</guid>
         
         
         <category>Circuit Design</category>
@@ -631,8 +631,8 @@ into it&lt;/p&gt;
 
 </description>
         <pubDate>Fri, 21 May 2021 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/oubrejames.github.io/a_robotics_minor/</link>
-        <guid isPermaLink="true">http://localhost:4000/oubrejames.github.io/a_robotics_minor/</guid>
+        <link>http://localhost:4000/a_robotics_minor/</link>
+        <guid isPermaLink="true">http://localhost:4000/a_robotics_minor/</guid>
         
         
         <category>Mechatronics</category>
@@ -686,8 +686,8 @@ distance to the flag. Using a higher resolution image could help mitigate this p
 &lt;div align=&quot;center&quot;&gt;&lt;h2&gt; &lt;a href=&quot;https://github.com/oubrejames/range_finder&quot;&gt;View it on Github&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt;
 </description>
         <pubDate>Thu, 20 May 2021 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/oubrejames.github.io/golf/</link>
-        <guid isPermaLink="true">http://localhost:4000/oubrejames.github.io/golf/</guid>
+        <link>http://localhost:4000/golf/</link>
+        <guid isPermaLink="true">http://localhost:4000/golf/</guid>
         
         
         <category>Computer Vision</category>
