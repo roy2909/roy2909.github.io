@@ -3,8 +3,8 @@ layout: post
 title:  "Physics Simulation"
 categories: [ Python, Dynamic Systems, Simulation, Jupyter Notebook ]
 image: assets/images/cropped_jack.gif
-featured: true
-hidden: true
+featured: false
+hidden: false
 ---
 Python, Dynamic Systems, Simulation, Jupyter Notebook
 

@@ -13,8 +13,8 @@
 <meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Electric Formula Racecar" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Circuit Design, Power Systems, PCB Design, Digital Logic, Mechanical Design" />
-<meta property="og:description" content="Circuit Design, Power Systems, PCB Design, Digital Logic, Mechanical Design" />
+<meta name="description" content="Circuit Design, Power Systems, PCB Design, Digital Logic, Mechanical Design, Manufacturng" />
+<meta property="og:description" content="Circuit Design, Power Systems, PCB Design, Digital Logic, Mechanical Design, Manufacturng" />
 <link rel="canonical" href="http://localhost:4000/fsae/" />
 <meta property="og:url" content="http://localhost:4000/fsae/" />
 <meta property="og:site_name" content="James’ Portfolio" />
@@ -25,7 +25,7 @@
 <meta property="twitter:image" content="http://localhost:4000/assets/images/fsae_cropped.gif" />
 <meta property="twitter:title" content="Electric Formula Racecar" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2021-05-23T00:00:00-05:00","datePublished":"2021-05-23T00:00:00-05:00","description":"Circuit Design, Power Systems, PCB Design, Digital Logic, Mechanical Design","headline":"Electric Formula Racecar","image":"http://localhost:4000/assets/images/fsae_cropped.gif","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/fsae/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo3.png"}},"url":"http://localhost:4000/fsae/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2021-05-23T00:00:00-05:00","datePublished":"2021-05-23T00:00:00-05:00","description":"Circuit Design, Power Systems, PCB Design, Digital Logic, Mechanical Design, Manufacturng","headline":"Electric Formula Racecar","image":"http://localhost:4000/assets/images/fsae_cropped.gif","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/fsae/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo3.png"}},"url":"http://localhost:4000/fsae/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -158,9 +158,9 @@
                 <!-- Toc if any -->
                 
                 <!-- End Toc -->
-                <p>Circuit Design, Power Systems, PCB Design, Digital Logic, Mechanical Design</p>
+                <p>Circuit Design, Power Systems, PCB Design, Digital Logic, Mechanical Design, Manufacturng</p>
 
-<p align="center"><img src="https://raw.githubusercontent.com/oubrejames/oubrejames.github.io/gh-pages/assets/images/wide_fsae1.gif" height="600" width="1500" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/oubrejames/oubrejames.github.io/gh-pages/assets/images/wide_fsae1.gif" height="400" width="1400" /></p>
 
 <h2 id="overview">Overview</h2>
 <p>For my senior capstone project, I was a part of a group that converted an internal combustion FSAE
@@ -172,76 +172,113 @@ because we were converting an existing internal combustion vehicle, certain mech
 were made. Personally, I was responsible for the low voltage subsystem and acted as team treasurer.</p>
 
 <h2 id="low-voltage-electrical">Low Voltage Electrical</h2>
-<ul>
-  <li>Overview of low voltage</li>
-</ul>
-<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211061123-7a96fe45-fb80-4c00-98a7-ed8b1cfdd7d9.png" /></p>
-<p align="center">Low Voltage System Circuit Diagram</p>
+<p>The low voltage system is broken up into three main parts: the acceleration and 
+brake fault detection device, the safety shutdown circuit, and the 12 V bus. Each of these subsystems
+is descriebd in more detail later on. The purpose of this subsystem is to handle all auxillory functions
+of the vehicle. Bassically any function of the car outside of the high voltage power train is a part
+of the low voltage system. Below is the circuit diagram for the vehicles auxillory systems.</p>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211062386-db1ac433-20ec-4532-a877-260ac9ebe49a.png" height="500" width="1000" /></p>
-<p align="center">12 V Load</p>
+<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211061123-7a96fe45-fb80-4c00-98a7-ed8b1cfdd7d9.png" /></p>
+<p align="center">Low Voltage Auxillory System Circuit Diagram</p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211060715-f450c295-2451-442d-9807-a751f7e2a5b5.png" height="400" width="400" /></p>
+<p align="center"> Auxillory System PCBs</p>
 
 <h3 id="acceleration-and-brake-fault-detection-device">Acceleration and Brake Fault Detection Device</h3>
+<p>One key feature of this project is the acceleration and brake fault detection device. This device 
+detects the following accelerating and braking conditions that could cause harm to the driver:</p>
 <ul>
-  <li>Describe what the device did, why we needed it, and how I made it</li>
+  <li>Simultaneous pressing of accelerator and brake pedals</li>
+  <li>Significant current delivered to motor while driver is hard braking</li>
+  <li>Short or open circuits in the accelerator and break pedal sensors</li>
 </ul>
-<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211351660-95b478a3-97a4-4c37-b137-3bf4f9780392.png" /></p>
+
+<p>If any of these faults were detetected, a trigger signal is sent to a 500 ms timer which would then 
+actuate a relay to open the saftey shutdown circuit and cut off high voltage power. The logic is 
+described in the diagram below.</p>
+<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211351660-95b478a3-97a4-4c37-b137-3bf4f9780392.png" height="500" width="900" /></p>
 <p align="center">Accelerator and Brake Pedal Fault Detection Logic</p>
 
+<p>Per FSAE rules, the device had to be compeltely analog. Because of this, I chose to detect faults 
+using op-amp comparators and logic gates. If the input signal from the sensor went above a certain 
+value or outside a specified range, the comparator would send a high signal to 500 ms timer. Below is
+the circuit diagram for the device.</p>
 <p align="center"><img src="https://user-images.githubusercontent.com/46512429/211362295-e465339e-2c05-4d23-8f41-d82d6a0bb8dc.png
 " /></p>
 <p align="center">Accelerator and Brake Pedal Fault Detection Circuit Diagram</p>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211357816-5aa82aa4-6d7e-41ea-bdd8-5c02cca062bd.png" height="500" width="300" /><img src="https://user-images.githubusercontent.com/46512429/211358125-e0ebf7ab-ff7b-45c8-a981-e6278d53c633.png" height="500" width="300" /><img src="https://user-images.githubusercontent.com/46512429/211061318-c8f09262-0d12-4fa0-835a-5204ac204f21.png" height="500" width="500" /></p>
+<p>Using EaglePCB, I created the manufacturing drawings for the board’s PCB. I then ordered the board 
+and solderred the components on myself.</p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211633971-c9f89743-3217-4d98-9eeb-a563323437c3.png" height="300" width="900" /></p>
 <p align="center">Accelerator and Brake Pedal Fault Detection PCB</p>
 
 <h3 id="safety-shutdown-circuit">Safety Shutdown Circuit</h3>
-<ul>
-  <li>Describe purpose and circuit and implimentation</li>
-</ul>
-<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211060489-fb3fc2e4-7bef-4339-ba6c-8e091cb9c5dd.png" height="800" width="800" /></p>
+
+<p>A safety shutdown circuit was created to cut off high powered electricity in unsafe conditions. This
+circuit connects the 12 V batterry to the coils of the two high power relays that are connected to 
+the vehicle’s high power battery or accumulator. The rest of the circuit is a number of switches and
+relays in series such that if any are disconnected, the circuit is open and no voltage is applied to 
+the accumulator relay coils. When there is no voltage at these coils, they are open and the accumulator
+is disconnected.</p>
+
+<p>The circuit has 3 emergency stop buttons, 2 master switches, a brake over travel 
+switch, and 2 low voltage relays. The brake over travel switch is a toggle switch located behind the 
+break pedal such that if the brakes are pressed extremly hard, the flip is switched and the circuit 
+is opened. The 2 low votlage relays are connected to the acceleration and brake fault detection device 
+(shown as APPS/BSPD) and the insulation monitoring device (IMD). The IMD measures the insulation 
+between the high voltage bus and the chassis ground. If a short between the two is detected, the 
+device outputs a high signal to open the relay in the shutdown circuit.</p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211060489-fb3fc2e4-7bef-4339-ba6c-8e091cb9c5dd.png" height="600" width="600" /></p>
 <p align="center">Safety Shutdown Circuit</p>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211060715-f450c295-2451-442d-9807-a751f7e2a5b5.png" height="600" width="600" /></p>
-<p align="center">Low Voltage PCBs</p>
+<h3 id="low-voltage-power">Low Voltage Power</h3>
+<p>Part of this project was ensuring it could withstand the FSAE endurance event which we calculated would
+take about 30 minutes. To spec out the battery for this, I found the max current draw of each component
+on the 12 V bus to be 34.6 A. To complete the endurance event the vehicle required a battery with a
+capacity of 17.3 Ah.</p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211062386-db1ac433-20ec-4532-a877-260ac9ebe49a.png" height="400" width="800" /></p>
+<p align="center">12 V Bus</p>
 
 <h2 id="high-voltage-electrical">High Voltage Electrical</h2>
 <ul>
   <li>Describe the system -&gt; motor, controller, battery, BMS</li>
 </ul>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211060599-3fcc09c2-3934-46d7-84e7-322f6446e71c.png" height="800" width="700" /></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211638355-cd7efaf9-2df1-45a8-9109-6f4d6a332829.png" height="600" width="500" /></p>
 <p align="center">High Voltage Bus</p>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211061422-5a3f2ce8-8b3e-4308-9254-78ec03287e79.png" height="500" width="600" /></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211061422-5a3f2ce8-8b3e-4308-9254-78ec03287e79.png" height="300" width="400" /></p>
 <p align="center">Battery Model</p>
 
 <h3 id="manufacturing">Manufacturing</h3>
 <ul>
   <li>Describe battery manufacturing process</li>
 </ul>
-<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211060775-4c267d84-7744-4ab6-8959-b27025ffc28a.png" height="500" width="425" /> <img src="https://user-images.githubusercontent.com/46512429/211063614-2411203c-d497-4b3b-930b-90057dc83ef7.png" height="500" width="425" /> </p>
+<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211060775-4c267d84-7744-4ab6-8959-b27025ffc28a.png" height="400" width="325" /> <img src="https://user-images.githubusercontent.com/46512429/211063614-2411203c-d497-4b3b-930b-90057dc83ef7.png" height="400" width="325" /> </p>
 <p align="center">Battery Segment Manufacturing</p>
 
 <h2 id="mechanical">Mechanical</h2>
 <ul>
   <li>Briefly Describe</li>
 </ul>
-<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211065647-dfa76530-b426-4cb4-9a31-2b71c24d21be.png" /></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211065647-dfa76530-b426-4cb4-9a31-2b71c24d21be.png" height="400" width="650" /></p>
 <p align="center">Mechanical Systems</p>
 
 <h2 id="the-team">The Team</h2>
 <ul>
-  <li>Doug</li>
-  <li>Mo</li>
-  <li>Esther</li>
-  <li>Mike</li>
-  <li>Felix</li>
-  <li>JAcob</li>
-  <li>Alejandro</li>
+  <li>Douglas Byrd</li>
+  <li>Muhammed Al-Hassani</li>
+  <li>Esther Yoo</li>
+  <li>Michael Hom</li>
+  <li>Felix Rodrigue</li>
+  <li>Jacob Antie </li>
+  <li>Alejandro Nunez</li>
 </ul>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211373131-5975e0fe-ff09-467c-9f22-22d847f0455a.jpeg" height="800" width="1200" /></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/46512429/211373131-5975e0fe-ff09-467c-9f22-22d847f0455a.jpeg" height="500" width="1100" /></p>
 
             </div>
 
@@ -267,6 +304,10 @@ were made. Personally, I was responsible for the low voltage subsystem and acted
                     
                     <li>
                         <a class="smoothscroll" href="/categories#Digital-Logic">Digital Logic</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#Manufacturng">Manufacturng</a>
                     </li>
                     
                     <li>
@@ -356,6 +397,8 @@ https://search.google.com/structured-data/testing-tool/u/0/
                     <a class="mt-1 mb-1" href="/categories#Digital-Logic">Digital Logic (1)</a>
                 
                     <a class="mt-1 mb-1" href="/categories#Mechanical-Design">Mechanical Design (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Manufacturng">Manufacturng (1)</a>
                 
                     <a class="mt-1 mb-1" href="/categories#Arduino">Arduino (1)</a>
                 

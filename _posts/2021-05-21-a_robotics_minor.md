@@ -2,9 +2,9 @@
 layout: post
 title:  "Robotics minor"
 categories: [ Mechatronics, SLAM, Controls, Python, C++ ]
-image: assets/images/cropped_rob_minor.gif
-featured: true
-hidden: true
+image: assets/images/rob_minor.gif
+featured: false
+hidden: false
 ---
 
 Mechatronics, SLAM, Controls, Python, C++
