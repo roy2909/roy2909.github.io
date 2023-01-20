@@ -1,13 +1,13 @@
 ---
 layout: post
 title:  "Robotics minor"
-categories: [ Mechatronics, SLAM, Controls, Python, C++ ]
+categories: [ROS1 Mechatronics, SLAM, Controls, Python, C++ ]
 image: assets/images/rob_minor.gif
 featured: false
 hidden: false
 ---
 
-Mechatronics, SLAM, Controls, Python, C++
+ROS1, Mechatronics, SLAM, Controls, Python, C++
 
 <div align="center"><img src="https://raw.githubusercontent.com/oubrejames/oubrejames.github.io/gh-pages/assets/images/rob_minor.gif
 " alt="rob_minor_gif" width="700"/></div>
