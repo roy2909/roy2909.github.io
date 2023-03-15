@@ -41,6 +41,10 @@
 <lastmod>2022-12-11T00:00:00-06:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/halo_auv/</loc>
+<lastmod>2023-03-15T00:00:00-05:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/categories</loc>
 </url>
 <url>
@@ -51,6 +55,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/tags</loc>
+</url>
+<url>
+<loc>http://localhost:4000/page2/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/_pages/James_Oubre_Resume_1_6_23.pdf</loc>

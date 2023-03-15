@@ -5,9 +5,98 @@
     <description>Northwestern MS in Robotics Student Portfolio</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 10 Jan 2023 21:40:14 -0600</pubDate>
-    <lastBuildDate>Tue, 10 Jan 2023 21:40:14 -0600</lastBuildDate>
+    <pubDate>Wed, 15 Mar 2023 12:27:20 -0500</pubDate>
+    <lastBuildDate>Wed, 15 Mar 2023 12:27:20 -0500</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
+    
+      <item>
+        <title>Custom built ROV/AUV</title>
+        <description>&lt;p&gt;ROS2, Electrical Design, Mechanical Design, Python, Mavlink&lt;/p&gt;
+
+&lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/oubrejames/oubrejames.github.io/gh-pages/assets/images/rob_minor.gif
+&quot; alt=&quot;rob_minor_gif&quot; width=&quot;700&quot; /&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;While at LSU, I completed a minor in robotics engineering alongside my electrical engineering
+major. For this minor I took a number of robotics related classes covering a range of topics. Many 
+of these classes were very hands on and I got a lot of useful project experience. Two of the 
+courses that I found particularly useful were Intro to Robotics Engineering and Autonomous Robotic Vehicles&lt;/p&gt;
+
+&lt;p&gt;In Intro to Robotics Engineering we learned about a broad array of topics from mechanical design to 
+software. We learned about robotic actuators and mobility mechanisms, robot motion control, navigation 
+and mapping, and human-robot interaction. Particularly, we had many interesting projects involving 
+the Parallax Activitybots, hexapods, and Turtlebots. Furthermore, the class focused heavily on learning
+ROS and had many labs, classes, and assignments dedicated to learning it.&lt;/p&gt;
+
+&lt;p&gt;Autonomous Robotic Vehicles covered topics like vehicle kinematics, motion control, perception, 
+localization, path planning, and navigation. In the class we learned about and implemented different 
+probabilistic methods like Particle Filter and Extended Kalman Filter (EKF) for navigation. As our final 
+project of the class, we implemented an Extended Kalman Filter (EKF) SLAM using Python and ROS on a Turtlebot 
+to navigate through a maze, map it, and localize itself.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/209484859-2579aa0f-0024-4640-8194-f3b06593e2fa.PNG&quot; height=&quot;400&quot; width=&quot;430&quot; /&gt; &lt;img src=&quot;https://user-images.githubusercontent.com/46512429/209484862-2830e017-f679-415b-ab06-1b02ff7585c9.jpg&quot; height=&quot;400&quot; width=&quot;430&quot; /&gt; &lt;/p&gt;
+
+&lt;div align=&quot;center&quot;&gt;&lt;h2&gt; &lt;a href=&quot;https://github.com/oubrejames/slam_ENGR_4200&quot;&gt;View it on Github&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;projects&quot;&gt;Projects&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;ins&gt;&lt;strong&gt;Maze solving robot (leftmost gif)&lt;/strong&gt;&lt;/ins&gt;:  Programmed Parallax Activitybot in C++ to navigate through a 
+maze, create a map of the maze, and save the quickest path to the end&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;ins&gt;&lt;strong&gt;Hexapod (middle gif)&lt;/strong&gt;&lt;/ins&gt;:  Explored different gaits and control to move the hexapod in 
+particular ways, achieve turning motions, and climb stairs&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;ins&gt;&lt;strong&gt;Increasing Activitybot Payload (rightmost gif)&lt;/strong&gt;&lt;/ins&gt;:  Created an external chassis for the
+Activitybot and retrofitted its drivetrain with different gears to increase its torque capacity to 
+push heavier objects&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;ins&gt;&lt;strong&gt;Extended Kalman Filter SLAM on Turtlebot&lt;/strong&gt;&lt;/ins&gt;:  Implemented EKF SLAM using Python and ROS 
+to navigate through a maze, map it, and localize itself&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;ins&gt;&lt;strong&gt;&lt;a href=&quot;https://oubrejames.github.io/golf/&quot;&gt;Golf Range Finder&lt;/a&gt;&lt;/strong&gt;&lt;/ins&gt;:  Created a computer
+vision system that tells a user how far they are from a golf flag using just an image of the flag&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;ins&gt;&lt;strong&gt;&lt;a href=&quot;https://oubrejames.github.io/cocktail/&quot;&gt;Automated Cocktail Maker&lt;/a&gt;&lt;/strong&gt;&lt;/ins&gt;:  Designed
+and created an automatic cocktail machine that can serve different drinks based off the glass inserted 
+into it&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;relevant-classes&quot;&gt;Relevant Classes&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Intro to Robotics Engineering&lt;/li&gt;
+  &lt;li&gt;Autonomous Robotic Vehicles&lt;/li&gt;
+  &lt;li&gt;Sensors and Actuators&lt;/li&gt;
+  &lt;li&gt;Intro Computer Vision&lt;/li&gt;
+  &lt;li&gt;Adjustable Speed Drives&lt;/li&gt;
+  &lt;li&gt;Microprocessor Systems&lt;/li&gt;
+  &lt;li&gt;Advanced Control System Design&lt;/li&gt;
+  &lt;li&gt;Discrete Control System Design&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Wed, 15 Mar 2023 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/halo_auv/</link>
+        <guid isPermaLink="true">http://localhost:4000/halo_auv/</guid>
+        
+        
+        <category>ROS2</category>
+        
+        <category>Electrical Design</category>
+        
+        <category>Mechanical Design</category>
+        
+        <category>Python</category>
+        
+        <category>Mavlink</category>
+        
+      </item>
     
       <item>
         <title>Motion Mirroring Robotic Arm</title>
@@ -560,7 +649,7 @@ to protect and insulate the battery segments.&lt;/p&gt;
     
       <item>
         <title>Robotics minor</title>
-        <description>&lt;p&gt;Mechatronics, SLAM, Controls, Python, C++&lt;/p&gt;
+        <description>&lt;p&gt;ROS1, Mechatronics, SLAM, Controls, Python, C++&lt;/p&gt;
 
 &lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/oubrejames/oubrejames.github.io/gh-pages/assets/images/rob_minor.gif
 &quot; alt=&quot;rob_minor_gif&quot; width=&quot;700&quot; /&gt;&lt;/div&gt;
@@ -635,7 +724,7 @@ into it&lt;/p&gt;
         <guid isPermaLink="true">http://localhost:4000/a_robotics_minor/</guid>
         
         
-        <category>Mechatronics</category>
+        <category>ROS1 Mechatronics</category>
         
         <category>SLAM</category>
         
@@ -644,57 +733,6 @@ into it&lt;/p&gt;
         <category>Python</category>
         
         <category>C++</category>
-        
-      </item>
-    
-      <item>
-        <title>Computer Vision Golf Range Finder</title>
-        <description>&lt;p&gt;Computer Vision, OpenCV, Python&lt;/p&gt;
-
-&lt;div align=&quot;center&quot;&gt;&lt;iframe width=&quot;925&quot; height=&quot;550&quot; src=&quot;https://www.youtube.com/embed/dGjaLse-M8g&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
-
-&lt;!-- &lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/oubrejames/oubrejames.github.io/gh-pages/assets/images/cropped_golf.gif&quot; alt=&quot;golf_pipeline&quot; width=&quot;1000&quot;/&gt;&lt;/div&gt; --&gt;
-
-&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
-
-&lt;p&gt;The purpose of this project is to imitate a golf range finder using a normal, non-depth, camera. The
-program was written using Python and OpenCV and the algorithm pipeline is shown below.&lt;/p&gt;
-
-&lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/209574627-5a9833e3-39d1-4991-bada-10430d3c5eb4.png&quot; alt=&quot;golf_pipeline&quot; width=&quot;1000&quot; /&gt;&lt;/div&gt;
-&lt;p align=&quot;center&quot;&gt;System Pipeline&lt;/p&gt;
-
-&lt;p&gt;First, the user takes an image of the flag and draws a rectangle around the flag. This region is 
-cropped out and the color of the flag is then detected. After the color of the flag is found, the 
-flag is cropped out using contour detection and the pixel length of the side of the flag is measured.
- Using this pixel length, the distance to the flag could be calculated using triangle similarity and
-displayed on the user’s screen.&lt;/p&gt;
-
-&lt;h2 id=&quot;results&quot;&gt;Results&lt;/h2&gt;
-
-&lt;p&gt;Overall, the range finder worked well. It was very precise and accurate for smaller distances. 
-However, as the distances began to increase, the program was less successful. Test results can be 
-seen below. One reason this could be happening is that the farther away the flag is, the smaller it 
-is on the picture. This makes it much more difficult get an accurate pixel count to calculate the 
-distance to the flag. Using a higher resolution image could help mitigate this problem.&lt;/p&gt;
-
-&lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/209575075-0e07e18b-a700-41f2-b51d-886c69e905d1.png&quot; alt=&quot;results1&quot; width=&quot;600&quot; /&gt;&lt;/div&gt;
-&lt;p align=&quot;center&quot;&gt;Test Results for 5-35 yards&lt;/p&gt;
-
-&lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/209575091-a12b24c1-39eb-491a-beb1-a5a8d6fe8962.png&quot; alt=&quot;results2&quot; width=&quot;600&quot; /&gt;&lt;/div&gt;
-&lt;p align=&quot;center&quot;&gt;Test Results for 44-132 yards&lt;/p&gt;
-
-&lt;div align=&quot;center&quot;&gt;&lt;h2&gt; &lt;a href=&quot;https://github.com/oubrejames/range_finder&quot;&gt;View it on Github&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt;
-</description>
-        <pubDate>Thu, 20 May 2021 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/golf/</link>
-        <guid isPermaLink="true">http://localhost:4000/golf/</guid>
-        
-        
-        <category>Computer Vision</category>
-        
-        <category>OpenCV</category>
-        
-        <category>Python</category>
         
       </item>
     
