@@ -5,80 +5,67 @@
     <description>Northwestern MS in Robotics Student Portfolio</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 15 Mar 2023 12:27:20 -0500</pubDate>
-    <lastBuildDate>Wed, 15 Mar 2023 12:27:20 -0500</lastBuildDate>
+    <pubDate>Thu, 16 Mar 2023 11:45:37 -0500</pubDate>
+    <lastBuildDate>Thu, 16 Mar 2023 11:45:37 -0500</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
         <title>Custom built ROV/AUV</title>
         <description>&lt;p&gt;ROS2, Electrical Design, Mechanical Design, Python, Mavlink&lt;/p&gt;
 
-&lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/oubrejames/oubrejames.github.io/gh-pages/assets/images/rob_minor.gif
-&quot; alt=&quot;rob_minor_gif&quot; width=&quot;700&quot; /&gt;&lt;/div&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;iframe width=&quot;700&quot; height=&quot;394&quot; src=&quot;https://www.youtube.com/embed/8WXNRmXKI5E&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
-&lt;p&gt;While at LSU, I completed a minor in robotics engineering alongside my electrical engineering
-major. For this minor I took a number of robotics related classes covering a range of topics. Many 
-of these classes were very hands on and I got a lot of useful project experience. Two of the 
-courses that I found particularly useful were Intro to Robotics Engineering and Autonomous Robotic Vehicles&lt;/p&gt;
 
-&lt;p&gt;In Intro to Robotics Engineering we learned about a broad array of topics from mechanical design to 
-software. We learned about robotic actuators and mobility mechanisms, robot motion control, navigation 
-and mapping, and human-robot interaction. Particularly, we had many interesting projects involving 
-the Parallax Activitybots, hexapods, and Turtlebots. Furthermore, the class focused heavily on learning
-ROS and had many labs, classes, and assignments dedicated to learning it.&lt;/p&gt;
+&lt;p&gt;Halo AUV is a robot I created to serve as platform for student’s in my master’s program at Northwestern University
+to use to learn about underwater robotics and impliment different features on. Personally, I wanted to gain experience
+in underwater robotics while also buildkkng a robot from the ground up. The robot can run as a normal remotely
+operated vehicle (ROV) and has been integrated with ROS2 to further explore autonomous capabilities.&lt;/p&gt;
 
-&lt;p&gt;Autonomous Robotic Vehicles covered topics like vehicle kinematics, motion control, perception, 
-localization, path planning, and navigation. In the class we learned about and implemented different 
-probabilistic methods like Particle Filter and Extended Kalman Filter (EKF) for navigation. As our final 
-project of the class, we implemented an Extended Kalman Filter (EKF) SLAM using Python and ROS on a Turtlebot 
-to navigate through a maze, map it, and localize itself.&lt;/p&gt;
+&lt;h2 id=&quot;rov-functionality&quot;&gt;ROV Functionality&lt;/h2&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/209484859-2579aa0f-0024-4640-8194-f3b06593e2fa.PNG&quot; height=&quot;400&quot; width=&quot;430&quot; /&gt; &lt;img src=&quot;https://user-images.githubusercontent.com/46512429/209484862-2830e017-f679-415b-ab06-1b02ff7585c9.jpg&quot; height=&quot;400&quot; width=&quot;430&quot; /&gt; &lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/225519957-af670ed4-fafb-47be-807c-44130d4830f3.png&quot; height=&quot;400&quot; width=&quot;700&quot; /&gt; &lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;QGroundControl View in ROV Mode&lt;/p&gt;
+
+&lt;h2 id=&quot;ros2-integration&quot;&gt;ROS2 Integration&lt;/h2&gt;
+
+&lt;h2 id=&quot;mechanical-design&quot;&gt;Mechanical Design&lt;/h2&gt;
+&lt;p&gt;The key aspects of the mechanical design are ease of manufacturing, high adjustablility, and the abililty
+to easily add on new payloads/sensors. The design is also centered around the BlueRobotics 3” and 4” watertight
+enclosures.&lt;/p&gt;
+
+&lt;div align=&quot;center&quot;&gt;&lt;h2&gt; &lt;a href=&quot;https://cad.onshape.com/documents/80b1bd153eeafd48236580f8/w/a8bef987ce7a6f7e2556b87e/e/c5365bc12b4a5414eba7a777?renderMode=0&amp;amp;uiState=64133e72baa9af4c9b11d3a9&quot;&gt;View the Mechanical Design&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/225687785-9b64f344-fcf0-4a4d-b7c9-24ed178947cc.png&quot; height=&quot;600&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;Halo AUV&lt;/p&gt;
+
+&lt;p&gt;The frame itself is constructed of two parallel laser-cut pieces of acryllic that are mounted to the 
+water tight enclosure and reinforced with multiple standoffs. Once the top and bottom frames are cut, 
+the only tools needed to assemble the frame are common hex keys. The assembly process takes about 10 minutes.&lt;/p&gt;
+
+&lt;p&gt;The vehicle also consists of six slotted mounts along the bottom of the frame for adding and moving 
+weights. These are used to adjust the vehile’s overall weight and to align the it center of bouyancy 
+with its center of gravity. The current design allows for weights to be quickly added and shifted so
+that adjustments can be made quickly. This is esspecially useful for adding new payloads to the vehicle
+as they will change the weight and bouyancy balance of the robot. Additionally, floats may be added
+to increase the bouyancy.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/225508507-ff27e27a-fcbe-4740-a20d-61eb99ce611a.gif&quot; height=&quot;200&quot; width=&quot;280&quot; /&gt; &lt;img src=&quot;https://user-images.githubusercontent.com/46512429/225509749-6b0fd71c-9194-4dd6-bf3e-4cb84fb6357f.gif&quot; height=&quot;200&quot; width=&quot;280&quot; /&gt; &lt;img src=&quot;https://user-images.githubusercontent.com/46512429/225510365-459077d5-c2ea-4ec6-85bb-c2b0b1e0c81b.gif&quot; height=&quot;200&quot; width=&quot;280&quot; /&gt; &lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;Weight Sliders, Corner Weights, and Bouyancy Floats&lt;/p&gt;
+
+&lt;p&gt;Additionaly payloads and sensors can also be easily added to Halo. There are many mounting holes lining
+all sides of the frame and going down the center. The weight mounts are a good example of how new payloads
+may be added.&lt;/p&gt;
+
+&lt;h2 id=&quot;electrical-dessign&quot;&gt;Electrical Dessign&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/225513025-a6f9a9ca-644e-4e17-b3fe-7a8860e6f7c3.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;software&quot;&gt;Software&lt;/h2&gt;
 
 &lt;div align=&quot;center&quot;&gt;&lt;h2&gt; &lt;a href=&quot;https://github.com/oubrejames/slam_ENGR_4200&quot;&gt;View it on Github&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;projects&quot;&gt;Projects&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;ins&gt;&lt;strong&gt;Maze solving robot (leftmost gif)&lt;/strong&gt;&lt;/ins&gt;:  Programmed Parallax Activitybot in C++ to navigate through a 
-maze, create a map of the maze, and save the quickest path to the end&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;ins&gt;&lt;strong&gt;Hexapod (middle gif)&lt;/strong&gt;&lt;/ins&gt;:  Explored different gaits and control to move the hexapod in 
-particular ways, achieve turning motions, and climb stairs&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;ins&gt;&lt;strong&gt;Increasing Activitybot Payload (rightmost gif)&lt;/strong&gt;&lt;/ins&gt;:  Created an external chassis for the
-Activitybot and retrofitted its drivetrain with different gears to increase its torque capacity to 
-push heavier objects&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;ins&gt;&lt;strong&gt;Extended Kalman Filter SLAM on Turtlebot&lt;/strong&gt;&lt;/ins&gt;:  Implemented EKF SLAM using Python and ROS 
-to navigate through a maze, map it, and localize itself&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;ins&gt;&lt;strong&gt;&lt;a href=&quot;https://oubrejames.github.io/golf/&quot;&gt;Golf Range Finder&lt;/a&gt;&lt;/strong&gt;&lt;/ins&gt;:  Created a computer
-vision system that tells a user how far they are from a golf flag using just an image of the flag&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;ins&gt;&lt;strong&gt;&lt;a href=&quot;https://oubrejames.github.io/cocktail/&quot;&gt;Automated Cocktail Maker&lt;/a&gt;&lt;/strong&gt;&lt;/ins&gt;:  Designed
-and created an automatic cocktail machine that can serve different drinks based off the glass inserted 
-into it&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;relevant-classes&quot;&gt;Relevant Classes&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Intro to Robotics Engineering&lt;/li&gt;
-  &lt;li&gt;Autonomous Robotic Vehicles&lt;/li&gt;
-  &lt;li&gt;Sensors and Actuators&lt;/li&gt;
-  &lt;li&gt;Intro Computer Vision&lt;/li&gt;
-  &lt;li&gt;Adjustable Speed Drives&lt;/li&gt;
-  &lt;li&gt;Microprocessor Systems&lt;/li&gt;
-  &lt;li&gt;Advanced Control System Design&lt;/li&gt;
-  &lt;li&gt;Discrete Control System Design&lt;/li&gt;
-&lt;/ul&gt;
 
 </description>
         <pubDate>Wed, 15 Mar 2023 00:00:00 -0500</pubDate>
