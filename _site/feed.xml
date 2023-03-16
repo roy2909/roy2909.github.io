@@ -5,8 +5,8 @@
     <description>Northwestern MS in Robotics Student Portfolio</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 16 Mar 2023 11:45:37 -0500</pubDate>
-    <lastBuildDate>Thu, 16 Mar 2023 11:45:37 -0500</lastBuildDate>
+    <pubDate>Thu, 16 Mar 2023 14:45:20 -0500</pubDate>
+    <lastBuildDate>Thu, 16 Mar 2023 14:45:20 -0500</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -20,14 +20,19 @@
 &lt;p&gt;Halo AUV is a robot I created to serve as platform for student’s in my master’s program at Northwestern University
 to use to learn about underwater robotics and impliment different features on. Personally, I wanted to gain experience
 in underwater robotics while also buildkkng a robot from the ground up. The robot can run as a normal remotely
-operated vehicle (ROV) and has been integrated with ROS2 to further explore autonomous capabilities.&lt;/p&gt;
+operated vehicle (ROV) and has been integrated with ROS2 to further explore autonomous capabilities. Below is a block diagram
+describing the architecture of the robot.&lt;/p&gt;
 
-&lt;h2 id=&quot;rov-functionality&quot;&gt;ROV Functionality&lt;/h2&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/225735537-3376c1d1-477b-4449-94be-46e569b8983c.png&quot; height=&quot;900&quot; width=&quot;650&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;Halo AUV Block Diagram&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/225519957-af670ed4-fafb-47be-807c-44130d4830f3.png&quot; height=&quot;400&quot; width=&quot;700&quot; /&gt; &lt;/p&gt;
-&lt;p align=&quot;center&quot;&gt;QGroundControl View in ROV Mode&lt;/p&gt;
-
-&lt;h2 id=&quot;ros2-integration&quot;&gt;ROS2 Integration&lt;/h2&gt;
+&lt;p&gt;On Halo itself, the Pixhawk handles low level control and actually sends commands to move the motors. It 
+relays depth information from a barometer and heading information from its internal sensors to the Raspberry Pi.
+The Raspberry Pi sends these sensor measurements alongside the camera stream via Ethernet to a laptop.
+The measurements and camera stream are then sent to either QGroundControl (ROV mode) or to a ROS2 nodes
+that publish the images to a ROS topic and perform different control functions. In ROV mode, control input
+comes from a PlayStation control manned by a human. When high level control cmommands are recieved, they are
+sent back to the Raspberry Pi over the Ethernet tether and eventually to the Pixhawk to move the robot.&lt;/p&gt;
 
 &lt;h2 id=&quot;mechanical-design&quot;&gt;Mechanical Design&lt;/h2&gt;
 &lt;p&gt;The key aspects of the mechanical design are ease of manufacturing, high adjustablility, and the abililty
@@ -62,8 +67,23 @@ may be added.&lt;/p&gt;
 &lt;h2 id=&quot;electrical-dessign&quot;&gt;Electrical Dessign&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/225513025-a6f9a9ca-644e-4e17-b3fe-7a8860e6f7c3.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;Wiring Diagram&lt;/p&gt;
 
 &lt;h2 id=&quot;software&quot;&gt;Software&lt;/h2&gt;
+
+&lt;h2 id=&quot;rov-functionality&quot;&gt;ROV Functionality&lt;/h2&gt;
+
+&lt;p&gt;When using the robot as an ROV, a user simply has to plug the robot’s tether into their laptop and 
+run the QGroundControl software (shown below). This software allows them to control the robot with 
+a standard video game controller while getting depth information, heading information, and a first person
+view from onboard the ROV.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/225519957-af670ed4-fafb-47be-807c-44130d4830f3.png&quot; height=&quot;400&quot; width=&quot;700&quot; /&gt; &lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;QGroundControl View in ROV Mode&lt;/p&gt;
+
+&lt;h2 id=&quot;ros2-integration&quot;&gt;ROS2 Integration&lt;/h2&gt;
+
+&lt;p&gt;Explain the different nodes and services&lt;/p&gt;
 
 &lt;div align=&quot;center&quot;&gt;&lt;h2&gt; &lt;a href=&quot;https://github.com/oubrejames/slam_ENGR_4200&quot;&gt;View it on Github&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt;
 
