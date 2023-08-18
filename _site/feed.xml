@@ -5,16 +5,15 @@
     <description>Northwestern MS in Robotics Student Portfolio</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 12 Aug 2023 11:10:24 -0500</pubDate>
-    <lastBuildDate>Sat, 12 Aug 2023 11:10:24 -0500</lastBuildDate>
+    <pubDate>Thu, 17 Aug 2023 16:21:21 -0500</pubDate>
+    <lastBuildDate>Thu, 17 Aug 2023 16:21:21 -0500</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
-        <title>Using Machine Learning to Identify Individual Ants in a Colony</title>
+        <title>Using Machine Learning to Identify Individual Ants</title>
         <description>&lt;p&gt;Machine Learning, Python, Computer Vision, OpenCV, PyTorch, C++&lt;/p&gt;
 
-&lt;!-- &lt;div align=&quot;center&quot;&gt;&lt;iframe width=&quot;700&quot; height=&quot;394&quot; src=&quot;https://www.youtube.com/embed/8WXNRmXKI5E&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt; --&gt;
-&lt;p&gt;** Video with voiceover describing the project coming soon **&lt;/p&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;iframe width=&quot;700&quot; height=&quot;394&quot; src=&quot;https://www.youtube.com/embed/8WXNRmXKI5E&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;The goal of this project was to create a system that could identify individual ants in a colony. Using
@@ -24,7 +23,7 @@ network to create a feature vector, or embedding, to describe each ant. By compa
 ants, a threshold could be used to determine if the ants are the same or different with a ___ give accuracy,
 recall, precision, or whatever.&lt;/p&gt;
 
-&lt;h2 id=&quot;why-ants&quot;&gt;Why Ants?&lt;/h2&gt;
+&lt;h3 id=&quot;why-ants&quot;&gt;Why Ants?&lt;/h3&gt;
 &lt;p&gt;The first reaction when I tell people about this project is typically something along the lines of “how
 is this useful?” or “why would you want to do that?”. The answer is that for most people, it’s not
 useful at all. However, for myrmecologists (ant scientists), it is very useful. Ants are very social 
@@ -35,25 +34,42 @@ patterns on them. Check out &lt;a href=&quot;https://youtu.be/uAQ5IKVpysc&quot;&
 this process can be. By creating a system that can automatically identify individual ants, we can save researchers a lot of time and effort.&lt;/p&gt;
 
 &lt;h2 id=&quot;project-setup-and-hardware&quot;&gt;Project Setup and Hardware&lt;/h2&gt;
+&lt;p&gt;To collect images of the ants, I used a Blackfly S camera from FLIR equipped with a macro lens. The 
+camera was mounted on a microscope stand and placed above a 3D printed channel that the ants could
+walk through. By using this setup, the ants were forced to walk in a straight line in the camera’s
+field of view. This entire setup was then placed inside of a light box to ensure consistent lighting.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://github.com/oubrejames/antID/assets/46512429/cb99713f-b1f7-4a37-87c9-7e023232fd85&quot; height=&quot;600&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot;&gt;Ant World&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://github.com/oubrejames/antID/assets/46512429/a5261545-e3ca-49aa-b72d-d54e64cbcd73&quot; height=&quot;500&quot; width=&quot;350&quot; /&gt;  &lt;img src=&quot;https://github.com/oubrejames/antID/assets/46512429/76fbd53c-77db-4546-b986-dc568ce16fc8&quot; height=&quot;500&quot; width=&quot;350&quot; /&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Image from github showing all the different components&lt;/li&gt;
-  &lt;li&gt;Give overview of the living spaces&lt;/li&gt;
-  &lt;li&gt;Describe camera and lens and why I chose them (all the specs and shit)&lt;/li&gt;
-  &lt;li&gt;Talk about light box&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;The image below shows the entire setup. There were two main living chambers for the ants. One for ants
+that data had already been collected for and one for ants that data still needed to be imaged. There are
+also multiple 3D printed gates to control the flow of ants from the living chambers to the data collection
+area.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://github.com/oubrejames/antID/assets/46512429/cb99713f-b1f7-4a37-87c9-7e023232fd85&quot; height=&quot;800&quot; width=&quot;700&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;Setup Overview&lt;/p&gt;
 
 &lt;h2 id=&quot;data-collection&quot;&gt;Data Collection&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Explaining the C++ library and why I made it/what it does (data collect script)&lt;/li&gt;
-  &lt;li&gt;Give explanation of data collection process&lt;/li&gt;
-  &lt;li&gt;Have more pictures to supplement words like picture of pass thru under camera&lt;/li&gt;
-&lt;/ul&gt;
+
+&lt;p&gt;By using the setup described above, I was able to collect &lt;strong&gt;&lt;em&gt;insert number here&lt;/em&gt;&lt;/strong&gt; images of &lt;strong&gt;&lt;em&gt;insert number here&lt;/em&gt;&lt;/strong&gt; different ants. The traffic control gates were used to isolated one ant in the data collection area.
+This allowed me to collect a video&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://github.com/oubrejames/antID/assets/46512429/d097f72f-aad7-4b84-8c3f-167528621f12&quot; height=&quot;250&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://github.com/oubrejames/antID/assets/46512429/9589a8a1-cd86-46d3-8b16-473048150340&quot; height=&quot;250&quot; width=&quot;600&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;Ant Imaging Channel and Image&lt;/p&gt;
+
+&lt;p&gt;To interact with the Blackfly camera and collect videos of the ants walking through the imaging channel, I 
+had to first create a &lt;a href=&quot;https://github.com/oubrejames/antID/tree/main/black_fly_tools&quot;&gt;C++ library&lt;/a&gt;
+to interface with the camera. It allowed me to control all of the camera’s settings and collect videos. I also created 
+a scripts to semi-automatically collect videos of the ants.&lt;/p&gt;
+
+&lt;p&gt;When collecting videos, I would first let an ant walk into the data collection area and start recording. Once the ant walked under the camera enough, I would stop recording and have the ant walk to the separate living chamber. I would then repeat this process for each unfilmed ant. Videos were named sequentially as “ant_#.avi” so that I could keep track of which ant was in each video.&lt;/p&gt;
 
 &lt;h2 id=&quot;methodology&quot;&gt;Methodology&lt;/h2&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://github.com/oubrejames/antID/assets/46512429/c10ccb0f-a427-44be-b271-7a9c534163ca&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;System Pipeline&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;talk about entire pipeline (might need to add voting and single pass detection)&lt;/li&gt;
   &lt;li&gt;have a diagram of the pipeline&lt;/li&gt;
@@ -65,6 +81,9 @@ this process can be. By creating a system that can automatically identify indivi
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;results&quot;&gt;Results&lt;/h2&gt;
+
+&lt;p&gt;im here hello.&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Give confusion matrix&lt;/li&gt;
   &lt;li&gt;explain how I defined accuracy&lt;/li&gt;

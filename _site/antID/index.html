@@ -6,12 +6,12 @@
 
 <link rel="icon" href="/assets/images/logo.png">
 
-<title>Using Machine Learning to Identify Individual Ants in a Colony | James Oubre</title>
+<title>Using Machine Learning to Identify Individual Ants | James Oubre</title>
 
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Using Machine Learning to Identify Individual Ants in a Colony | James’ Portfolio</title>
+<title>Using Machine Learning to Identify Individual Ants | James’ Portfolio</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Using Machine Learning to Identify Individual Ants in a Colony" />
+<meta property="og:title" content="Using Machine Learning to Identify Individual Ants" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Machine Learning, Python, Computer Vision, OpenCV, PyTorch, C++" />
 <meta property="og:description" content="Machine Learning, Python, Computer Vision, OpenCV, PyTorch, C++" />
@@ -23,9 +23,9 @@
 <meta property="article:published_time" content="2023-08-10T00:00:00-05:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="http://localhost:4000/assets/images/slower_bigger_ant.gif" />
-<meta property="twitter:title" content="Using Machine Learning to Identify Individual Ants in a Colony" />
+<meta property="twitter:title" content="Using Machine Learning to Identify Individual Ants" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-08-10T00:00:00-05:00","datePublished":"2023-08-10T00:00:00-05:00","description":"Machine Learning, Python, Computer Vision, OpenCV, PyTorch, C++","headline":"Using Machine Learning to Identify Individual Ants in a Colony","image":"http://localhost:4000/assets/images/slower_bigger_ant.gif","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/antID/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo3.png"}},"url":"http://localhost:4000/antID/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-08-10T00:00:00-05:00","datePublished":"2023-08-10T00:00:00-05:00","description":"Machine Learning, Python, Computer Vision, OpenCV, PyTorch, C++","headline":"Using Machine Learning to Identify Individual Ants","image":"http://localhost:4000/assets/images/slower_bigger_ant.gif","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/antID/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo3.png"}},"url":"http://localhost:4000/antID/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -145,7 +145,7 @@
                 
 
                 <!-- Post Title -->
-                <h1 class="posttitle">Using Machine Learning to Identify Individual Ants in a Colony</h1>
+                <h1 class="posttitle">Using Machine Learning to Identify Individual Ants</h1>
 
             </div>
 
@@ -160,8 +160,7 @@
                 <!-- End Toc -->
                 <p>Machine Learning, Python, Computer Vision, OpenCV, PyTorch, C++</p>
 
-<!-- <div align="center"><iframe width="700" height="394" src="https://www.youtube.com/embed/8WXNRmXKI5E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div> -->
-<p>** Video with voiceover describing the project coming soon **</p>
+<div align="center"><iframe width="700" height="394" src="https://www.youtube.com/embed/8WXNRmXKI5E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></div>
 
 <h2 id="overview">Overview</h2>
 <p>The goal of this project was to create a system that could identify individual ants in a colony. Using
@@ -171,7 +170,7 @@ network to create a feature vector, or embedding, to describe each ant. By compa
 ants, a threshold could be used to determine if the ants are the same or different with a ___ give accuracy,
 recall, precision, or whatever.</p>
 
-<h2 id="why-ants">Why Ants?</h2>
+<h3 id="why-ants">Why Ants?</h3>
 <p>The first reaction when I tell people about this project is typically something along the lines of “how
 is this useful?” or “why would you want to do that?”. The answer is that for most people, it’s not
 useful at all. However, for myrmecologists (ant scientists), it is very useful. Ants are very social 
@@ -182,25 +181,42 @@ patterns on them. Check out <a href="https://youtu.be/uAQ5IKVpysc">this video</a
 this process can be. By creating a system that can automatically identify individual ants, we can save researchers a lot of time and effort.</p>
 
 <h2 id="project-setup-and-hardware">Project Setup and Hardware</h2>
+<p>To collect images of the ants, I used a Blackfly S camera from FLIR equipped with a macro lens. The 
+camera was mounted on a microscope stand and placed above a 3D printed channel that the ants could
+walk through. By using this setup, the ants were forced to walk in a straight line in the camera’s
+field of view. This entire setup was then placed inside of a light box to ensure consistent lighting.</p>
 
-<p align="center"><img src="https://github.com/oubrejames/antID/assets/46512429/cb99713f-b1f7-4a37-87c9-7e023232fd85" height="600" width="800" /></p>
-<p align="center">Ant World</p>
+<p align="center"><img src="https://github.com/oubrejames/antID/assets/46512429/a5261545-e3ca-49aa-b72d-d54e64cbcd73" height="500" width="350" />  <img src="https://github.com/oubrejames/antID/assets/46512429/76fbd53c-77db-4546-b986-dc568ce16fc8" height="500" width="350" /></p>
 
-<ul>
-  <li>Image from github showing all the different components</li>
-  <li>Give overview of the living spaces</li>
-  <li>Describe camera and lens and why I chose them (all the specs and shit)</li>
-  <li>Talk about light box</li>
-</ul>
+<p>The image below shows the entire setup. There were two main living chambers for the ants. One for ants
+that data had already been collected for and one for ants that data still needed to be imaged. There are
+also multiple 3D printed gates to control the flow of ants from the living chambers to the data collection
+area.</p>
+
+<p align="center"><img src="https://github.com/oubrejames/antID/assets/46512429/cb99713f-b1f7-4a37-87c9-7e023232fd85" height="800" width="700" /></p>
+<p align="center">Setup Overview</p>
 
 <h2 id="data-collection">Data Collection</h2>
-<ul>
-  <li>Explaining the C++ library and why I made it/what it does (data collect script)</li>
-  <li>Give explanation of data collection process</li>
-  <li>Have more pictures to supplement words like picture of pass thru under camera</li>
-</ul>
+
+<p>By using the setup described above, I was able to collect <strong><em>insert number here</em></strong> images of <strong><em>insert number here</em></strong> different ants. The traffic control gates were used to isolated one ant in the data collection area.
+This allowed me to collect a video</p>
+
+<p align="center"><img src="https://github.com/oubrejames/antID/assets/46512429/d097f72f-aad7-4b84-8c3f-167528621f12" height="250" width="500" /></p>
+<p align="center"><img src="https://github.com/oubrejames/antID/assets/46512429/9589a8a1-cd86-46d3-8b16-473048150340" height="250" width="600" /></p>
+<p align="center">Ant Imaging Channel and Image</p>
+
+<p>To interact with the Blackfly camera and collect videos of the ants walking through the imaging channel, I 
+had to first create a <a href="https://github.com/oubrejames/antID/tree/main/black_fly_tools">C++ library</a>
+to interface with the camera. It allowed me to control all of the camera’s settings and collect videos. I also created 
+a scripts to semi-automatically collect videos of the ants.</p>
+
+<p>When collecting videos, I would first let an ant walk into the data collection area and start recording. Once the ant walked under the camera enough, I would stop recording and have the ant walk to the separate living chamber. I would then repeat this process for each unfilmed ant. Videos were named sequentially as “ant_#.avi” so that I could keep track of which ant was in each video.</p>
 
 <h2 id="methodology">Methodology</h2>
+
+<p align="center"><img src="https://github.com/oubrejames/antID/assets/46512429/c10ccb0f-a427-44be-b271-7a9c534163ca" /></p>
+<p align="center">System Pipeline</p>
+
 <ul>
   <li>talk about entire pipeline (might need to add voting and single pass detection)</li>
   <li>have a diagram of the pipeline</li>
@@ -212,6 +228,9 @@ this process can be. By creating a system that can automatically identify indivi
 </ul>
 
 <h2 id="results">Results</h2>
+
+<p>im here hello.</p>
+
 <ul>
   <li>Give confusion matrix</li>
   <li>explain how I defined accuracy</li>
