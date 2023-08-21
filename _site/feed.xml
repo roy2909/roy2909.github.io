@@ -5,23 +5,25 @@
     <description>Northwestern MS in Robotics Student Portfolio</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 17 Aug 2023 16:21:21 -0500</pubDate>
-    <lastBuildDate>Thu, 17 Aug 2023 16:21:21 -0500</lastBuildDate>
+    <pubDate>Mon, 21 Aug 2023 14:05:19 -0500</pubDate>
+    <lastBuildDate>Mon, 21 Aug 2023 14:05:19 -0500</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
         <title>Using Machine Learning to Identify Individual Ants</title>
         <description>&lt;p&gt;Machine Learning, Python, Computer Vision, OpenCV, PyTorch, C++&lt;/p&gt;
 
-&lt;div align=&quot;center&quot;&gt;&lt;iframe width=&quot;700&quot; height=&quot;394&quot; src=&quot;https://www.youtube.com/embed/8WXNRmXKI5E&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;iframe width=&quot;700&quot; height=&quot;394&quot; src=&quot;https://www.youtube.com/embed/KltiiPcd1nc?si=WuJL2qU8SzZCvGjD&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;The goal of this project was to create a system that could identify individual ants in a colony. Using
-a machine vision camera equipped with a macro lens, I was able to collect &lt;strong&gt;&lt;em&gt;insert number here&lt;/em&gt;&lt;/strong&gt; images
-of &lt;strong&gt;&lt;em&gt;insert number here&lt;/em&gt;&lt;/strong&gt; different harvester ants. These images were then used to train a machine learning
+a machine vision camera equipped with a macro lens, I was able to collect 27,244 images
+of 55 different harvester ants. These images were then used to train a machine learning
 network to create a feature vector, or embedding, to describe each ant. By comparing embeddings of two
-ants, a threshold could be used to determine if the ants are the same or different with a ___ give accuracy,
-recall, precision, or whatever.&lt;/p&gt;
+ants, a threshold could be used to determine if the ants are the same or different with and accuracy 
+of 86.04%.&lt;/p&gt;
+
+&lt;div align=&quot;center&quot;&gt;&lt;h2&gt; &lt;a href=&quot;https://github.com/oubrejames/antID&quot;&gt;View it on Github&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;why-ants&quot;&gt;Why Ants?&lt;/h3&gt;
 &lt;p&gt;The first reaction when I tell people about this project is typically something along the lines of “how
@@ -51,45 +53,65 @@ area.&lt;/p&gt;
 
 &lt;h2 id=&quot;data-collection&quot;&gt;Data Collection&lt;/h2&gt;
 
-&lt;p&gt;By using the setup described above, I was able to collect &lt;strong&gt;&lt;em&gt;insert number here&lt;/em&gt;&lt;/strong&gt; images of &lt;strong&gt;&lt;em&gt;insert number here&lt;/em&gt;&lt;/strong&gt; different ants. The traffic control gates were used to isolated one ant in the data collection area.
-This allowed me to collect a video&lt;/p&gt;
+&lt;p&gt;By using the setup described above, I was able to I was able to collect 27,244 images
+of 55 different harvester ants. The traffic control gates were used to isolated one ant in the data collection area. This allowed me to collect a videos of one ant at a time.&lt;/p&gt;
 
 &lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://github.com/oubrejames/antID/assets/46512429/d097f72f-aad7-4b84-8c3f-167528621f12&quot; height=&quot;250&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://github.com/oubrejames/antID/assets/46512429/9589a8a1-cd86-46d3-8b16-473048150340&quot; height=&quot;250&quot; width=&quot;600&quot; /&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot;&gt;Ant Imaging Channel and Image&lt;/p&gt;
 
 &lt;p&gt;To interact with the Blackfly camera and collect videos of the ants walking through the imaging channel, I 
-had to first create a &lt;a href=&quot;https://github.com/oubrejames/antID/tree/main/black_fly_tools&quot;&gt;C++ library&lt;/a&gt;
+had to first create a &lt;a href=&quot;https://github.com/oubrejames/antID/tree/main/black_fly_tools&quot;&gt;library in C++&lt;/a&gt;
 to interface with the camera. It allowed me to control all of the camera’s settings and collect videos. I also created 
 a scripts to semi-automatically collect videos of the ants.&lt;/p&gt;
 
-&lt;p&gt;When collecting videos, I would first let an ant walk into the data collection area and start recording. Once the ant walked under the camera enough, I would stop recording and have the ant walk to the separate living chamber. I would then repeat this process for each unfilmed ant. Videos were named sequentially as “ant_#.avi” so that I could keep track of which ant was in each video.&lt;/p&gt;
+&lt;p&gt;When collecting videos, I would first let an ant walk into the data collection area and then start recording. Once the ant walked under the camera enough, I would stop recording and have the ant walk to the separate living chamber. I would then repeat this process for each unfilmed ant. Videos were named sequentially as “ant_#.avi” so that I could keep track of which ant was in each video.&lt;/p&gt;
 
 &lt;h2 id=&quot;methodology&quot;&gt;Methodology&lt;/h2&gt;
 
 &lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://github.com/oubrejames/antID/assets/46512429/c10ccb0f-a427-44be-b271-7a9c534163ca&quot; /&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot;&gt;System Pipeline&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;talk about entire pipeline (might need to add voting and single pass detection)&lt;/li&gt;
-  &lt;li&gt;have a diagram of the pipeline&lt;/li&gt;
-  &lt;li&gt;very briefly overview the yolo steps&lt;/li&gt;
-  &lt;li&gt;go into detail about the embedding steps and triplet loss (mention/link facenet)&lt;/li&gt;
-  &lt;li&gt;have model architecture here&lt;/li&gt;
-  &lt;li&gt;talk about how I chose threshold&lt;/li&gt;
-  &lt;li&gt;if you do voting explain how that increased the accuracy&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Once videos of the ants were collected, I used YOLO V8 to find video frames where ants were present.
+I then saved a cropped image of the ant from the YOLO detection in a folder corresponding to that
+ant’s identity.&lt;/p&gt;
+
+&lt;p&gt;Ant images are then put into the same convolutional neural network, known as a siamese 
+network, that outputs a feature vector, or embedding, for each image. By finding the difference between embeddings of two images and taking the norm of that difference a distance is obtained. By comparing this
+distance to a threshold, I was able to determine if ants were the same or different.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://github.com/oubrejames/antID/assets/46512429/41e57b7c-5b99-40f1-9938-27a52a565ca7&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;Model Summary&lt;/p&gt;
+
+&lt;p&gt;The model itself outputs a 128 element feature vector. To train it I used a loss function known as triplet loss. Training with triplet loss can be understood intuitively by giving the trainer 3 images at each training step, an anchor, a positive, and a negative. The anchor is an image of any ant, the positive is then a different picture of the same ant, and the negative is a picture of a different ant. During training, the model weights will be updated so that the distance between anchor and positive embeddings is smaller than the distance between anchor and negative embeddings.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://github.com/oubrejames/antID/assets/46512429/9692bb97-9344-4ca4-9df5-629caa8e4fd8&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;Triplet Loss Function&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://github.com/oubrejames/antID/assets/46512429/5f83b33c-1a04-4203-a70d-9ffd9ba439ca&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;Cost Function with Triplet Loss&lt;/p&gt;
+
+&lt;p&gt;Triplet loss makes this work because the distances between the anchor positive pair minus the anchor 
+negative pair plus some margin must be less than zero. Because the difference between distances must 
+be negative, the anchor negative distance must be larger than the anchor positive distance. The 
+margin is then used to try and push the distances from the anchor to positive and negative embeddings 
+further from each other. Because the max is taken between the difference of distances and zero, the 
+loss will be zero when distances are separated by the defined margin.&lt;/p&gt;
+
+&lt;p&gt;The model was trained on 18,845 images of 45 different ants.&lt;/p&gt;
 
 &lt;h2 id=&quot;results&quot;&gt;Results&lt;/h2&gt;
 
-&lt;p&gt;im here hello.&lt;/p&gt;
+&lt;p&gt;To choose a threshold, I tested a range of thresholds between the average anchor-positive distance and
+average anchor-negative distance. The threshold was chosen by picking the value that achieved the
+highest accuracy.&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Give confusion matrix&lt;/li&gt;
-  &lt;li&gt;explain how I defined accuracy&lt;/li&gt;
-  &lt;li&gt;if you do voting say differences in accuracy and stuff between that and non-voting&lt;/li&gt;
-  &lt;li&gt;explain how I used thresholding and show graph with different thresholds&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot; https://github.com/oubrejames/antID/assets/46512429/973d7aff-4243-4023-a82a-7fe054b782b4&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;Threshold Test&lt;/p&gt;
+
+&lt;p&gt;The model was tested on two different test sets. One contained 2,357 different images of 45 ants that the model had seen in training and the other had 3,687 images of 10 unseen ants. On the dataset of previously
+seen ants, the model achieved a true positive rate of 95.21%, a true negative rate of 99.6% and an accuracy
+of 97.3%. On the dataset of unseen ants, the model achieved a true positive rate of 80.67%, a true negative rate of 93.68% and an accuracy of 86.04%. Accuracy here is defined as the number of true positives plus the number of true negative over the total number of predictions.&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 10 Aug 2023 00:00:00 -0500</pubDate>
