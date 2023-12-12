@@ -49,6 +49,9 @@
 <lastmod>2023-08-10T00:00:00-05:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/about</loc>
+</url>
+<url>
 <loc>http://localhost:4000/categories</loc>
 </url>
 <url>
@@ -62,17 +65,5 @@
 </url>
 <url>
 <loc>http://localhost:4000/page2/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/_pages/Awesome_CV-15.pdf</loc>
-<lastmod>2023-12-11T20:46:57-06:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/_pages/James_Oubre_Resume_1_6_23.pdf</loc>
-<lastmod>2023-12-11T20:46:57-06:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/_pages/James_Oubre_resume.pdf</loc>
-<lastmod>2023-12-11T20:46:57-06:00</lastmod>
 </url>
 </urlset>
