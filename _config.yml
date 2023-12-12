@@ -1,10 +1,10 @@
 # Site
-name: "James Oubre"
-title: "James' Portfolio"
+name: "Rahul Roy"
+title: "Rahul Roy's Portfolio"
 description: "Northwestern MS in Robotics Student Portfolio"
 logo: 'assets/images/logo3.png'
 favicon: 'assets/images/logo3.png'
-url: oubrejames.github.io
+url: roy2909.github.io
 baseurl: 
 google_analytics:
 include: ["_pages"]
@@ -13,10 +13,10 @@ permalink: /:title/
 # Authors
 authors:
   James:
-    name: James Oubre
-    display_name: James Oubre
+    name: Rahul Roy
+    display_name: Rahul Roy
     gravatar:
-    email: jamesoubre2023@u.northwestern.edu
+    email: rahulroy2024@u.northwestern.edu
     LinkedIn: https://www.linkedin.com/in/james-oubre
     description: 
 
