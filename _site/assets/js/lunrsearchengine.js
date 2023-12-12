@@ -6,7 +6,7 @@ var documents = [{
     "body": "404 Page does not exist!Please use the search bar at the top or visit our homepage! "
     }, {
     "id": 1,
-    "url": "http://localhost:4000/about",
+    "url": "http://localhost:4000/AboutMe",
     "title": "Mediumish Template for Jekyll",
     "body": "This website is built with Jekyll and Mediumish template for Jekyll. It's for demonstration purposes, no real content can be found. Mediumish template for Jekyll is compatible with Github pages, in fact even this demo is created with Github Pages and hosted with Github.  Documentation: Please, read the docs here. Questions or bug reports?: Head over to our Github repository! Buy me a coffeeThank you for your support! Your donation helps me to maintain and improve Mediumish . Buy me a coffee Documentation"
     }, {
@@ -23,7 +23,7 @@ var documents = [{
     "id": 4,
     "url": "http://localhost:4000/JamesOubre_Resume",
     "title": "Resume and Contact Info",
-    "body": "Contactjamesoubre2023@u. northwestern. edu: GitHub: LinkedIn: Download Resume as a PDF: "
+    "body": "Contactrahulroy2024@u. northwestern. edu: GitHub: LinkedIn: Download Resume as a PDF: "
     }, {
     "id": 5,
     "url": "http://localhost:4000/page2/",

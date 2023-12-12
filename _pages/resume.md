@@ -7,7 +7,7 @@ comments: false
 
 # Contact
 
-#### jamesoubre2023@u.northwestern.edu
+#### rahulroy2024@u.northwestern.edu
 
 #### [GitHub](https://github.com/oubrejames)
 
