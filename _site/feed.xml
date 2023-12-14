@@ -5,70 +5,82 @@
     <description>Northwestern MS in Robotics</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 12 Dec 2023 20:23:13 -0600</pubDate>
-    <lastBuildDate>Tue, 12 Dec 2023 20:23:13 -0600</lastBuildDate>
+    <pubDate>Wed, 13 Dec 2023 20:51:44 -0600</pubDate>
+    <lastBuildDate>Wed, 13 Dec 2023 20:51:44 -0600</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
-        <title>BotChocolate</title>
-        <description>&lt;p&gt;Computer Vision, OpenCV, ROS2, Python, Motion Planning, Moveit, Intel Realsense, Emika Franka Robot Arm&lt;/p&gt;
+        <title>Nerf shoots</title>
+        <description>&lt;p&gt;Programmed a 7 DOF Emika Franka Arm to detect and knock down colored bowling pins.&lt;/p&gt;
 
 &lt;div align=&quot;center&quot;&gt;&lt;iframe width=&quot;720&quot; height=&quot;400&quot; src=&quot;https://www.youtube.com/embed/Q_aNWWe4h5M&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
-&lt;p&gt;The purpose of this project was to create hot chocolate using the Franka Emika 7 DOF robot arm. To perceive its environment, the system utilizes an Intel D435i camera AprilTags. Upon initial setup, a calibration process must be completed. After this, the process consisted of using AprilTags to locate a scoop of cocoa, a mug, a spoon, and a kettle relative to the robot. Next, using our custom MoveIt API for Python, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;movebot&lt;/code&gt;, the robot is able to perform path planning between all of these objects. It turns on the kettle, dumps the cocoa powder into the mug, pours the hot water over the power, and stirs the mixture it with the spoon.&lt;/p&gt;
+&lt;p&gt;In this project, the Franka arm scans the environment for randomly placed bowling pins of known colors(blue, green, red, yellow) and knocks them down. Mounted with an Intel Realsense D435i depth camera, it perceptively observes the environment, while employing a Nerf blaster to accurately aim and knock over the identified targets. The user has the option to specify the initial color of the bowling pins for the arm to knock over. Once all the selected colored pins are neutralized, the arm pauses, awaiting a subsequent input to resume targeting differently colored pins. Additionally, it possesses the capability to switch between two Nerf blasters if ammunition runs low during the operation.&lt;/p&gt;
 
-&lt;div align=&quot;center&quot;&gt;&lt;h2&gt; &lt;a href=&quot;https://github.com/oubrejames/bot_chocolate&quot;&gt;View BotChocolate Github&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt;
+&lt;h2 id=&quot;control-flow-and-nodes&quot;&gt;Control Flow and Nodes&lt;/h2&gt;
+&lt;p&gt;Control: 
+Main node which is used to call services to other nodes to carry out the project.&lt;/p&gt;
 
-&lt;h2 id=&quot;moveit-api&quot;&gt;Moveit API&lt;/h2&gt;
-&lt;p&gt;Because the ROS2 MoveIt package does not have a Python API yet, creating one was the first step. By 
-looking into the MoveIt ROS2 actions and services, we were able to create an API that takes either 
-Cartesian coordinates of the Franka end-efffector or joint-state positions of each joint and creates
-a path to the specified position. It also allows for the choice of moving in a Cartesian path.&lt;/p&gt;
+&lt;p&gt;Shoot: 
+Node that carries out all moveit-interface services such as cartesian planning, IK planning, and gripper requests.&lt;/p&gt;
 
-&lt;div align=&quot;center&quot;&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Sed9XwHT-7c&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+&lt;p&gt;Yolo: 
+Node that runs YOLO(You only look once) to find the colored bowling pins with respect to the base of the Franka arm and display them as colored markers in Rviz2.&lt;/p&gt;
 
-&lt;h2 id=&quot;vision&quot;&gt;Vision&lt;/h2&gt;
-&lt;p&gt;The vision system is comprised of two major parts: calibration and component location. AprilTags are
-used to detect where each of the hot chocolate making components are. The AprilTags are located using
-the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;apriltag_ros&lt;/code&gt; package.&lt;/p&gt;
+&lt;p&gt;User_Input: 
+Node that listens to the user’s audio input to set the color of the targeted pins.&lt;/p&gt;
 
-&lt;p&gt;There is one tag fixed to a kettle and one tag fixed to a jig that has slots for a mug, cocoa scooper,
-and a spoon. Once these tags are found in the camera frame, there are two transformation trees 
-describing where all the hot chocolate components are relative to the camera and where each link of
-the Franka robot arm is relative to the robot’s base. However, we need to connect these trees to 
-get the location of each component relative to the robot’s base. This is where the calibration is 
-used. An AprilTag must be placed in the robot’s gripper, aligned with the gripper’s
-coordinate frame and in view of the camera to calibrate. We then wrote a program that finds the location of the tag
-and relates it to the position of the base, connecting the robot frame to the camera frame. We then
-save this transformation to a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.yaml&lt;/code&gt; file to be used later on when running the main hot chocolate
-making sequence.&lt;/p&gt;
+&lt;p&gt;Trigger: 
+Node that controls the Arduino for the gun’s trigger.&lt;/p&gt;
 
-&lt;p&gt;After obtaining the transformation from the camera to the robot, the robot can now use the locations
-of the two AprilTags to locate and manipulate the hot chocolate components as necessary.&lt;/p&gt;
+&lt;p&gt;Apriltag_node: 
+Node that scans and gives the coordinates for the April tags&lt;/p&gt;
+
+&lt;p&gt;The control flow diagram is shown below:&lt;/p&gt;
+
+&lt;p class=&quot;mb-5&quot;&gt;&lt;img class=&quot;shadow-lg&quot; src=&quot;/assets/images/Blank diagram.png&quot; alt=&quot;Control Flow Diagram&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;user-input&quot;&gt;User Input&lt;/h2&gt;
+&lt;p&gt;The user input is done using pyaudio package with the Google Web Speech API that listens to an user’s choice of target and transcibes that to a string that can be used in aiming at the chosen target. The inputs are set to only red, blue, green, and yellow.&lt;/p&gt;
+
+&lt;h2 id=&quot;image-pipeline&quot;&gt;Image Pipeline&lt;/h2&gt;
+&lt;p&gt;The Image pipeline is comprised of two major parts: Scanning(Object detection and classification) and AprilTags. 
+Object detecting and classification is done with the help of the YOLOv8(You Only Look Once) model which is a
+real-time object detection and image segmentation model. The model was trained on more than 300 images of five classes:
+blue_pins, red_pins, yellow_pins, green_pins  and not_pins. This was used to detect the colored bowling pins in the environment. With the help of the Intel Realsense D435i depth camera mounted on top of the Franka’s arm, the depth of the 
+pins as well as the x,y coordinates were calculated with respect to the Franka’s base and this was published as Markers in Rviz2&lt;/p&gt;
+
+&lt;p&gt;AprilTags are used to detect the position of the Nerf blasters in order to pick them up once the pin scanning was done. The AprilTags are located using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;apriltag_ros&lt;/code&gt; package.&lt;/p&gt;
 
 &lt;h2 id=&quot;motion-planning&quot;&gt;Motion Planning&lt;/h2&gt;
-&lt;p&gt;Once the locations of all the components are known, it’s time to make hot chocolate. Cartesian paths
-are used to move the robot in straight lines and rotational path planning is used for achieving motions
-like tilting to grab the scoop and dumping the cocoa. Both Cartesian and rotational motion are used to achieve pouring.
-To make a cup of hot chocolate, the robot first turns on the kettle to heat the water, grab the cocoa scoop, 
-pours it in a mug, pours the hot water over the powder, and stirs. We also used serval intermediate 
-waypoints to help avoid reaching the joint limits of the robot.&lt;/p&gt;
+&lt;p&gt;Motion Planning is done using The MoveItApi - a python wrapper for basic MoveIt functionality offered by the MoveIt ROS API.
+It used Cartesian Planning to pick up the blasters and Inverse Kinematics for the scanning positions.&lt;/p&gt;
+
+&lt;h2 id=&quot;control&quot;&gt;Control&lt;/h2&gt;
+&lt;p&gt;The main control node is used to integrate all functionalities of the system together. It starts with  the User input to select which pin gets knocked down. Scanning of the bowling pins is next, calling a the YOLO node to detect and publish markers of the detected pins. Once the pins are detected, the nerf blasters are loacted and picked up using the gun_pickup service and then targets are aimed at. The final service call is for the trigger mechanism that triggers the nerf blaster to fire at the aimed target.&lt;/p&gt;
+
+&lt;h1 id=&quot;future-work&quot;&gt;Future Work&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;One of the biggest issues is the success rate of hitting targets because even if the gun is correctly pointed at the target, the error from the gun can cause the gun to miss. This would be something that would ideally be fixed by either increasing the accuracy of the gun so that as long as the gun is properly aimed that it would hit the target or increasing the bullets to increase the chances of hitting. Another option would be to include motion while the gun is shooting to try to correct the error from the gun.&lt;/li&gt;
+  &lt;li&gt;360-degree scanning and shooting. Currently, the arm is only able to scan and shoot targets in front of itself so the next step would be adding the ability to target in any direction. Additionally, further testing on the limits of the height of the targets would also be necessary to determine how high and how low a target can be and have the arm still successfully shoot it.&lt;/li&gt;
+  &lt;li&gt;Dynamic aiming. The assumption is made that the targets are stationary and unable to move, so being able to add a camera to allow for the arm to constantly scan for targets would allow for two different things. The first is a dynamic environment where targets are moved before the gun is shot and remain stationary and can be hit, and the second is moving targets where the gun can track its motion and shoot.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;the-team&quot;&gt;The Team&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;Shantao Cao&lt;/li&gt;
-  &lt;li&gt;Allan Garcia-Casal&lt;/li&gt;
-  &lt;li&gt;Nicholas Marks&lt;/li&gt;
-  &lt;li&gt;James Oubre&lt;/li&gt;
-  &lt;li&gt;David Dorf&lt;/li&gt;
+  &lt;li&gt;Rahul Roy(YOLO, Computer vision)&lt;/li&gt;
+  &lt;li&gt;Maximiliano Palay&lt;/li&gt;
+  &lt;li&gt;Sophia Schiffer&lt;/li&gt;
+  &lt;li&gt;Jialu Yu&lt;/li&gt;
+  &lt;li&gt;Joel Goh&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/46512429/206768445-4503edc2-2075-48b4-baf7-e6dc7bd3ca86.png&quot; alt=&quot;bot_choc-min&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;h4&gt; &lt;a href=&quot;https://github.com/roy2909/NerfBlasterBot&quot;&gt;View Project on Github&lt;/a&gt;&lt;/h4&gt;&lt;/div&gt;
 </description>
-        <pubDate>Fri, 09 Dec 2022 00:00:00 -0600</pubDate>
-        <link>http://localhost:4000/Botchoc/</link>
-        <guid isPermaLink="true">http://localhost:4000/Botchoc/</guid>
+        <pubDate>Mon, 04 Dec 2023 00:00:00 -0600</pubDate>
+        <link>http://localhost:4000/Nerf/</link>
+        <guid isPermaLink="true">http://localhost:4000/Nerf/</guid>
         
         
         <category>Computer Vision</category>
@@ -87,6 +99,8 @@ waypoints to help avoid reaching the joint limits of the robot.&lt;/p&gt;
         
         <category>Emika Franka Robot Arm</category>
         
+        <category>YOLOv8</category>
+        
       </item>
     
       <item>
@@ -102,7 +116,7 @@ waypoints to help avoid reaching the joint limits of the robot.&lt;/p&gt;
 &lt;div align=&quot;center&quot;&gt;&lt;h4&gt; &lt;a href=&quot;https://github.com/roy2909/pen_challenge&quot;&gt;View it on Github&lt;/a&gt;&lt;/h4&gt;&lt;/div&gt;
 
 </description>
-        <pubDate>Thu, 15 Sep 2022 00:00:00 -0500</pubDate>
+        <pubDate>Fri, 15 Sep 2023 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/Pen/</link>
         <guid isPermaLink="true">http://localhost:4000/Pen/</guid>
         
