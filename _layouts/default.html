@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link rel="icon" href="{{ site.baseurl }}/assets/images/rahul_logo.png">
+<link rel="icon" href="{{ site.baseurl }}/assets/images/logobig.png">
 
 <title>{{ page.title }} | {{site.name}}</title>
 
@@ -43,7 +43,7 @@ ga('send', 'pageview');
 
 <!-- Begin Menu Navigation
 ================================================== -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+<nav class="navbar navbar-expand-lg navbar-light bg-gray fixed-top mediumnavigation nav-down">
 
     <div class="container pr-0">
 
@@ -59,26 +59,23 @@ ga('send', 'pageview');
 
     <div class="collapse navbar-collapse" id="navbarMediumish">
 
-        <!-- Begin Menu -->
+     <!-- Begin Menu -->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item {% if page.url == '/' %}active{% endif %}">
+                <a class="nav-link font-weight-bold text-white" href="{{ site.baseurl }}/index.html">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link font-weight-bold text-white" href="{{ site.baseurl }}/Rahul_Resume">Resume</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link font-weight-bold text-white" href="{{ site.baseurl }}/AboutMe">About</a>
+            </li>
+            <!-- Include search -->
+            {% include search-lunr.html %}
+        </ul>
+        <!-- End Menu -->
 
-            <ul class="navbar-nav ml-auto">
-
-                {% if page.url == "/" %}
-                <li class="nav-item active">
-                {% else %}
-                <li class="nav-item">
-                {% endif %}
-                <a class="nav-link" href="{{ site.baseurl }}/index.html">Projects</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="{{ site.baseurl }}/Rahul_Resume">Resume</a>
-                </li>
-                <a class="nav-link" href="{{ site.baseurl }}/AboutMe">About</a>
-                </li>
-
-                {% include search-lunr.html %}
-
-            </ul>
+        
 
         <!-- End Menu -->
 
@@ -138,12 +135,12 @@ ga('send', 'pageview');
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left text-white">
                 Copyright © {{ site.time | date: "%Y" }} {{ site.name }} 
             </div>
-            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
+            <!-- <div class="col-md-6 col-sm-6 text-center text-lg-right text-white">    
                 <a target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish Jekyll Theme</a> by WowThemes.net
-            </div>
+            </div> -->
         </div>
     </div>
 </footer>

@@ -1,9 +1,9 @@
 # Site
 name: "Rahul Roy"
 title: "Rahul Roy's Portfolio"
-description: "Northwestern MS in Robotics"
-logo: 'assets/images/robotics1.png'
-favicon: 'assets/images/robotics1.png'
+description: "MS in Robotics - Northwestern University"
+logo: 'assets/images/logobig.png'
+favicon: 'assets/images/logobig.png'
 url: roy2909.github.io
 baseurl: 
 google_analytics:

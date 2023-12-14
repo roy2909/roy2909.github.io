@@ -2,21 +2,93 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rahul Roy&apos;s Portfolio</title>
-    <description>Northwestern MS in Robotics</description>
+    <description>MS in Robotics - Northwestern University</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 13 Dec 2023 20:51:44 -0600</pubDate>
-    <lastBuildDate>Wed, 13 Dec 2023 20:51:44 -0600</lastBuildDate>
+    <pubDate>Thu, 14 Dec 2023 15:30:47 -0600</pubDate>
+    <lastBuildDate>Thu, 14 Dec 2023 15:30:47 -0600</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
-        <title>Nerf shoots</title>
-        <description>&lt;p&gt;Programmed a 7 DOF Emika Franka Arm to detect and knock down colored bowling pins.&lt;/p&gt;
-
-&lt;div align=&quot;center&quot;&gt;&lt;iframe width=&quot;720&quot; height=&quot;400&quot; src=&quot;https://www.youtube.com/embed/Q_aNWWe4h5M&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+        <title>Motion Controlled differential drive car with Infrared sensor(IR) operated Gripper</title>
+        <description>&lt;p&gt;Programmed a nRF52833 microcontroller in C to control a differential drive car and autonomously operate a gripper on detection of objects using an IR sensor&lt;/p&gt;
 
 &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
-&lt;p&gt;In this project, the Franka arm scans the environment for randomly placed bowling pins of known colors(blue, green, red, yellow) and knocks them down. Mounted with an Intel Realsense D435i depth camera, it perceptively observes the environment, while employing a Nerf blaster to accurately aim and knock over the identified targets. The user has the option to specify the initial color of the bowling pins for the arm to knock over. Once all the selected colored pins are neutralized, the arm pauses, awaiting a subsequent input to resume targeting differently colored pins. Additionally, it possesses the capability to switch between two Nerf blasters if ammunition runs low during the operation.&lt;/p&gt;
+&lt;p&gt;As part of Northwestern’s microprocessor design course, I took in the fall, my group and I created a motion controlled RC car which autonomously opens and closes a gripper on detection of objects(heat sources).&lt;/p&gt;
+
+&lt;p&gt;Car in action&lt;/p&gt;
+
+&lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/roy2909/roy2909.github.io/335c33a8b59c644fb7b8f54dcdef2fb14fb2cdd6/assets/images/grip.gif&quot; alt=&quot;car_setup&quot; width=&quot;600&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;h2 id=&quot;system-and-control&quot;&gt;System and Control&lt;/h2&gt;
+
+&lt;p&gt;The system&lt;/p&gt;
+
+&lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/roy2909/roy2909.github.io/5c2da00e658749bc5bcbfaa6060f021950e988cf/assets/images/carset.png&quot; alt=&quot;car_setup&quot; width=&quot;600&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;The system comprises various components working in tandem: two microcontrollers communicating via radio - the BBC Micro:bit V2 (nRF52833) and the Motobit, responsible for motor control in the RC car (utilizing the SparkFun moto:bit - micro:bit Carrier Board). Additionally, the system includes a PWM-controlled gripper (servo - MG996R) and an IR sensor (SparkFun Grid-EYE Infrared Array Breakout).&lt;/p&gt;
+
+&lt;p&gt;Developed around the Micro:bit V2, the project involved coding directly into the Micro:bit’s microcontroller (nRF52833) using C programming language. Leveraging two sensors, namely the built-in accelerometer (for which a custom Tilt driver was written to provide Euler angles to the Micro:bit controlling the car base via radio communication) and the IR sensor (Grid-EYE), the system is designed for robust functionality.&lt;/p&gt;
+
+&lt;p&gt;Communication between the microcontrollers is facilitated through Radio for which a wireless communication driver was written to facilitate this, allowing the transmission of Euler angles from the accelerometer-equipped Micro:bit to the car-based Micro:bit. This data dictates the movement of the RC car via the motodriver, controlled using I2C communication.&lt;/p&gt;
+
+&lt;p&gt;The end-effector, a mechanical gripper, operates in response to a servo (MG996R) controlled by a Micro:bit that sends Pulse Width Modulation (PWM) signals via I2C. Triggered by the breakout IR Grid-EYE sensor’s heat signatures, the gripper engages and disengages through a stem attachment.&lt;/p&gt;
+
+&lt;p&gt;The Car being controlled by the Microbit&lt;/p&gt;
+
+&lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/roy2909/roy2909.github.io/6636d5643b15a614417a1c87e04d364e50d60b3b/assets/images/car1.gif&quot; alt=&quot;car_gif&quot; width=&quot;600&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;h2 id=&quot;operation&quot;&gt;Operation&lt;/h2&gt;
+
+&lt;p&gt;The system operates as follows. It begins with the user tilting the Micro:bit, operating the Tilt driver for the accelerometer. This action generates precise Euler angles, transmitted as data packets via Radio communication to another Micro:bit positioned on the car’s base.&lt;/p&gt;
+
+&lt;p&gt;The Micro:bit on the car base serves as the command center, engaging in two primary functionalities. Firstly, it communicates via the I2C protocol with the motodriver, responsible for controlling the car’s motors. This communication translates the received Euler angles into specific motor commands, directing the car’s movement based on both the tilt direction and the degree of inclination.&lt;/p&gt;
+
+&lt;p&gt;Simultaneously, the system monitors its surroundings using the breakout IR Grid-EYE sensor. Upon detecting a heat signature, indicative of an object, this information is relayed back to the Micro:bit attached to the motodriver.&lt;/p&gt;
+
+&lt;p&gt;The Micro:bit interprets this data and generates Pulse Width Modulation (PWM) signals, which travel over the I2C protocol to the servo responsible for the gripper mechanism. These signals precisely control the opening and closing actions of the gripper, enabling it to interact with and manipulate objects within its reach.&lt;/p&gt;
+
+&lt;div align=&quot;center&quot;&gt;&lt;h2&gt; &lt;a href=&quot;https://github.com/roy2909&quot;&gt;View Project on Github&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;the-team&quot;&gt;The Team&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Graham Clifford&lt;/li&gt;
+  &lt;li&gt;Rahul Roy&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 05 Dec 2023 00:00:00 -0600</pubDate>
+        <link>http://localhost:4000/Car/</link>
+        <guid isPermaLink="true">http://localhost:4000/Car/</guid>
+        
+        
+        <category>C</category>
+        
+        <category>Mechatronics</category>
+        
+        <category>Embedded Systems</category>
+        
+        <category>I2C</category>
+        
+        <category>nRF52833</category>
+        
+        <category>PWM</category>
+        
+      </item>
+    
+      <item>
+        <title>Autonomous Colored Bowling Pin Targeting with Franka Arm and Nerf Blaster</title>
+        <description>&lt;p&gt;Programmed a 7 DOF Emika Franka Arm to detect and knock down colored bowling pins.&lt;/p&gt;
+
+&lt;div align=&quot;center&quot;&gt;&lt;iframe width=&quot;720&quot; height=&quot;400&quot; src=&quot;https://www.youtube.com/embed/OQsgt1Qhr0Y&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;In this project, the Franka arm scans the environment for randomly placed bowling pins of known colors(blue, green, red, yellow) and knocks them down. Mounted with an Intel Realsense D435i depth camera, it perceptively observes the environment, while employing a Nerf blaster to accurately aim and knock over the identified targets. The user has the option to specify the initial color of the bowling pins for the arm to knock over. Once all the selected colored pins are knocked down, the arm pauses, awaiting a subsequent input to resume targeting differently colored pins. Additionally, it possesses the capability to switch between two Nerf blasters if ammunition runs low during the operation.&lt;/p&gt;
 
 &lt;h2 id=&quot;control-flow-and-nodes&quot;&gt;Control Flow and Nodes&lt;/h2&gt;
 &lt;p&gt;Control: 
@@ -52,6 +124,9 @@ blue_pins, red_pins, yellow_pins, green_pins  and not_pins. This was used to det
 pins as well as the x,y coordinates were calculated with respect to the Franka’s base and this was published as Markers in Rviz2&lt;/p&gt;
 
 &lt;p&gt;AprilTags are used to detect the position of the Nerf blasters in order to pick them up once the pin scanning was done. The AprilTags are located using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;apriltag_ros&lt;/code&gt; package.&lt;/p&gt;
+
+&lt;p&gt;Shown below is the blue and yellow pins published as colored markers in Rviz2&lt;/p&gt;
+&lt;p class=&quot;mb-5&quot;&gt;&lt;img class=&quot;shadow-lg&quot; src=&quot;/assets/images/rviz.png&quot; alt=&quot;Rviz markers&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;motion-planning&quot;&gt;Motion Planning&lt;/h2&gt;
 &lt;p&gt;Motion Planning is done using The MoveItApi - a python wrapper for basic MoveIt functionality offered by the MoveIt ROS API.
@@ -104,17 +179,19 @@ It used Cartesian Planning to pick up the blasters and Inverse Kinematics for th
       </item>
     
       <item>
-        <title></title>
+        <title>Automated Grasping: Pincher X100 4-DOF Robot Arm -Picks a Purple Pen</title>
         <description>&lt;p&gt;Programmed a Pincher X100 4-DOF robot arm to grasp a purple colored pen.&lt;/p&gt;
 
 &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
 
-&lt;div align=&quot;center&quot;&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://youtube.com/embed/iNhg6hstLbM?feature=share&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/SmPIuWhf_UQ&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 
 &lt;p&gt;I utilized an Intel Realsense D435i camera to locate a purple Northwestern pen and manipulate it using a Trossen PincherX 100 robot arm. To identify the pen’s position, I transformed the RGB image from the Realsense into an HSV image and employed the HSV values to identify all purple-hued pixels. Following this, I established a binary map where the identified pixels were depicted as white and all other pixels as black. Utilizing OpenCV’s contour detection, I determined the pixel coordinates of the pen’s centroid. This enabled me to ascertain the pen’s position in relation to the camera by utilizing the aligned depth image generated by the Realsense. Subsequently, I converted the pen’s position from the camera’s frame to that of the frame of the robot and directed the robot to maneuver towards the pen and seize it.&lt;/p&gt;
 
-&lt;div align=&quot;center&quot;&gt;&lt;h4&gt; &lt;a href=&quot;https://github.com/roy2909/pen_challenge&quot;&gt;View it on Github&lt;/a&gt;&lt;/h4&gt;&lt;/div&gt;
+&lt;p&gt;Centroid and thresholding of the purple pen&lt;/p&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/roy2909/roy2909.github.io/08b08e279ba67fb56615d4048d3c89ace9d4a978/assets/images/penC.gif&quot; alt=&quot;car_setup&quot; width=&quot;600&quot; /&gt;&lt;/div&gt;
 
+&lt;div align=&quot;center&quot;&gt;&lt;h4&gt; &lt;a href=&quot;https://github.com/roy2909/pen_challenge&quot;&gt;View it on Github&lt;/a&gt;&lt;/h4&gt;&lt;/div&gt;
 </description>
         <pubDate>Fri, 15 Sep 2023 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/Pen/</link>

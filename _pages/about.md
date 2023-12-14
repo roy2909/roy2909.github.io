@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Mediumish Template for Jekyll
+title: About Me
 permalink: /AboutMe
 comments: false
 ---
@@ -8,28 +8,18 @@ comments: false
 <div class="row justify-content-between">
 <div class="col-md-8 pr-5">
 
-<p>This website is built with Jekyll and Mediumish template for Jekyll. It's for demonstration purposes, no real content can be found. Mediumish template for Jekyll is compatible with Github pages, in fact even this demo is created with Github Pages and hosted with Github.</p>
+<p>I am Rahul Roy, a robotics enginner with a passion for solving real world complex problems through cutting edge robotic solutions. I am driven to fuse software and hardware, crafting sustainable robotic solutions for a better world.</p>
+
+<p>I received my Bachelor's degree in Mechatronics Engineering from Manipal Institue of Technology, India and am currently pursuing a Master's degree in Robotics from Northwestern University. </p>
+
+<p>During my internships at the Centre for Artificial Intelligence and Robotics, DRDO, and the Central Research Laboratory, BEL, I worked in a team building practical robotic navigation projects. I worked on implementing core algorithms like trilateration and triangulation while learning about various communication protocols like CAN, UDP, TCP etc.
+For my final undergraduate project I worked on implementing autonomous navigation through waypoints on a Husky A200 robot while comparing planner algorithms like the Dynamic Window Approach(DWA) planner and the Timed Elastic Band(TEB) planner.</p>
+
+<p>My Master's journey in robotics at Northwestern has been really exciting so far. I worked on several projects including a Motion controlled differential drive robot with an IR sensor operated gripper and most notably a 7 DOF Emika Franka arm that can autonomously scan, aim and knock down colored bowling pins.</p>
+
+<p>I have a broad skill set covering Python and C programming, complemented by hands-on experience in ROS2/(ROS), Gazebo, MoveIt, OpenCV, SLAM, Computer Vision,YOLO and Embedded Systems. Additionally, I'm proficient in Linux, Git, CMake, and Unit Testing. </p>
 
 <p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/mediumish-jekyll-template.png" alt="jekyll template mediumish" /></p>
-<h4>Documentation</h4>
 
-<p>Please, read the docs <a href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/">here</a>.</p>
-
-<h4>Questions or bug reports?</h4>
-
-<p>Head over to our <a href="https://github.com/wowthemesnet/mediumish-theme-jekyll">Github repository</a>!</p>
-
-</div>
-
-<div class="col-md-4">
-
-<div class="sticky-top sticky-top-80">
-<h5>Buy me a coffee</h5>
-
-<p>Thank you for your support! Your donation helps me to maintain and improve <a target="_blank" href="https://github.com/wowthemesnet/mediumish-theme-jekyll">Mediumish <i class="fab fa-github"></i></a>.</p>
-
-<a target="_blank" href="https://www.wowthemes.net/donate/" class="btn btn-danger">Buy me a coffee</a> <a target="_blank" href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/" class="btn btn-warning">Documentation</a>
-
-</div>
 </div>
 </div>
