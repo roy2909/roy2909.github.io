@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/assets/images/rahul_logo.png">
+
+<title>Nerf shoots | Rahul Roy</title>
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Nerf shoots | Rahul Roy’s Portfolio</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Nerf shoots" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Programmed a 7 DOF Emika Franka Arm to detect and knock down colored bowling pins." />
+<meta property="og:description" content="Programmed a 7 DOF Emika Franka Arm to detect and knock down colored bowling pins." />
+<link rel="canonical" href="http://localhost:4000/Nerf/" />
+<meta property="og:url" content="http://localhost:4000/Nerf/" />
+<meta property="og:site_name" content="Rahul Roy’s Portfolio" />
+<meta property="og:image" content="http://localhost:4000/assets/images/nerfy.gif" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-12-04T00:00:00-06:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/images/nerfy.gif" />
+<meta property="twitter:title" content="Nerf shoots" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-12-04T00:00:00-06:00","datePublished":"2023-12-04T00:00:00-06:00","description":"Programmed a 7 DOF Emika Franka Arm to detect and knock down colored bowling pins.","headline":"Nerf shoots","image":"http://localhost:4000/assets/images/nerfy.gif","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/Nerf/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/robotics1.png"}},"url":"http://localhost:4000/Nerf/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+<link href="/assets/css/screen.css" rel="stylesheet">
+
+<link href="/assets/css/main.css" rel="stylesheet">
+
+<script src="/assets/js/jquery.min.js"></script>
+
+</head>
+
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+    <img src="/assets/images/robotics1.png" alt="Rahul Roy">
+    </a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/index.html">Projects</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="/Rahul_Resume">Resume</a>
+                </li>
+                <a class="nav-link" href="/AboutMe">About</a>
+                </li>
+
+                <script src="/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+            </ul>
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Site Title
+================================================== -->
+<div class="mainheading">
+    <h1 class="sitetitle">Rahul Roy</h1>
+    <p class="lead">
+        Northwestern MS in Robotics
+    </p>
+</div>
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">Nerf shoots</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <p>Programmed a 7 DOF Emika Franka Arm to detect and knock down colored bowling pins.</p>
+
+<div align="center"><iframe width="720" height="400" src="https://www.youtube.com/embed/Q_aNWWe4h5M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+
+<h2 id="overview">Overview</h2>
+<p>In this project, the Franka arm scans the environment for randomly placed bowling pins of known colors(blue, green, red, yellow) and knocks them down. Mounted with an Intel Realsense D435i depth camera, it perceptively observes the environment, while employing a Nerf blaster to accurately aim and knock over the identified targets. The user has the option to specify the initial color of the bowling pins for the arm to knock over. Once all the selected colored pins are neutralized, the arm pauses, awaiting a subsequent input to resume targeting differently colored pins. Additionally, it possesses the capability to switch between two Nerf blasters if ammunition runs low during the operation.</p>
+
+<h2 id="control-flow-and-nodes">Control Flow and Nodes</h2>
+<p>Control: 
+Main node which is used to call services to other nodes to carry out the project.</p>
+
+<p>Shoot: 
+Node that carries out all moveit-interface services such as cartesian planning, IK planning, and gripper requests.</p>
+
+<p>Yolo: 
+Node that runs YOLO(You only look once) to find the colored bowling pins with respect to the base of the Franka arm and display them as colored markers in Rviz2.</p>
+
+<p>User_Input: 
+Node that listens to the user’s audio input to set the color of the targeted pins.</p>
+
+<p>Trigger: 
+Node that controls the Arduino for the gun’s trigger.</p>
+
+<p>Apriltag_node: 
+Node that scans and gives the coordinates for the April tags</p>
+
+<p>The control flow diagram is shown below:</p>
+
+<p class="mb-5"><img class="shadow-lg" src="/assets/images/Blank diagram.png" alt="Control Flow Diagram" /></p>
+
+<h2 id="user-input">User Input</h2>
+<p>The user input is done using pyaudio package with the Google Web Speech API that listens to an user’s choice of target and transcibes that to a string that can be used in aiming at the chosen target. The inputs are set to only red, blue, green, and yellow.</p>
+
+<h2 id="image-pipeline">Image Pipeline</h2>
+<p>The Image pipeline is comprised of two major parts: Scanning(Object detection and classification) and AprilTags. 
+Object detecting and classification is done with the help of the YOLOv8(You Only Look Once) model which is a
+real-time object detection and image segmentation model. The model was trained on more than 300 images of five classes:
+blue_pins, red_pins, yellow_pins, green_pins  and not_pins. This was used to detect the colored bowling pins in the environment. With the help of the Intel Realsense D435i depth camera mounted on top of the Franka’s arm, the depth of the 
+pins as well as the x,y coordinates were calculated with respect to the Franka’s base and this was published as Markers in Rviz2</p>
+
+<p>AprilTags are used to detect the position of the Nerf blasters in order to pick them up once the pin scanning was done. The AprilTags are located using the <code class="language-plaintext highlighter-rouge">apriltag_ros</code> package.</p>
+
+<h2 id="motion-planning">Motion Planning</h2>
+<p>Motion Planning is done using The MoveItApi - a python wrapper for basic MoveIt functionality offered by the MoveIt ROS API.
+It used Cartesian Planning to pick up the blasters and Inverse Kinematics for the scanning positions.</p>
+
+<h2 id="control">Control</h2>
+<p>The main control node is used to integrate all functionalities of the system together. It starts with  the User input to select which pin gets knocked down. Scanning of the bowling pins is next, calling a the YOLO node to detect and publish markers of the detected pins. Once the pins are detected, the nerf blasters are loacted and picked up using the gun_pickup service and then targets are aimed at. The final service call is for the trigger mechanism that triggers the nerf blaster to fire at the aimed target.</p>
+
+<h1 id="future-work">Future Work</h1>
+<ul>
+  <li>One of the biggest issues is the success rate of hitting targets because even if the gun is correctly pointed at the target, the error from the gun can cause the gun to miss. This would be something that would ideally be fixed by either increasing the accuracy of the gun so that as long as the gun is properly aimed that it would hit the target or increasing the bullets to increase the chances of hitting. Another option would be to include motion while the gun is shooting to try to correct the error from the gun.</li>
+  <li>360-degree scanning and shooting. Currently, the arm is only able to scan and shoot targets in front of itself so the next step would be adding the ability to target in any direction. Additionally, further testing on the limits of the height of the targets would also be necessary to determine how high and how low a target can be and have the arm still successfully shoot it.</li>
+  <li>Dynamic aiming. The assumption is made that the targets are stationary and unable to move, so being able to add a camera to allow for the arm to constantly scan for targets would allow for two different things. The first is a dynamic environment where targets are moved before the gun is shot and remain stationary and can be hit, and the second is moving targets where the gun can track its motion and shoot.</li>
+</ul>
+
+<h2 id="the-team">The Team</h2>
+<ul>
+  <li>Rahul Roy(YOLO, Computer vision)</li>
+  <li>Maximiliano Palay</li>
+  <li>Sophia Schiffer</li>
+  <li>Jialu Yu</li>
+  <li>Joel Goh</li>
+</ul>
+
+<div align="center"><h4> <a href="https://github.com/roy2909/NerfBlasterBot">View Project on Github</a></h4></div>
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="2023-12-04">04 Dec 2023</time></span>           
+                
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#Computer-Vision">Computer Vision</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#Emika-Franka-Robot-Arm">Emika Franka Robot Arm</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#Intel-Realsense">Intel Realsense</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#Motion-Planning">Motion Planning</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#Moveit">Moveit</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#OpenCV">OpenCV</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#Python">Python</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#ROS2">ROS2</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#YOLOv8">YOLOv8</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            
+            <a class="prev d-block col-md-6" href="/Pen/"> &laquo; </a>
+            
+            
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-4 transpdark align-self-center text-center h-100">
+            <div class="d-md-flex align-items-center justify-content-center h-100">
+                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>
+            </div>
+		</div>
+		<div class="col-md-8 p-5 align-self-center text-center">
+            
+            
+                
+                    <a class="mt-1 mb-1" href="/categories#Computer-Vision">Computer Vision (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#OpenCV">OpenCV (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Python">Python (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#PincherX-100">PincherX 100 (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Intel-Realsense">Intel Realsense (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#ROS2">ROS2 (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Motion-Planning">Motion Planning (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Moveit">Moveit (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Emika-Franka-Robot-Arm">Emika Franka Robot Arm (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#YOLOv8">YOLOv8 (1)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                Copyright © 2023 Rahul Roy 
+            </div>
+            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
+                <a target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish Jekyll Theme</a> by WowThemes.net
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer
+================================================== -->
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="/assets/js/mediumish.js"></script>
+
+
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+<script id="dsq-count-scr" src="//.disqus.com/count.js"></script>
+
+
+</body>
+</html>
