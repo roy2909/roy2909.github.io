@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Resume and Contact Info
+title: Resume and Contact Information
 permalink: /Rahul_Resume
 comments: false
 ---
