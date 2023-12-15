@@ -5,8 +5,8 @@
     <description>MS in Robotics - Northwestern University</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 14 Dec 2023 23:04:20 -0600</pubDate>
-    <lastBuildDate>Thu, 14 Dec 2023 23:04:20 -0600</lastBuildDate>
+    <pubDate>Thu, 14 Dec 2023 23:19:00 -0600</pubDate>
+    <lastBuildDate>Thu, 14 Dec 2023 23:19:00 -0600</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -43,18 +43,18 @@ above the block.&lt;/li&gt;
 The FeedbackControl function is instrumental in computing the kinematic task-space feedforward plus feedback control law.&lt;/p&gt;
 
 &lt;h2 id=&quot;results&quot;&gt;Results&lt;/h2&gt;
-&lt;p&gt;Best
-The best results were obtained by tuning the proportional gain(Kp) to 3.0 and the integral gain(Ki) to 0.01. As seen from the error plot there is a tiny error in the middle but converges after that. The initial block configuration is at (x, y, 𝜃) = (1m, 0m, 0 rad) and the final block configuration is at (x, y, 𝜃) = (0 m,-1m, -π/2 rad).&lt;/p&gt;
+&lt;div align=&quot;left&quot;&gt;&lt;h4&gt; Best &lt;/h4&gt;&lt;/div&gt;
+&lt;p&gt;The best results were obtained by tuning the proportional gain(Kp) to 3.0 and the integral gain(Ki) to 0.01. As seen from the error plot there is a tiny error in the middle but converges after that. The initial block configuration is at (x, y, 𝜃) = (1m, 0m, 0 rad) and the final block configuration is at (x, y, 𝜃) = (0 m,-1m, -π/2 rad).&lt;/p&gt;
 
 &lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/roy2909/roy2909.github.io/70ef4d72319e78af4889d3be62dcb52665a20acb/assets/images/best.png&quot; alt=&quot;car_setup&quot; width=&quot;600&quot; /&gt;&lt;/div&gt;
 
-&lt;p&gt;Overshoot
-The overshoot results were obtained by tuning the proportional gain(Kp) to 2.0 and the integral gain(Ki) to 0.01. As seen from the error plot there is a tiny error in the middle but converges after that. It overshoots slightly in the beginning as seen from the red loop but converges after that. The initial block configuration is at (x, y, 𝜃) = (1m, 0m, 0 rad) and the final block configuration is at (x, y, 𝜃) = (0 m,-1m, -π/2 rad).&lt;/p&gt;
+&lt;div align=&quot;left&quot;&gt;&lt;h4&gt; Overshoot &lt;/h4&gt;&lt;/div&gt;
+&lt;p&gt;The overshoot results were obtained by tuning the proportional gain(Kp) to 2.0 and the integral gain(Ki) to 0.01. As seen from the error plot there is a tiny error in the middle but converges after that. It overshoots slightly in the beginning as seen from the red loop but converges after that. The initial block configuration is at (x, y, 𝜃) = (1m, 0m, 0 rad) and the final block configuration is at (x, y, 𝜃) = (0 m,-1m, -π/2 rad).&lt;/p&gt;
 
 &lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/roy2909/roy2909.github.io/70ef4d72319e78af4889d3be62dcb52665a20acb/assets/images/overshoot.png&quot; alt=&quot;car_setup&quot; width=&quot;600&quot; /&gt;&lt;/div&gt;
 
-&lt;p&gt;NewTask
-The newTask results were obtained by tuning the proportional gain(Kp) to 2.0 and the integral gain(Ki) to 0.01. As seen from the error plot there is a tiny error in the middle but converges after that. The initial block configuration is now at (x, y, 𝜃) = (0.5m, 1.0m, 0 rad) and the final block configuration is at (x, y, 𝜃) = (0.5 m,-1.5m, -π/2 rad).&lt;/p&gt;
+&lt;div align=&quot;left&quot;&gt;&lt;h4&gt; newTask &lt;/h4&gt;&lt;/div&gt;
+&lt;p&gt;The newTask results were obtained by tuning the proportional gain(Kp) to 2.0 and the integral gain(Ki) to 0.01. As seen from the error plot there is a tiny error in the middle but converges after that. The initial block configuration is now at (x, y, 𝜃) = (0.5m, 1.0m, 0 rad) and the final block configuration is at (x, y, 𝜃) = (0.5 m,-1.5m, -π/2 rad).&lt;/p&gt;
 
 &lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/roy2909/roy2909.github.io/70ef4d72319e78af4889d3be62dcb52665a20acb/assets/images/newTask.png&quot; alt=&quot;car_setup&quot; width=&quot;600&quot; /&gt;&lt;/div&gt;
 
