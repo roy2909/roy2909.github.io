@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/assets/images/logobig.png">
+
+<title>Youbot Pick and Place simulation | Rahul Roy</title>
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Youbot Pick and Place simulation | Rahul Roy’s Portfolio</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Youbot Pick and Place simulation" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Simluation of youBot mobile manipulator in Coppeliasim picking up a cube from one location and placing it down at a final position" />
+<meta property="og:description" content="Simluation of youBot mobile manipulator in Coppeliasim picking up a cube from one location and placing it down at a final position" />
+<link rel="canonical" href="http://localhost:4000/Kuka/" />
+<meta property="og:url" content="http://localhost:4000/Kuka/" />
+<meta property="og:site_name" content="Rahul Roy’s Portfolio" />
+<meta property="og:image" content="http://localhost:4000/assets/images/best.GIF" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-12-07T00:00:00-06:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/images/best.GIF" />
+<meta property="twitter:title" content="Youbot Pick and Place simulation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-12-07T00:00:00-06:00","datePublished":"2023-12-07T00:00:00-06:00","description":"Simluation of youBot mobile manipulator in Coppeliasim picking up a cube from one location and placing it down at a final position","headline":"Youbot Pick and Place simulation","image":"http://localhost:4000/assets/images/best.GIF","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/Kuka/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logobig.png"}},"url":"http://localhost:4000/Kuka/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+<link href="/assets/css/screen.css" rel="stylesheet">
+
+<link href="/assets/css/main.css" rel="stylesheet">
+
+<script src="/assets/js/jquery.min.js"></script>
+
+</head>
+
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-gray fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+    <img src="/assets/images/logobig.png" alt="Rahul Roy">
+    </a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+     <!-- Begin Menu -->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+                <a class="nav-link font-weight-bold text-white" href="/index.html">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link font-weight-bold text-white" href="/Rahul_Resume">Resume</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link font-weight-bold text-white" href="/AboutMe">About</a>
+            </li>
+            <!-- Include search -->
+            <script src="/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+        </ul>
+        <!-- End Menu -->
+
+        
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Site Title
+================================================== -->
+<div class="mainheading">
+    <h1 class="sitetitle">Rahul Roy</h1>
+    <p class="lead">
+        MS in Robotics - Northwestern University
+    </p>
+</div>
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">Youbot Pick and Place simulation</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <p>Simluation of  youBot mobile manipulator in Coppeliasim picking up a cube from one location and placing it down at a final position</p>
+
+<div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/chrKG_HIOXA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+
+<h2 id="overview">Overview</h2>
+<p>This software plans a trajectory of the end effector of the youBot mobile manipulator (a mobile base with four mecanum wheels and a 5R robot arm), to pick up a block from a specified location,carry it to a final location and place it down. It also performs odometry as the chassis moves and feedback control to drive the youBot to pick up the block. The final output of the software will be a comma-separated values (csv) text file that specifies the configurations of the chassis and the arm, the angles of the four wheels, and the state of the gripper (open or closed) as a function of time. The initial configuration (the chassis phi, chassis x, chassis y, J1, J2, J3, J4, J5, W1, W2, W3, W4, gripper state = 0, 0.2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), used is (x, y, 𝜃) = (0.2, 0, 0), The initial block configuration is at (x, y, 𝜃) = (1m, 0m, 0 rad) and the final block configuration is at (x, y, 𝜃) = (0 m,-1m, -π/2 rad). In ‘New Task’, the initial block configuration is at at (x, y, 𝜃) = (0.5m, 1.0m, 0 rad) and the final block configuration is at (x, y, 𝜃) = (0.5m, -1.5m, -π/2rad). The results were obtained using a feedforward PI controller tuned individually for each task.</p>
+
+<h2 id="algorithm-description">Algorithm description</h2>
+<p>The NextState function employs the first-order Euler method to determine the robot’s configuration at the next
+time step.</p>
+
+<p>The TrajectoryGenerator function is responsible for generating the reference trajectory for the end-effector frame {e}. This trajectory consists of eight concatenated trajectory segments, as described below. Each trajectory segment begins and ends 
+at rest.</p>
+
+<p>Across 8 stages in the simulation, the process unfolds as
+follows:</p>
+<ol>
+  <li>A trajectory to move the gripper from its initial configuration to a “standoff” configuration a few cm
+above the block.</li>
+  <li>A trajectory to move the gripper down to the grasp position.</li>
+  <li>Closing of the gripper.</li>
+  <li>A trajectory to move the gripper back up to the “standoff” configuration.</li>
+  <li>A trajectory to move the gripper to a “standoff” configuration above the final configuration.</li>
+  <li>A trajectory to move the gripper to the final configuration of the object.</li>
+  <li>Opening of the gripper.</li>
+  <li>A trajectory to move the gripper back to the “standoff” configuration.</li>
+</ol>
+
+<p>Throughout each stage, the algorithm uses the ScrewTrajectory function from the modern robotics python library. This function, utilizing the third-order or fifth-order polynomial time-scaling method, takes the start and end transformations of the gripper as inputs. It generates a discrete trajectory in the form of a list of end-effector transformation matrices.
+The FeedbackControl function is instrumental in computing the kinematic task-space feedforward plus feedback control law.</p>
+
+<h2 id="results">Results</h2>
+<p>Best
+The best results were obtained by tuning the proportional gain(Kp) to 3.0 and the integral gain(Ki) to 0.01. As seen from the error plot there is a tiny error in the middle but converges after that. The initial block configuration is at (x, y, 𝜃) = (1m, 0m, 0 rad) and the final block configuration is at (x, y, 𝜃) = (0 m,-1m, -π/2 rad).</p>
+
+<div align="center"><img src="https://raw.githubusercontent.com/roy2909/roy2909.github.io/70ef4d72319e78af4889d3be62dcb52665a20acb/assets/images/best.png" alt="car_setup" width="600" /></div>
+
+<p>Overshoot
+The overshoot results were obtained by tuning the proportional gain(Kp) to 2.0 and the integral gain(Ki) to 0.01. As seen from the error plot there is a tiny error in the middle but converges after that. It overshoots slightly in the beginning as seen from the red loop but converges after that. The initial block configuration is at (x, y, 𝜃) = (1m, 0m, 0 rad) and the final block configuration is at (x, y, 𝜃) = (0 m,-1m, -π/2 rad).</p>
+
+<div align="center"><img src="https://raw.githubusercontent.com/roy2909/roy2909.github.io/70ef4d72319e78af4889d3be62dcb52665a20acb/assets/images/overshoot.png" alt="car_setup" width="600" /></div>
+
+<p>NewTask
+The newTask results were obtained by tuning the proportional gain(Kp) to 2.0 and the integral gain(Ki) to 0.01. As seen from the error plot there is a tiny error in the middle but converges after that. The initial block configuration is now at (x, y, 𝜃) = (0.5m, 1.0m, 0 rad) and the final block configuration is at (x, y, 𝜃) = (0.5 m,-1.5m, -π/2 rad).</p>
+
+<div align="center"><img src="https://raw.githubusercontent.com/roy2909/roy2909.github.io/70ef4d72319e78af4889d3be62dcb52665a20acb/assets/images/newTask.png" alt="car_setup" width="600" /></div>
+
+<div align="center"><h4> <a href="https://github.com/roy2909/KukaYouBot/tree/main">View it on Github</a></h4></div>
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="2023-12-07">07 Dec 2023</time></span>           
+                
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#CoppeliaSim">CoppeliaSim</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#Mobile-Manipulation">Mobile Manipulation</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#PID-Control">PID Control</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#Python">Python</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            
+            <a class="prev d-block col-md-6" href="/Car/"> &laquo; Motion Controlled differential drive car with Infrared sensor(IR) operated Gripper</a>
+            
+            
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-4 transpdark align-self-center text-center h-100">
+            <div class="d-md-flex align-items-center justify-content-center h-100">
+                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>
+            </div>
+		</div>
+		<div class="col-md-8 p-5 align-self-center text-center">
+            
+            
+                
+                    <a class="mt-1 mb-1" href="/categories#Computer-Vision">Computer Vision (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#OpenCV">OpenCV (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Python">Python (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#PincherX-100">PincherX 100 (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Intel-Realsense">Intel Realsense (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#ROS2">ROS2 (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Motion-Planning">Motion Planning (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Moveit">Moveit (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Emika-Franka-Robot-Arm">Emika Franka Robot Arm (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#YOLOv8">YOLOv8 (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#C">C (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Mechatronics">Mechatronics (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Embedded-Systems">Embedded Systems (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#I2C">I2C (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#nRF52833">nRF52833 (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#PWM">PWM (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Mobile-Manipulation">Mobile Manipulation (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#CoppeliaSim">CoppeliaSim (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#PID-Control">PID Control (1)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left text-white">
+                Copyright © 2023 Rahul Roy 
+            </div>
+            <!-- <div class="col-md-6 col-sm-6 text-center text-lg-right text-white">    
+                <a target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish Jekyll Theme</a> by WowThemes.net
+            </div> -->
+        </div>
+    </div>
+</footer>
+<!-- End Footer
+================================================== -->
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="/assets/js/mediumish.js"></script>
+
+
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+<script id="dsq-count-scr" src="//.disqus.com/count.js"></script>
+
+
+</body>
+</html>
