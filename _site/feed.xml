@@ -5,8 +5,8 @@
     <description>MS in Robotics - Northwestern University</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 15 Dec 2023 15:07:49 -0600</pubDate>
-    <lastBuildDate>Fri, 15 Dec 2023 15:07:49 -0600</lastBuildDate>
+    <pubDate>Fri, 15 Dec 2023 15:49:24 -0600</pubDate>
+    <lastBuildDate>Fri, 15 Dec 2023 15:49:24 -0600</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -16,7 +16,7 @@
 &lt;div align=&quot;center&quot;&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/chrKG_HIOXA&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
-&lt;p&gt;This software plans a trajectory of the end effector of the youBot mobile manipulator (a mobile base with four mecanum wheels and a 5R robot arm), to pick up a block from a specified location,carry it to a final location and place it down. It also performs odometry as the chassis moves and feedback control to drive the youBot to pick up the block. The final output of the software will be a comma-separated values (csv) text file that specifies the configurations of the chassis and the arm, the angles of the four wheels, and the state of the gripper (open or closed) as a function of time. The initial configuration (the chassis phi, chassis x, chassis y, J1, J2, J3, J4, J5, W1, W2, W3, W4, gripper state = 0, 0.2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), used is (x, y, 𝜃) = (0.2, 0, 0), The initial block configuration is at (x, y, 𝜃) = (1m, 0m, 0 rad) and the final block configuration is at (x, y, 𝜃) = (0 m,-1m, -π/2 rad). In ‘New Task’, the initial block configuration is at at (x, y, 𝜃) = (0.5m, 1.0m, 0 rad) and the final block configuration is at (x, y, 𝜃) = (0.5m, -1.5m, -π/2rad). The results were obtained using a feedforward PI controller tuned individually for each task.&lt;/p&gt;
+&lt;p&gt;This software plans a trajectory of the end effector of the youBot mobile manipulator (a mobile base with four mecanum wheels and a 5R robot arm), to pick up a block from a specified location, carry it to a final location and place it down. It also performs odometry as the chassis moves and feedback control to drive the youBot to pick up the block. The final output of the software will be a comma-separated values (csv) text file that specifies the configurations of the chassis and the arm, the angles of the four wheels, and the state of the gripper (open or closed) as a function of time. The initial configuration (the chassis phi, chassis x, chassis y, J1, J2, J3, J4, J5, W1, W2, W3, W4, gripper state = 0, 0.2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), used is (x, y, 𝜃) = (0.2, 0, 0). The initial block configuration is at (x, y, 𝜃) = (1m, 0m, 0 rad) and the final block configuration is at (x, y, 𝜃) = (0 m,-1m, -π/2 rad). In ‘New Task’, the initial block configuration is at at (x, y, 𝜃) = (0.5m, 1.0m, 0 rad) and the final block configuration is at (x, y, 𝜃) = (0.5m, -1.5m, -π/2rad). The results were obtained using a feedforward PI controller tuned individually for each task.&lt;/p&gt;
 
 &lt;h2 id=&quot;algorithm-description&quot;&gt;Algorithm description&lt;/h2&gt;
 &lt;p&gt;The NextState function employs the first-order Euler method to determine the robot’s configuration at the next
@@ -41,6 +41,8 @@ above the block.&lt;/li&gt;
 
 &lt;p&gt;Throughout each stage, the algorithm uses the ScrewTrajectory function from the modern robotics python library. This function, utilizing the third-order or fifth-order polynomial time-scaling method, takes the start and end transformations of the gripper as inputs. It generates a discrete trajectory in the form of a list of end-effector transformation matrices.
 The FeedbackControl function is instrumental in computing the kinematic task-space feedforward plus feedback control law.&lt;/p&gt;
+
+&lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/roy2909/roy2909.github.io/ccd0415dcf0def9e3a0e2c0697e6d3649bcf640c/assets/images/feedbacklaw.png&quot; alt=&quot;car_setup&quot; width=&quot;600&quot; /&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;results&quot;&gt;Results&lt;/h2&gt;
 &lt;div align=&quot;left&quot;&gt;&lt;h4&gt; Best &lt;/h4&gt;&lt;/div&gt;
@@ -80,7 +82,7 @@ The FeedbackControl function is instrumental in computing the kinematic task-spa
         <description>&lt;p&gt;Programmed a nRF52833 microcontroller in C to control a differential drive car and autonomously operate a gripper on detection of objects using an IR sensor&lt;/p&gt;
 
 &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
-&lt;p&gt;As part of Northwestern’s microprocessor design course, I took in the fall, my group and I created a motion controlled RC car which autonomously opens and closes a gripper on detection of objects(heat sources).&lt;/p&gt;
+&lt;p&gt;As part of Northwestern’s microprocessor design course, I took in the fall, my group and I created a motion controlled differential drive car which autonomously opens and closes a gripper on detection of objects(heat sources).&lt;/p&gt;
 
 &lt;p&gt;Car in action&lt;/p&gt;
 
@@ -100,7 +102,7 @@ The FeedbackControl function is instrumental in computing the kinematic task-spa
 
 &lt;p&gt;Developed around the Micro:bit V2, the project involved coding directly into the Micro:bit’s microcontroller (nRF52833) using C programming language. Leveraging two sensors, namely the built-in accelerometer (for which a custom Tilt driver was written to provide Euler angles to the Micro:bit controlling the car base via radio communication) and the IR sensor (Grid-EYE), the system is designed for robust functionality.&lt;/p&gt;
 
-&lt;p&gt;Communication between the microcontrollers is facilitated through Radio for which a wireless communication driver was written to facilitate this, allowing the transmission of Euler angles from the accelerometer-equipped Micro:bit to the car-based Micro:bit. This data dictates the movement of the RC car via the motodriver, controlled using I2C communication.&lt;/p&gt;
+&lt;p&gt;Communication between the microcontrollers is facilitated through Radio for which a wireless communication driver was written, allowing the transmission of Euler angles from the accelerometer-equipped Micro:bit to the car-based Micro:bit. This data dictates the movement of the RC car via the motodriver, controlled using I2C communication.&lt;/p&gt;
 
 &lt;p&gt;The end-effector, a mechanical gripper, operates in response to a servo (MG996R) controlled by a Micro:bit that sends Pulse Width Modulation (PWM) signals via I2C. Triggered by the breakout IR Grid-EYE sensor’s heat signatures, the gripper engages and disengages through a stem attachment.&lt;/p&gt;
 
@@ -165,7 +167,7 @@ Main node which is used to call services to other nodes to carry out the project
 Node that carries out all moveit-interface services such as cartesian planning, IK planning, and gripper requests.&lt;/p&gt;
 
 &lt;p&gt;Yolo: 
-Node that runs YOLO(You only look once) to find the colored bowling pins with respect to the base of the Franka arm and display them as colored markers in Rviz2.&lt;/p&gt;
+Node that runs YOLO (You only look once) to find the colored bowling pins with respect to the base of the Franka arm and display them as colored markers in Rviz2.&lt;/p&gt;
 
 &lt;p&gt;User_Input: 
 Node that listens to the user’s audio input to set the color of the targeted pins.&lt;/p&gt;
@@ -185,14 +187,14 @@ Node that scans and gives the coordinates for the April tags&lt;/p&gt;
 
 &lt;h2 id=&quot;image-pipeline&quot;&gt;Image Pipeline&lt;/h2&gt;
 &lt;p&gt;The Image pipeline is comprised of two major parts: Scanning(Object detection and classification) and AprilTags. 
-Object detecting and classification is done with the help of the YOLOv8(You Only Look Once) model which is a
+Object detection and classification is done with the help of the YOLOv8(You Only Look Once) model which is a
 real-time object detection and image segmentation model. The model was trained on more than 300 images of five classes:
 blue_pins, red_pins, yellow_pins, green_pins  and not_pins. This was used to detect the colored bowling pins in the environment. With the help of the Intel Realsense D435i depth camera mounted on top of the Franka’s arm, the depth of the 
-pins as well as the x,y coordinates were calculated with respect to the Franka’s base and this was published as Markers in Rviz2&lt;/p&gt;
+pins as well as the x, y coordinates were calculated with respect to the Franka’s base and this was published as Markers in Rviz2&lt;/p&gt;
 
 &lt;p&gt;AprilTags are used to detect the position of the Nerf blasters in order to pick them up once the pin scanning was done. The AprilTags are located using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;apriltag_ros&lt;/code&gt; package.&lt;/p&gt;
 
-&lt;p&gt;Shown below is the blue and yellow pins published as colored markers in Rviz2&lt;/p&gt;
+&lt;p&gt;Shown below are the blue and yellow pins published as colored markers in Rviz2&lt;/p&gt;
 &lt;p class=&quot;mb-5&quot;&gt;&lt;img class=&quot;shadow-lg&quot; src=&quot;/assets/images/rviz.png&quot; alt=&quot;Rviz markers&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;motion-planning&quot;&gt;Motion Planning&lt;/h2&gt;

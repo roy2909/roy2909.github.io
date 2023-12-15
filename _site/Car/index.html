@@ -162,7 +162,7 @@
                 <p>Programmed a nRF52833 microcontroller in C to control a differential drive car and autonomously operate a gripper on detection of objects using an IR sensor</p>
 
 <h2 id="overview">Overview</h2>
-<p>As part of Northwestern’s microprocessor design course, I took in the fall, my group and I created a motion controlled RC car which autonomously opens and closes a gripper on detection of objects(heat sources).</p>
+<p>As part of Northwestern’s microprocessor design course, I took in the fall, my group and I created a motion controlled differential drive car which autonomously opens and closes a gripper on detection of objects(heat sources).</p>
 
 <p>Car in action</p>
 
@@ -182,7 +182,7 @@
 
 <p>Developed around the Micro:bit V2, the project involved coding directly into the Micro:bit’s microcontroller (nRF52833) using C programming language. Leveraging two sensors, namely the built-in accelerometer (for which a custom Tilt driver was written to provide Euler angles to the Micro:bit controlling the car base via radio communication) and the IR sensor (Grid-EYE), the system is designed for robust functionality.</p>
 
-<p>Communication between the microcontrollers is facilitated through Radio for which a wireless communication driver was written to facilitate this, allowing the transmission of Euler angles from the accelerometer-equipped Micro:bit to the car-based Micro:bit. This data dictates the movement of the RC car via the motodriver, controlled using I2C communication.</p>
+<p>Communication between the microcontrollers is facilitated through Radio for which a wireless communication driver was written, allowing the transmission of Euler angles from the accelerometer-equipped Micro:bit to the car-based Micro:bit. This data dictates the movement of the RC car via the motodriver, controlled using I2C communication.</p>
 
 <p>The end-effector, a mechanical gripper, operates in response to a servo (MG996R) controlled by a Micro:bit that sends Pulse Width Modulation (PWM) signals via I2C. Triggered by the breakout IR Grid-EYE sensor’s heat signatures, the gripper engages and disengages through a stem attachment.</p>
 
