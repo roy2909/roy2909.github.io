@@ -15,9 +15,9 @@ a {
     color: #00ab6b;
     transition: all 0.2s;
 }
-/* body {
+ body {
     /* background-color: rgb(230, 240, 250); Change this to the shade of blue you want */
-    /* background-color: rgba(255, 255, 255, 0.829); 230,240,250,    25,25,112,      */
+     background-color: #eff3fc;}      
 
 a:hover {
     color: #038252;
@@ -154,7 +154,7 @@ section.recent-posts {
 
 .listfeaturedtag h4.card-text,
 .listrecent h4.card-text {
-    color: rgba(0, 0, 0, .44);
+    color: rgba(81, 80, 80, 0.984);
     font-size: 0.95rem;
     line-height: 1.6;
     font-weight: 400;

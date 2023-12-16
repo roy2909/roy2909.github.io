@@ -22,7 +22,7 @@ var documents = [{
     }, {
     "id": 4,
     "url": "http://localhost:4000/Rahul_Resume",
-    "title": "Resume and Contact Info",
+    "title": "Resume and Contact Information",
     "body": "Contactrahulroy2024@u. northwestern. edu: GitHub: LinkedIn: Download Resume as a PDF: "
     }, {
     "id": 5,
