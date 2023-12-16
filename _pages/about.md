@@ -12,7 +12,7 @@ comments: false
 
 <p>I received my Bachelor's degree in Mechatronics Engineering from Manipal Institue of Technology, India and am currently pursuing a Master's degree in Robotics from Northwestern University. </p>
 
-<p>During my internships at the Centre for Artificial Intelligence and Robotics, DRDO, and the Central Research Laboratory, BEL, I worked in a team building practical robotic navigation projects. I worked on implementing core algorithms like trilateration and triangulation while learning about various communication protocols like CAN, UDP, TCP etc.
+<p>During my internships at the Centre for Artificial Intelligence and Robotics, DRDO, and the Central Research Laboratory, BEL, I worked in a team building practical robotic navigation projects. I worked on implementing core algorithms like trilateration and triangulation while learning about various communication protocols like CAN, UDP and TCP.
 For my final undergraduate project, I worked on implementing autonomous navigation through waypoints on a Husky A200 robot while comparing planner algorithms like the Dynamic Window Approach (DWA) planner and the Timed Elastic Band (TEB) planner.</p>
 
 <p>My Master's journey in robotics at Northwestern has been really exciting so far. I worked on several projects including a Motion Controlled Differential Drive Robot with an IR sensor Operated Gripper and most notably a 7 DOF Emika Franka arm that can autonomously scan, aim and knock down colored bowling pins.</p>
