@@ -5,12 +5,12 @@
     <description>MS in Robotics - Northwestern University</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 15 Dec 2023 19:26:26 -0600</pubDate>
-    <lastBuildDate>Fri, 15 Dec 2023 19:26:26 -0600</lastBuildDate>
+    <pubDate>Fri, 15 Dec 2023 23:29:38 -0600</pubDate>
+    <lastBuildDate>Fri, 15 Dec 2023 23:29:38 -0600</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
-        <title>Youbot Pick and Place simulation</title>
+        <title>CoppeliaSim Youbot Pick and Place simulation</title>
         <description>&lt;p&gt;Simluation of  youBot mobile manipulator in Coppeliasim picking up a cube from one location and placing it down at a final position&lt;/p&gt;
 
 &lt;div align=&quot;center&quot;&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/chrKG_HIOXA&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
@@ -43,23 +43,24 @@ above the block.&lt;/li&gt;
 The FeedbackControl function is instrumental in computing the kinematic task-space feedforward plus feedback control law.&lt;/p&gt;
 
 &lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/roy2909/roy2909.github.io/ccd0415dcf0def9e3a0e2c0697e6d3649bcf640c/assets/images/feedbacklaw.png&quot; alt=&quot;car_setup&quot; width=&quot;600&quot; /&gt;&lt;/div&gt;
-
+&lt;p&gt; &lt;/p&gt;
 &lt;h2 id=&quot;results&quot;&gt;Results&lt;/h2&gt;
 &lt;div align=&quot;left&quot;&gt;&lt;h4&gt; Best &lt;/h4&gt;&lt;/div&gt;
 &lt;p&gt;The best results were obtained by tuning the proportional gain(Kp) to 3.0 and the integral gain(Ki) to 0.01. As seen from the error plot there is a tiny error in the middle but converges after that. The initial block configuration is at (x, y, 𝜃) = (1m, 0m, 0 rad) and the final block configuration is at (x, y, 𝜃) = (0 m,-1m, -π/2 rad).&lt;/p&gt;
 
 &lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/roy2909/roy2909.github.io/70ef4d72319e78af4889d3be62dcb52665a20acb/assets/images/best.png&quot; alt=&quot;car_setup&quot; width=&quot;600&quot; /&gt;&lt;/div&gt;
-
+&lt;p&gt; &lt;/p&gt;
 &lt;div align=&quot;left&quot;&gt;&lt;h4&gt; Overshoot &lt;/h4&gt;&lt;/div&gt;
 &lt;p&gt;The overshoot results were obtained by tuning the proportional gain(Kp) to 2.0 and the integral gain(Ki) to 0.01. As seen from the error plot there is a tiny error in the middle but converges after that. It overshoots slightly in the beginning as seen from the red loop but converges after that. The initial block configuration is at (x, y, 𝜃) = (1m, 0m, 0 rad) and the final block configuration is at (x, y, 𝜃) = (0 m,-1m, -π/2 rad).&lt;/p&gt;
 
 &lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/roy2909/roy2909.github.io/70ef4d72319e78af4889d3be62dcb52665a20acb/assets/images/overshoot.png&quot; alt=&quot;car_setup&quot; width=&quot;600&quot; /&gt;&lt;/div&gt;
-
+&lt;p&gt; &lt;/p&gt;
 &lt;div align=&quot;left&quot;&gt;&lt;h4&gt; newTask &lt;/h4&gt;&lt;/div&gt;
 &lt;p&gt;The newTask results were obtained by tuning the proportional gain(Kp) to 2.0 and the integral gain(Ki) to 0.01. As seen from the error plot there is a tiny error in the middle but converges after that. The initial block configuration is now at (x, y, 𝜃) = (0.5m, 1.0m, 0 rad) and the final block configuration is at (x, y, 𝜃) = (0.5 m,-1.5m, -π/2 rad).&lt;/p&gt;
 
 &lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/roy2909/roy2909.github.io/70ef4d72319e78af4889d3be62dcb52665a20acb/assets/images/newTask.png&quot; alt=&quot;car_setup&quot; width=&quot;600&quot; /&gt;&lt;/div&gt;
 
+&lt;p&gt; &lt;/p&gt;
 &lt;div align=&quot;center&quot;&gt;&lt;h4&gt; &lt;a href=&quot;https://github.com/roy2909/KukaYouBot/tree/main&quot;&gt;View Project on Github&lt;/a&gt;&lt;/h4&gt;&lt;/div&gt;
 </description>
         <pubDate>Thu, 07 Dec 2023 00:00:00 -0600</pubDate>
@@ -79,10 +80,10 @@ The FeedbackControl function is instrumental in computing the kinematic task-spa
     
       <item>
         <title>Motion Controlled Differential Drive Car with Infrared Sensor (IR) Operated Gripper</title>
-        <description>&lt;p&gt;Programmed a nRF52833 microcontroller in C to control a differential drive car and autonomously operate a gripper on detection of objects using an IR sensor&lt;/p&gt;
+        <description>&lt;p&gt;Programmed a nRF52833 microcontroller to control a differential drive car and autonomously operate a gripper on detection of objects using an IR sensor&lt;/p&gt;
 
 &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
-&lt;p&gt;As part of Northwestern’s microprocessor design course, I took in the fall, my group and I created a motion controlled differential drive car which autonomously opens and closes a gripper on detection of objects(heat sources).&lt;/p&gt;
+&lt;p&gt;As part of Northwestern’s microprocessor design course, I took in the fall, my group and I created a motion controlled differential drive car which autonomously opens and closes a gripper on detection of objects (heat sources).&lt;/p&gt;
 
 &lt;p&gt;Car in action&lt;/p&gt;
 
@@ -94,7 +95,7 @@ The FeedbackControl function is instrumental in computing the kinematic task-spa
 
 &lt;p&gt;The system&lt;/p&gt;
 
-&lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/roy2909/roy2909.github.io/5c2da00e658749bc5bcbfaa6060f021950e988cf/assets/images/carset.png&quot; alt=&quot;car_setup&quot; width=&quot;600&quot; /&gt;&lt;/div&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/roy2909/roy2909.github.io/9e7efdc4fe540ea58a439d714bdc78164ebd8469/assets/images/fd.png&quot; alt=&quot;car_setup&quot; width=&quot;600&quot; /&gt;&lt;/div&gt;
 
 &lt;p&gt; &lt;/p&gt;
 
