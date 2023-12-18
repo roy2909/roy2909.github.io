@@ -164,14 +164,14 @@
 <div align="center"><iframe width="720" height="400" src="https://www.youtube.com/embed/OQsgt1Qhr0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 
 <h2 id="overview">Overview</h2>
-<p>In this project, the Franka arm scans the environment for randomly placed bowling pins of known colors(blue, green, red, yellow) and knocks them down. Mounted with an Intel Realsense D435i depth camera, it perceptively observes the environment, while employing a Nerf blaster to accurately aim and knock over the identified targets. The user has the option to specify the initial color of the bowling pins for the arm to knock over. Once all the selected colored pins are knocked down, the arm pauses, awaiting a subsequent input to resume targeting differently colored pins. Additionally, it possesses the capability to switch between two Nerf blasters if ammunition runs low during the operation.</p>
+<p>In this project, the Franka arm scans the environment for randomly placed bowling pins of known colors (blue, green, red, yellow) and knocks them down. Mounted with an Intel Realsense D435i depth camera, it perceptively observes the environment, while employing a Nerf blaster to accurately aim and knock over the identified targets. The user has the option to specify the initial color of the bowling pins for the arm to knock over. Once all the selected colored pins are knocked down, the arm pauses, awaiting a subsequent input to resume targeting differently colored pins. Additionally, it possesses the capability to switch between two Nerf blasters if ammunition runs low during the operation.</p>
 
 <h2 id="control-flow-and-nodes">Control Flow and Nodes</h2>
 <p>Control: 
 Main node which is used to call services to other nodes to carry out the project.</p>
 
 <p>Shoot: 
-Node that carries out all moveit-interface services such as cartesian planning, IK planning, and gripper requests.</p>
+Node that carries out all MoveIt-interface services such as cartesian planning, IK planning, and gripper requests.</p>
 
 <p>Yolo: 
 Node that runs YOLO (You only look once) to find the colored bowling pins with respect to the base of the Franka arm and display them as colored markers in Rviz2.</p>
@@ -183,7 +183,7 @@ Node that listens to the user’s audio input to set the color of the targeted p
 Node that controls the Arduino for the gun’s trigger.</p>
 
 <p>Apriltag_node: 
-Node that scans and gives the coordinates for the April tags</p>
+Node that scans and gives the coordinates for the April tags.</p>
 
 <p>The control flow diagram is shown below:</p>
 
@@ -193,8 +193,8 @@ Node that scans and gives the coordinates for the April tags</p>
 <p>The user input is done using pyaudio package with the Google Web Speech API that listens to an user’s choice of target and transcibes that to a string that can be used in aiming at the chosen target. The inputs are set to only red, blue, green, and yellow.</p>
 
 <h2 id="image-pipeline">Image Pipeline</h2>
-<p>The Image pipeline is comprised of two major parts: Scanning(Object detection and classification) and AprilTags. 
-Object detection and classification is done with the help of the YOLOv8(You Only Look Once) model which is a
+<p>The Image pipeline is comprised of two major parts: Scanning (Object detection and classification) and AprilTags. 
+Object detection and classification is done with the help of the YOLOv8 (You Only Look Once) model which is a
 real-time object detection and image segmentation model. The model was trained on more than 300 images of five classes:
 blue_pins, red_pins, yellow_pins, green_pins  and not_pins. This was used to detect the colored bowling pins in the environment. With the help of the Intel Realsense D435i depth camera mounted on top of the Franka’s arm, the depth of the 
 pins as well as the x, y coordinates were calculated with respect to the Franka’s base and this was published as Markers in Rviz2</p>
@@ -264,7 +264,7 @@ It used Cartesian Planning to pick up the blasters and Inverse Kinematics for th
                     </li>
                     
                     <li>
-                        <a class="smoothscroll" href="/categories#Moveit">Moveit</a>
+                        <a class="smoothscroll" href="/categories#MoveIt">MoveIt</a>
                     </li>
                     
                     <li>
@@ -349,7 +349,7 @@ https://search.google.com/structured-data/testing-tool/u/0/
                 
                     <a class="mt-1 mb-1" href="/categories#Motion-Planning">Motion Planning (1)</a>
                 
-                    <a class="mt-1 mb-1" href="/categories#Moveit">Moveit (1)</a>
+                    <a class="mt-1 mb-1" href="/categories#MoveIt">MoveIt (1)</a>
                 
                     <a class="mt-1 mb-1" href="/categories#Emika-Franka-Robot-Arm">Emika Franka Robot Arm (1)</a>
                 
@@ -383,8 +383,8 @@ https://search.google.com/structured-data/testing-tool/u/0/
 ================================================== -->
 <footer class="footer">
     <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-sm-6 text-center text-lg-left text-white">
+        <div class="row justify-content-center"> <!-- Center the row content -->
+            <div class="col-md-6 col-sm-6 text-center text-white"> <!-- Center the div content -->
                 Copyright © 2023 Rahul Roy 
             </div>
             <!-- <div class="col-md-6 col-sm-6 text-center text-lg-right text-white">    
@@ -393,6 +393,7 @@ https://search.google.com/structured-data/testing-tool/u/0/
         </div>
     </div>
 </footer>
+
 <!-- End Footer
 ================================================== -->
 
