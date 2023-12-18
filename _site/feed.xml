@@ -5,8 +5,8 @@
     <description>MS in Robotics - Northwestern University</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 16 Dec 2023 12:02:37 -0600</pubDate>
-    <lastBuildDate>Sat, 16 Dec 2023 12:02:37 -0600</lastBuildDate>
+    <pubDate>Sun, 17 Dec 2023 20:40:10 -0600</pubDate>
+    <lastBuildDate>Sun, 17 Dec 2023 20:40:10 -0600</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -83,7 +83,7 @@ The FeedbackControl function is instrumental in computing the kinematic task-spa
         <description>&lt;p&gt;Programmed a nRF52833 microcontroller to control a differential drive car and autonomously operate a gripper on detection of objects using an IR sensor&lt;/p&gt;
 
 &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
-&lt;p&gt;As part of Northwestern’s microprocessor design course, I took in the fall, my group and I created a motion controlled differential drive car which autonomously opens and closes a gripper on detection of objects (heat sources).&lt;/p&gt;
+&lt;p&gt;As part of Northwestern’s microprocessor design course I took in the fall, my group and I created a motion controlled differential drive car which autonomously opens and closes a gripper on detection of objects (heat sources).&lt;/p&gt;
 
 &lt;p&gt;Car in action&lt;/p&gt;
 
