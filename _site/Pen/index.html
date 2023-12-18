@@ -165,9 +165,9 @@
 
 <div align="center"><iframe width="720" height="400" src="https://www.youtube.com/embed/SmPIuWhf_UQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 
-<p>I utilized an Intel Realsense D435i camera to locate a purple Northwestern pen and manipulate it using a Trossen PincherX 100 robot arm. My approach involved an initial transformation of the Realsense RGB image into the HSV color space, enabling the extraction of all purple-hued pixels using their specific HSV values. This selection formed a binary map, designating the identified pixels as white while rendering all other pixels black.</p>
+<p>I utilized an Intel RealSense D435i camera to locate a purple Northwestern pen and manipulate it using a Trossen PincherX 100 robot arm. My approach involved an initial transformation of the RealSense RGB image into the HSV color space, enabling the extraction of all purple-hued pixels using their specific HSV values. This selection formed a binary map, designating the identified pixels as white while rendering all other pixels black.</p>
 
-<p>Leveraging OpenCV’s contour detection capabilities, I determined the exact pixel coordinates representing the pen’s centroid. This information was pivotal in establishing the pen’s spatial orientation concerning the camera. By aligning this data with the depth image provided by the Realsense, I precisely mapped the pen’s position in the camera’s frame.</p>
+<p>Leveraging OpenCV’s contour detection capabilities, I determined the exact pixel coordinates representing the pen’s centroid. This information was pivotal in establishing the pen’s spatial orientation concerning the camera. By aligning this data with the depth image provided by the RealSense, I precisely mapped the pen’s position in the camera’s frame.</p>
 
 <p>Subsequently, through a conversion process, I translated the pen’s position from the camera’s frame to the robot’s frame. This enabled the seamless coordination of the robot arm’s movements towards the pen, allowing it to navigate and securely grasp the targeted object.</p>
 
@@ -199,7 +199,7 @@
                     </li>
                     
                     <li>
-                        <a class="smoothscroll" href="/categories#Intel-Realsense">Intel Realsense</a>
+                        <a class="smoothscroll" href="/categories#Intel-RealSense">Intel RealSense</a>
                     </li>
                     
                     <li>
@@ -272,7 +272,7 @@ https://search.google.com/structured-data/testing-tool/u/0/
                 
                     <a class="mt-1 mb-1" href="/categories#PincherX-100">PincherX 100 (1)</a>
                 
-                    <a class="mt-1 mb-1" href="/categories#Intel-Realsense">Intel Realsense (2)</a>
+                    <a class="mt-1 mb-1" href="/categories#Intel-RealSense">Intel RealSense (2)</a>
                 
                     <a class="mt-1 mb-1" href="/categories#ROS2">ROS2 (1)</a>
                 
