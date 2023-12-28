@@ -5,8 +5,8 @@
     <description>MS in Robotics - Northwestern University</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 28 Dec 2023 00:28:22 -0600</pubDate>
-    <lastBuildDate>Thu, 28 Dec 2023 00:28:22 -0600</lastBuildDate>
+    <pubDate>Thu, 28 Dec 2023 00:55:41 -0600</pubDate>
+    <lastBuildDate>Thu, 28 Dec 2023 00:55:41 -0600</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -84,6 +84,36 @@ An RRT consists of a set of vertices, which represent configurations in some dom
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RANDOM_CONFIGURATION&lt;/code&gt; : Generates a random position in the domain.                                                            &lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NEAREST_VERTEX&lt;/code&gt;  : finds the vertex in G that is closest to the given position, according to some metric (a measure of distance). We will use the Euclidean metric.                                                                          &lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NEW_CONFIGURATION&lt;/code&gt; : generates a new configuration in the tree by moving some distance Δ from one vertex configuration towards another configuration.&lt;/p&gt;
+
+&lt;h4 id=&quot;modification-for-rrt-with-obstacles&quot;&gt;Modification for RRT with obstacles&lt;/h4&gt;
+
+&lt;h5 id=&quot;collision-checking-steps&quot;&gt;Collision Checking Steps&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Before Adding qnew to the Tree:
+Check if the path from qnear to qnew intersects with any obstacles.
+Collision occurs if the line between these vertices intersects any obstacle circles.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;After Adding a New Vertex:
+Check for a collision-free path from the new vertex to the goal.
+If a collision-free path exists, terminate the algorithm.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;path-finding-steps&quot;&gt;Path Finding Steps:&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Finding a Path to the Goal:
+Once a vertex in the tree connects to the goal state, a collision-free path from that vertex to the goal is sought.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Backtracking for Path Reconstruction:
+When a path from a tree node to the goal state is found, traverse backward from the goal state through the connected nodes to reconstruct the complete path from the starting location.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;div align=&quot;center&quot;&gt;&lt;h4&gt; &lt;a href=&quot;https://github.com/roy2909/Plan_algorithms&quot;&gt;View Project on Github&lt;/a&gt;&lt;/h4&gt;&lt;/div&gt;
 
