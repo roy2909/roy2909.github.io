@@ -2,7 +2,7 @@
 layout: post
 title:  "Path Planning Algorithms from scratch"
 categories: [Python]
-image: assets/images/pen.jpg
+image: assets/images/rrt_obs.gif
 featured: false
 hidden: false
 ---
