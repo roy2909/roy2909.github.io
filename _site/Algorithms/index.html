@@ -6,26 +6,26 @@
 
 <link rel="icon" href="/assets/images/logobig.png">
 
-<title>CoppeliaSim Youbot Pick and Place simulation | Rahul Roy</title>
+<title>Path Planning Algorithms from scratch | Rahul Roy</title>
 
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>CoppeliaSim Youbot Pick and Place simulation | Rahul Roy’s Portfolio</title>
+<title>Path Planning Algorithms from scratch | Rahul Roy’s Portfolio</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="CoppeliaSim Youbot Pick and Place simulation" />
+<meta property="og:title" content="Path Planning Algorithms from scratch" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Simluation of youBot mobile manipulator in Coppeliasim picking up a cube from one location and placing it down at a final position" />
-<meta property="og:description" content="Simluation of youBot mobile manipulator in Coppeliasim picking up a cube from one location and placing it down at a final position" />
-<link rel="canonical" href="http://localhost:4000/Kuka/" />
-<meta property="og:url" content="http://localhost:4000/Kuka/" />
+<meta name="description" content="Programmed path planning algorithms including Probabilistic roadmap with obstacles, Rapidly-exploring Random Tree and Rapidly-exploring Random Tree with obstacles." />
+<meta property="og:description" content="Programmed path planning algorithms including Probabilistic roadmap with obstacles, Rapidly-exploring Random Tree and Rapidly-exploring Random Tree with obstacles." />
+<link rel="canonical" href="http://localhost:4000/Algorithms/" />
+<meta property="og:url" content="http://localhost:4000/Algorithms/" />
 <meta property="og:site_name" content="Rahul Roy’s Portfolio" />
-<meta property="og:image" content="http://localhost:4000/assets/images/best.GIF" />
+<meta property="og:image" content="http://localhost:4000/assets/images/pen.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-12-07T00:00:00-06:00" />
+<meta property="article:published_time" content="2023-12-22T00:00:00-06:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4000/assets/images/best.GIF" />
-<meta property="twitter:title" content="CoppeliaSim Youbot Pick and Place simulation" />
+<meta property="twitter:image" content="http://localhost:4000/assets/images/pen.jpg" />
+<meta property="twitter:title" content="Path Planning Algorithms from scratch" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-12-07T00:00:00-06:00","datePublished":"2023-12-07T00:00:00-06:00","description":"Simluation of youBot mobile manipulator in Coppeliasim picking up a cube from one location and placing it down at a final position","headline":"CoppeliaSim Youbot Pick and Place simulation","image":"http://localhost:4000/assets/images/best.GIF","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/Kuka/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logobig.png"}},"url":"http://localhost:4000/Kuka/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-12-22T00:00:00-06:00","datePublished":"2023-12-22T00:00:00-06:00","description":"Programmed path planning algorithms including Probabilistic roadmap with obstacles, Rapidly-exploring Random Tree and Rapidly-exploring Random Tree with obstacles.","headline":"Path Planning Algorithms from scratch","image":"http://localhost:4000/assets/images/pen.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/Algorithms/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logobig.png"}},"url":"http://localhost:4000/Algorithms/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -146,7 +146,7 @@
                 
 
                 <!-- Post Title -->
-                <h1 class="posttitle">CoppeliaSim Youbot Pick and Place simulation</h1>
+                <h1 class="posttitle">Path Planning Algorithms from scratch</h1>
 
             </div>
 
@@ -159,57 +159,82 @@
                 <!-- Toc if any -->
                 
                 <!-- End Toc -->
-                <p>Simluation of  youBot mobile manipulator in Coppeliasim picking up a cube from one location and placing it down at a final position</p>
+                <p>Programmed path planning algorithms including Probabilistic roadmap with obstacles, Rapidly-exploring Random Tree and Rapidly-exploring Random Tree  with obstacles.</p>
 
-<div align="center"><iframe width="720" height="400" src="https://www.youtube.com/embed/DZvI7udHxDo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<h2 id="probabilistic-roadmaps-prm">Probabilistic Roadmaps (PRM)</h2>
 
-<h2 id="overview">Overview</h2>
-<p>This software plans a trajectory of the end effector of the youBot mobile manipulator (a mobile base with four mecanum wheels and a 5R robot arm), to pick up a block from a specified location, carry it to a final location and place it down. It also performs odometry as the chassis moves and feedback control to drive the youBot to pick up the block. The final output of the software will be a comma-separated values (csv) text file that specifies the configurations of the chassis and the arm, the angles of the four wheels, and the state of the gripper (open or closed) as a function of time. The initial configuration (the chassis phi, chassis x, chassis y, J1, J2, J3, J4, J5, W1, W2, W3, W4, gripper state = 0, 0.2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), used is (x, y, 𝜃) = (0.2, 0, 0). The initial block configuration is at (x, y, 𝜃) = (1m, 0m, 0 rad) and the final block configuration is at (x, y, 𝜃) = (0 m,-1m, -π/2 rad). In ‘New Task’, the initial block configuration is at at (x, y, 𝜃) = (0.5m, 1.0m, 0 rad) and the final block configuration is at (x, y, 𝜃) = (0.5m, -1.5m, -π/2rad). The results were obtained using a feedforward PI controller tuned individually for each task.</p>
+<p>A probabilistic roadmap (PRM) is a network graph of possible paths in a given map based on free and occupied spaces.</p>
 
-<h2 id="algorithm-description">Algorithm description</h2>
-<p>The NextState function employs the first-order Euler method to determine the robot’s configuration at the next
-time step.</p>
+<p>The image below shows a Probabilistic Roadmap with the shortest path (in orange) from node 44 to node 2 : [44, 40, 20, 6, 47, 32, 22, 8, 2]. The obstacles are shown in red and the nodes in yellow.</p>
 
-<p>The TrajectoryGenerator function is responsible for generating the reference trajectory for the end-effector frame {e}. This trajectory consists of eight concatenated trajectory segments, as described below. Each trajectory segment begins and ends 
-at rest.</p>
-
-<p>Across 8 stages in the simulation, the process unfolds as
-follows:</p>
-<ol>
-  <li>A trajectory to move the gripper from its initial configuration to a “standoff” configuration a few cm
-above the block.</li>
-  <li>A trajectory to move the gripper down to the grasp position.</li>
-  <li>Closing of the gripper.</li>
-  <li>A trajectory to move the gripper back up to the “standoff” configuration.</li>
-  <li>A trajectory to move the gripper to a “standoff” configuration above the final configuration.</li>
-  <li>A trajectory to move the gripper to the final configuration of the object.</li>
-  <li>Opening of the gripper.</li>
-  <li>A trajectory to move the gripper back to the “standoff” configuration.</li>
-</ol>
-
-<p>Throughout each stage, the algorithm uses the ScrewTrajectory function from the modern robotics python library. This function, utilizing the third-order or fifth-order polynomial time-scaling method, takes the start and end transformations of the gripper as inputs. It generates a discrete trajectory in the form of a list of end-effector transformation matrices.
-The FeedbackControl function is instrumental in computing the kinematic task-space feedforward plus feedback control law.</p>
-
-<div align="center"><img src="https://raw.githubusercontent.com/roy2909/roy2909.github.io/ccd0415dcf0def9e3a0e2c0697e6d3649bcf640c/assets/images/feedbacklaw.png" alt="car_setup" width="600" /></div>
+<div align="center"><img src="https://raw.githubusercontent.com/roy2909/roy2909.github.io/557ccbec27092ff17086fde8003b0beb27881bb8/assets/images/prm_color.png" alt="prm_image" width="3000" /></div>
 <p> </p>
-<h2 id="results">Results</h2>
-<div align="left"><h4> Best </h4></div>
-<p>The best results were obtained by tuning the proportional gain(Kp) to 3.0 and the integral gain(Ki) to 0.01. As seen from the error plot there is a tiny error in the middle but converges after that. The initial block configuration is at (x, y, 𝜃) = (1m, 0m, 0 rad) and the final block configuration is at (x, y, 𝜃) = (0 m,-1m, -π/2 rad).</p>
 
-<div align="center"><img src="https://raw.githubusercontent.com/roy2909/roy2909.github.io/70ef4d72319e78af4889d3be62dcb52665a20acb/assets/images/best.png" alt="car_setup" width="600" /></div>
+<h3 id="algorithm-description">Algorithm Description</h3>
+
+<p>It consists of two phases</p>
+<ul>
+  <li>CONSTRUCTION PHASE</li>
+  <li>QUERY PHASE</li>
+</ul>
+
+<h3 id="construction-phase">Construction Phase</h3>
+
+<ul>
+  <li>
+    <p>Random Sampling: 
+  Random snapshots(samples) of different places that the robot could be in its environment.</p>
+  </li>
+  <li>
+    <p>Checking for Free Space: 
+  Each snapshot is checked to see if it’s a safe spot for the robot to be in (no obstacles).</p>
+  </li>
+  <li>
+    <p>Connecting the Dots: 
+  For each safe spot, other nearby spots are checked to see if it can easily connect to without hitting any obstacles, typically either the k nearest neighbors or all neighbors less than some predetermined distance.</p>
+  </li>
+  <li>
+    <p>Building a Road Map: 
+  This is done iteratively till enough snapshots and pathways are present that cover different ways the robot could move around and until the roadmap is dense enough. This collection of snapshots and connections becomes the “map” or “roadmap.”</p>
+  </li>
+</ul>
+
+<h3 id="query-phase">Query Phase</h3>
+<ul>
+  <li>Setting Start and Goal positions: 
+  The starting position and the destination position are marked on the map.</li>
+  <li>Linking with best route:
+  The positions are linked to the roadmap created and the best route is formed from start to end using a Dijkstra’s shortest path query.</li>
+</ul>
+
+<h1 id="rapidly-exploring-random-tree-rrt">Rapidly-exploring Random Tree (RRT)</h1>
+<p>A Rapidly-Exploring Random Tree (RRT) is a fundamental path planning algorithm in robotics, first developed by Steven LaValle in 1998. 
+An RRT consists of a set of vertices, which represent configurations in some domain D and edges, which connect two vertices. The algorithm randomly builds a tree in such a way that, as the number of vertices n increases to ∞, the vertices are uniformly distributed across the domain D⊂Rn.</p>
+
+<p>RRT without obstacles - 1000 iterations</p>
+
+<div align="center"><img src="https://raw.githubusercontent.com/roy2909/roy2909.github.io/f9654467ed948debec06a1339319f7915ebee122/assets/images/rrt.gif" alt="car_setup" width="1000" /></div>
+
 <p> </p>
-<div align="left"><h4> Overshoot </h4></div>
-<p>The overshoot results were obtained by tuning the proportional gain(Kp) to 2.0 and the integral gain(Ki) to 0.01. As seen from the error plot there is a tiny error in the middle but converges after that. It overshoots slightly in the beginning as seen from the red loop but converges after that. The initial block configuration is at (x, y, 𝜃) = (1m, 0m, 0 rad) and the final block configuration is at (x, y, 𝜃) = (0 m,-1m, -π/2 rad).</p>
 
-<div align="center"><img src="https://raw.githubusercontent.com/roy2909/roy2909.github.io/70ef4d72319e78af4889d3be62dcb52665a20acb/assets/images/overshoot.png" alt="car_setup" width="600" /></div>
-<p> </p>
-<div align="left"><h4> newTask </h4></div>
-<p>The newTask results were obtained by tuning the proportional gain(Kp) to 2.0 and the integral gain(Ki) to 0.01. As seen from the error plot there is a tiny error in the middle but converges after that. The initial block configuration is now at (x, y, 𝜃) = (0.5m, 1.0m, 0 rad) and the final block configuration is at (x, y, 𝜃) = (0.5 m,-1.5m, -π/2 rad).</p>
+<p>RRT with obstacles</p>
 
-<div align="center"><img src="https://raw.githubusercontent.com/roy2909/roy2909.github.io/70ef4d72319e78af4889d3be62dcb52665a20acb/assets/images/newTask.png" alt="car_setup" width="600" /></div>
+<div align="center"><img src="https://raw.githubusercontent.com/roy2909/roy2909.github.io/a07392ec53468054bdeb226991b6a195a0af0243/assets/images/rrt_obs.gif" alt="car_setup" width="1000" /></div>
 
 <p> </p>
-<div align="center"><h4> <a href="https://github.com/roy2909/KukaYouBot/tree/main">View Project on Github</a></h4></div>
+<h3 id="algorithm-description-1">Algorithm Description</h3>
+
+<p>RRT Algorithm</p>
+
+<div align="center"><img src="https://raw.githubusercontent.com/roy2909/roy2909.github.io/6801cb2df4da5b59725ef3bd806cda5ff687e174/assets/images/rrt.png" alt="car_setup" width="600" /></div>
+<p> </p>
+
+<p><code class="language-plaintext highlighter-rouge">RANDOM_CONFIGURATION</code> : Generates a random position in the domain.                                                            <br />
+<code class="language-plaintext highlighter-rouge">NEAREST_VERTEX</code>  : finds the vertex in G that is closest to the given position, according to some metric (a measure of distance). We will use the Euclidean metric.                                                                          <br />
+<code class="language-plaintext highlighter-rouge">NEW_CONFIGURATION</code> : generates a new configuration in the tree by moving some distance Δ from one vertex configuration towards another configuration.</p>
+
+<div align="center"><h4> <a href="https://github.com/roy2909/Plan_algorithms">View Project on Github</a></h4></div>
+
 
             </div>
 
@@ -219,7 +244,7 @@ The FeedbackControl function is instrumental in computing the kinematic task-spa
             <!-- Post Date -->
             <p>
             <small>
-                <span class="post-date"><time class="post-date" datetime="2023-12-07">07 Dec 2023</time></span>           
+                <span class="post-date"><time class="post-date" datetime="2023-12-22">22 Dec 2023</time></span>           
                 
                 </small>
             </p>
@@ -228,18 +253,6 @@ The FeedbackControl function is instrumental in computing the kinematic task-spa
             <div class="after-post-cats">
                 <ul class="tags mb-4">
                     
-                    
-                    <li>
-                        <a class="smoothscroll" href="/categories#CoppeliaSim">CoppeliaSim</a>
-                    </li>
-                    
-                    <li>
-                        <a class="smoothscroll" href="/categories#Mobile-Manipulation">Mobile Manipulation</a>
-                    </li>
-                    
-                    <li>
-                        <a class="smoothscroll" href="/categories#PID-Control">PID Control</a>
-                    </li>
                     
                     <li>
                         <a class="smoothscroll" href="/categories#Python">Python</a>
@@ -261,10 +274,8 @@ The FeedbackControl function is instrumental in computing the kinematic task-spa
             <!-- Prev/Next -->
             <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
             
-            <a class="prev d-block col-md-6" href="/Car/"> &laquo; Motion Controlled Differential Drive Car with Infrared Sensor (IR) Operated Gripper</a>
+            <a class="prev d-block col-md-6" href="/Kuka/"> &laquo; CoppeliaSim Youbot Pick and Place simulation</a>
             
-            
-            <a class="next d-block col-md-6 text-lg-right" href="/Algorithms/">Path Planning Algorithms from scratch &raquo; </a>
             
             <div class="clearfix"></div>
             </div>
