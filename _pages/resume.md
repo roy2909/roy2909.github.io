@@ -16,4 +16,4 @@ comments: false
 <iframe src="_pages/rahulresume_main_.pdf" width="100%" height="1500px">
 </iframe>
 
-## [Download Resume as a PDF](rahulresume_main_.pdf)
+## [Download Resume as a PDF](rahul_symb.pdf)
