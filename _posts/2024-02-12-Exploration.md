@@ -14,14 +14,18 @@ Rescue missions in disaster-stricken areas pose significant challenges due to th
 To address this challenge, I have programmed a [Unitree Go1](https://shop.unitree.com/products/robunitreeyushutechnologydog-artificial-intelligence-companion-bionic-companion-intelligent-robot-go1-quadruped-robot-dog) robot to autonomously explore unknown environments and search for survivors in disaster zones. Equipped with facial recognition capabilities, the robot can efficiently navigate through confined spaces and hazardous terrain, enhancing the effectiveness of rescue operations.
 
 The project is divided into three main sections:
-1. **Autonomous Exploration and Mapping**:
-2. **Human Detection**:
-3. **Facial Recognition**:
+
+[Autonomous Exploration and Mapping](#autonomous-exploration-and-mapping)
+
+[Human Detection](#human-detection)
+
+[Facial Recognition](#facial-recognition)
 
 
-## Control Flow
+
+<!-- ## Control Flow
 The following flow diagram shows the different components of the project and how they are connected to each other.
-
+ -->
 
 
 ## Setup and Hardware
@@ -44,10 +48,14 @@ A crucial aspect of the project involves the robot's autonomous mapping of unfam
 
 Key features implemented include:
 
-**Data Fusion:** Fusion of Lidar and camera data allows the robot to effectively map the environment and identify loop closures.
+**Sensor Fusion:** Fusion of Lidar and camera data allows the robot to effectively map the environment and identify loop closures.
+
 **Lidar Point Clouds:** Used to detect obstacles and provide a wider field of view.
+
 **Infrared Camera Data:** From the RealSense camera enables loop closures, enhancing mapping accuracy.
+
 **RTAB-Map Integration:** The robot employs the RTAB-Map package to fuse Lidar and camera data, creating a comprehensive map of the environment as it explores.
+
 
 
 ### Autonomous Exploration and Navigation
@@ -57,10 +65,15 @@ The project centers on the autonomous exploration capability of a robot in unkno
 Key features include:
 
 **Adaptation:** The algorithm is designed to be universally applicable to any robot equipped with Occupancy Grid information.
+
 **State Machine:** Utilizes a state machine for transitioning between IDLE, EXPLORING, and MOVING states, based on the robot's actions.
+
 **Frontier Identification:** During exploration, the robot detects frontiers, delineating explored and unexplored areas, by scanning the map.
+
 **Computational Optimization:** Downsampling of the map and binary erosion operations enhance computational efficiency, obstacle detection accuracy, and navigational precision.
+
 **Goal Determination:** Evaluates frontier points based on predefined criteria and selects a suitable goal destination for the robot to navigate towards.
+
 **Path Planning:** Utilizes the Nav2 stack to plan a path towards the selected goal frontier, facilitating autonomous navigation.
 
 <div align="center">
@@ -94,6 +107,7 @@ I utilized the `DeepFace` Python package, which is a lightweight face recognitio
 Implemented functionality includes:
 
 **Storage:** Images of individuals are stored using a `store` service.
+
 **Detection:** The `detect` service compares the stored image with the current image from a RealSense camera. If a match is found, a picture of the person is displayed in Rviz2.
 
 <!-- <div align="center">
