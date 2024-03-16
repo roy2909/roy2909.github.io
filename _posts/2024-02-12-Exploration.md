@@ -1,17 +1,37 @@
 ---
 layout: post
-title:  "Autonomous Exploration and Detection using RTAB-Map (3D SLAM) with a Quadruped (Unitree Go1) and a UGV (Clearpath Jackal) Robot [Work in Progress]"
-categories: [Deep learning , ROS 2 , C++, 3D SLAM, RTAB-Map, Unitree Go1, Clearpath Jackal, Frontier Exploration, Object Detection, YOLOv8]
+title:  "Autonomous Exploration and Detection in an Unknown Environment with a Quadruped Robot (Unitree Go1)"
+categories: [Deep learning , ROS 2 , C++, 3D SLAM, RTAB-Map, Unitree Go1, Frontier Exploration, Object Detection, YOLOv8]
 image: assets/images/Rob(1).gif
 featured: false
 hidden: false
 ---
-Developing an autonomous exploration and detection system using RTAB-Map with a Quadruped (Unitree Go1) Robot and a UGV (Clearpath Jackal) Robot. The system will be able to detect humans and objects in an unknown environment and also have the ability to find a person on showing it a picture.
+Programmed a Unitree Go1 robot to autonomously explore an unknown environment while searching for human beings in C++, Python and Ros 2 using 3D SLAM and Computer Vison.
 
 ## Overview
-### This post is a work in progess. The final post will be available by March 16, 2024.
-The main aim of this project is to enable any robot to autonomously explore and detect humans in an unknown environment. It was also have the ability to find a person on showing it a picture. The project is divided into several sections:
-1. **Frontier Exploration**:
+The main aim of this project is to enable any robot to autonomously explore and detect humans in an unknown environment. It also has a facial recognition ability. The project is divided into several sections:
+1. **Autonomous Exploration and Mapping**:
 2. **Human Detection**:
 3. **Facial Recognition**:
 4. **Integration with any Robot**:
+
+
+## Setup and Hardware
+The robot used in this project is the Unitree Go1. It is eq
+
+
+## Autonomous Exploration and Mapping
+
+
+## Human Detection
+
+
+
+## Facial Recognition
+
+
+## Integration with any Robot
+
+
+## Future Work
+
