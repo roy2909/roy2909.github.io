@@ -6,20 +6,20 @@ image: assets/images/Rob(1).gif
 featured: false
 hidden: false
 ---
-Programmed a Unitree Go1 robot to autonomously explore an unknown environment while searching for human beings in C++, Python and Ros 2 using 3D SLAM and Computer Vison.
+Programmed a Unitree Go1 robot to autonomously explore an unknown environment while searching for human beings in C++, Python and ROS 2 using 3D SLAM and Computer Vison.
 
 ## Overview
-Rescue missions in disaster-stricken areas pose significant challenges due to their dangerous and unpredictable nature. The intricacies of these environments make it difficult to send humans for exploration, necessitating the utilization of ground robots or aerial robots. While conventional robots encounter limitations such as maneuvering through tight spaces and overcoming obstacles, quadruped robots offer promising solutions with their superior mobility.
+Rescue missions in disaster-stricken areas pose significant challenges due to their dangerous and unpredictable nature. The intricacies of these environments make it difficult to send humans for exploration, necessitating the utilization of ground robots or aerial robots. While conventional robots encounter limitations such as maneuvering through tight spaces and overcoming obstacles, quadrupeds offer promising solutions with their superior mobility.
 
-To address this challenge, I have programmed a Unitree Go1 robot to autonomously explore unknown environments and search for survivors in disaster zones. Equipped with facial recognition capabilities, the robot can efficiently navigate through confined spaces and hazardous terrain, enhancing the effectiveness of rescue operations.
+To address this challenge, I have programmed a [Unitree Go1](https://shop.unitree.com/products/robunitreeyushutechnologydog-artificial-intelligence-companion-bionic-companion-intelligent-robot-go1-quadruped-robot-dog) robot to autonomously explore unknown environments and search for survivors in disaster zones. Equipped with facial recognition capabilities, the robot can efficiently navigate through confined spaces and hazardous terrain, enhancing the effectiveness of rescue operations.
 
-The project is divided into several sections:
+The project is divided into three main sections:
 1. **Autonomous Exploration and Mapping**:
 2. **Human Detection**:
 3. **Facial Recognition**:
 
 
-## Flow Diagram
+## Control Flow
 The following flow diagram shows the different components of the project and how they are connected to each other.
 
 
@@ -40,16 +40,28 @@ The robot used in this project is the [Unitree Go1](https://shop.unitree.com/pro
 ## Autonomous Exploration and Mapping
 
 ### Mapping
-A pivotal aspect of the project involves the robot's autonomous mapping of unfamiliar surroundings. This was handled by the [RTAB-Map](http://introlab.github.io/rtabmap/) package. It is a RGB-D, Stereo and Lidar Graph-Based SLAM approach based on an incremental appearance-based loop closure detector. Fusing the Lidar and camera data, the robot effectively maps the environment and identifies loop closures. The Lidar Point Clouds is used to detect obstacles and provide a wider field of view, while the infrared camera data of the realsense enables loop closures. The robot uses the RTAB-Map package to create a map of the environment as it explores.
+A crucial aspect of the project involves the robot's autonomous mapping of unfamiliar surroundings, facilitated by the RTAB-Map package. This RGB-D, Stereo, and Lidar Graph-Based SLAM approach utilize an incremental appearance-based loop closure detector.
+
+Key features implemented include:
+
+**Data Fusion:** Fusion of Lidar and camera data allows the robot to effectively map the environment and identify loop closures.
+**Lidar Point Clouds:** Used to detect obstacles and provide a wider field of view.
+**Infrared Camera Data:** From the RealSense camera enables loop closures, enhancing mapping accuracy.
+**RTAB-Map Integration:** The robot employs the RTAB-Map package to fuse Lidar and camera data, creating a comprehensive map of the environment as it explores.
 
 
 ### Autonomous Exploration and Navigation
 
-The main feature of the project is the robot's ability to autonomously explore an unknown environment. This was achieved using a custom exploration algorithm implemented as a ROS 2 node in Python. This algorithm is an adaptation of the frontier exploration algorithm, seamlessly integrated with the Nav2 stack for path planning and obstacle avoidance. The design was based on the fact that this algorithm can be applied to any robot with a map information of the environment.
+The project centers on the autonomous exploration capability of a robot in unknown environments. This is achieved through a custom exploration algorithm implemented as a ROS 2 node in Python. The algorithm, a variation of the frontier exploration algorithm, seamlessly integrates with the Nav2 stack for path planning and obstacle avoidance. It operates based on Occupancy Grid data of the environment.
 
-It utilizes a state machine to trnsition between IDLE, EXPLORING, and MOVING states based on the robot's actions. During the exploration phase, the robot identifies frontiers—boundary zones demarcating explored and unexplored regions—by scanning the map. To optimize computational efficiency, the map undergoes downsampling, thereby reducing its resolution. Moreover, binary erosion operations are employed to refine map data, enhancing both obstacle detection accuracy and navigational precision.
+Key features include:
 
-On obtaining the frontier points, the algorithm evaluates its validity against predefined criteria such as proximity to obstacles, previous visitation status, and adherence to the map's valid cells. It then selects a specific frontier point as the goal destination for the robot to navigate towards. Once the goal frontier is determined, the algorithm publishes this goal to the `goal_pose` topic. The robot then uses the Nav2 stack to plan a path to the goal and navigate towards it.
+**Adaptation:** The algorithm is designed to be universally applicable to any robot equipped with Occupancy Grid information.
+**State Machine:** Utilizes a state machine for transitioning between IDLE, EXPLORING, and MOVING states, based on the robot's actions.
+**Frontier Identification:** During exploration, the robot detects frontiers, delineating explored and unexplored areas, by scanning the map.
+**Computational Optimization:** Downsampling of the map and binary erosion operations enhance computational efficiency, obstacle detection accuracy, and navigational precision.
+**Goal Determination:** Evaluates frontier points based on predefined criteria and selects a suitable goal destination for the robot to navigate towards.
+**Path Planning:** Utilizes the Nav2 stack to plan a path towards the selected goal frontier, facilitating autonomous navigation.
 
 <div align="center">
 Autonomous Exploration
@@ -64,7 +76,7 @@ Navigation and Obstacle Avoidance
 
 
 ## Human Detection
-Human Detection and classification is done using the YOLOv8 model which is a realtime object detection and segmentation model. The model is trained on the COCO dataset and is able to detect and classify 80 different classes of objects. This was filtered to only detect human beings. Utilizing the depth imformation from the realsense camera, the Unitree Go1 is able to accurately and reliably determine the position(x,y, z coordinates and disatnce from the robot) of the human beings in the environment. This is visualized as red cubic markers in Rviz2. 
+Human Detection and classification is done using the `YOLOv8` model which is a realtime object detection and segmentation model. The model is trained on the COCO dataset and is able to detect and classify 80 different classes of objects. This was filtered to only detect human beings. Utilizing the depth information from the realsense camera, the Unitree Go1 is able to accurately and reliably determine the position (x,y,z coordinates and distance from the robot) of the human beings in the environment. This is visualized as red cubic markers in Rviz2. 
 
 <div align="center">
     <img src="/assets/images/detection_marker.png" alt="detection" width="700"/>
@@ -77,7 +89,12 @@ Human Detection and classification is done using the YOLOv8 model which is a rea
 
 ## Facial Recognition
 
-Facial recogiton id done using the DeepFace python package which is a lightweight face recognition and facial attribute analysis framework , wrapping several state of teh art models: VGG-Face,Google FaceNet, OpenFace,Facebook DeepFace,DeepID,ArcFace to name a few. While testimg, I found that `DeepID` model worked the best, provoding an accuracy of 94% compared to other models. I created a node to store an image of a person using a `store` servie and on callimg a `detect` service, it compares the stored image with the current image from the realsense camera and returns a picture of the person if the face matches with the stored image in Rviz2.
+I utilized the `DeepFace` Python package, which is a lightweight face recognition and facial attribute analysis framework integrating various cutting-edge models like VGG-Face, Google FaceNet, OpenFace, Facebook DeepFace, DeepID, and ArcFace. After testing, `DeepID` exhibited the highest accuracy at 94%.
+
+Implemented functionality includes:
+
+**Storage:** Images of individuals are stored using a `store` service.
+**Detection:** The `detect` service compares the stored image with the current image from a RealSense camera. If a match is found, a picture of the person is displayed in Rviz2.
 
 <!-- <div align="center">
     <img src="/assets/images/facial_recog.gif" alt="face_recog" width="700"/>
@@ -87,9 +104,10 @@ Facial recogiton id done using the DeepFace python package which is a lightweigh
 
 ## Future Work
 Although this project has achieved significant milestones, there are several areas that require further development. These include:
-1. **Exploration Algorithm Optimization**: The current exploration algorithm can be further optimized to enhance its efficiency and robustness. This can be done by adding an information gain metric  and an object classifier to provde the robot with more information about the environment and determine exactly which areas it should give priority to explore.
-2. **Human Detection and Recognition**: The human detection system currently takes still frames while exploraing and has to stop, take a image, process it  and return the postion of the deteted human. This was primarlty done as the Jetson Orin Nano was not able to process the video stream in real time and accurately determine the distance of the human beings while running the RTAB Map and the Nav2 stack. A sytem which can effectively detect and classify human beings in real time and determine their position and distance through the video feed would be required in a real world scenario. One way to do that would be to downsize the model and run it on a more powerful system.
-3. **Facial Recognition**: While I created a package accuartely store and recognize faces, I wanted to incororate the facial recognition system into the whole pipeline where the robot would store the face of a specific person it wants to find and search for tat specific person in the unknown environment. This would be a very useful feature in a real world scenario where the robot is looking for a specific person in a disaster zone. Due to time constraints, I was not able to implement this feature.
+1. **Exploration Algorithm Optimization**: The current exploration algorithm can be further optimized to enhance its efficiency and robustness. This can be done by adding an information gain metric and an object classifier to provde the robot with more information about the environment and determine exactly which areas it should give priority to explore.
+2. **Human Detection and Recognition**: Currently, the human detection system operates by capturing still frames during exploration, interrupting the process to take, process, and return the position of detected humans. This method was adopted due to limitations with the Jetson Orin Nano's inability to process video streams in real-time accurately while running RTAB Map and the Nav2 stack.
+For real-world scenarios, an efficient solution would entail real-time human detection and classification, along with determining their position and distance while the robot moves around. One viable approach would involve downsizing the model and deploying it on a more powerful system.
+3. **Facial Recognition**: Although I successfully developed a package for accurate face storage and recognition, I aimed to integrate facial recognition into the entire pipeline. This enhancement would allow the robot to store the face of a specific person it intends to find and search for that individual within an unknown environment. Such a feature would be invaluable in scenarios like searching for specific individuals in disaster zones. Unfortunately, due to time constraints, I couldn't implement this crucial feature.
 
 
 
