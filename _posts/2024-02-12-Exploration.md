@@ -139,4 +139,7 @@ For real-world scenarios, an efficient solution would entail real-time human det
 3. **Facial Recognition**: Although I successfully developed a package for accurate face storage and recognition, I aimed to integrate facial recognition into the entire pipeline. This enhancement would allow the robot to store the face of a specific person it intends to find and search for that individual within an unknown environment. Such a feature would be invaluable in scenarios like searching for specific individuals in disaster zones. Unfortunately, due to time constraints, I couldn't implement this crucial feature.
 
 
+div align="center"><h4> <a href="https://github.com/roy2909/QuadrupedSearchandRescue">View Project on Github</a></h4></div>
+
+
 
