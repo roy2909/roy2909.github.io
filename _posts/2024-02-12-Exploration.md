@@ -13,6 +13,9 @@ Rescue missions in disaster-stricken areas pose significant challenges due to th
 
 To address this challenge, I have programmed a [Unitree Go1](https://shop.unitree.com/products/robunitreeyushutechnologydog-artificial-intelligence-companion-bionic-companion-intelligent-robot-go1-quadruped-robot-dog) robot to autonomously explore unknown environments and search for survivors in disaster zones. Equipped with facial recognition capabilities, the robot can efficiently navigate through confined spaces and hazardous terrain, enhancing the effectiveness of rescue operations.
 
+<div align="center"><iframe width="720" height="400" src="https://www.youtube.com/embed/zlveyBEczUs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+
 The project is divided into three main sections:
 
 [Autonomous Exploration and Mapping](#autonomous-exploration-and-mapping)
