@@ -79,16 +79,19 @@ Key features include:
 
 **Path Planning:** Utilizes the Nav2 stack to plan a path towards the selected goal frontier, facilitating autonomous navigation.
 
-<div align="center">
-Autonomous Exploration
-</div>
+
 
 <div align="center"><iframe width="720" height="400" src="https://www.youtube.com/embed/pYJnkYQ9h0o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 <div align="center">
+Autonomous Exploration
+</div>
+
+
+<div align="center"><iframe width="720" height="400" src="https://www.youtube.com/embed/hL4MTG0u1K0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div align="center">
 Navigation and Obstacle Avoidance
 </div>
-<div align="center"><iframe width="720" height="400" src="https://www.youtube.com/embed/hL4MTG0u1K0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 
 ## Human Detection
@@ -117,6 +120,10 @@ Implemented functionality includes:
     <img src="/assets/images/facial_recog.gif" alt="face_recog" width="700"/>
 </div> -->
 <div align="center"><iframe width="720" height="400" src="https://www.youtube.com/embed/PvZz6a3rL4k  " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+<div align="center">
+Facial Recognition
+</div>
 
 
 ## Future Work
