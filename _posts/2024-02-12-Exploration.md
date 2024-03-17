@@ -15,6 +15,7 @@ To address this challenge, I have programmed a [Unitree Go1](https://shop.unitre
 
 <div align="center"><iframe width="720" height="400" src="https://www.youtube.com/embed/zlveyBEczUs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
+<br> <!-- Add a space here -->
 
 The project is divided into three main sections:
 
@@ -42,7 +43,7 @@ The robot used in this project is the [Unitree Go1](https://shop.unitree.com/pro
     <img src="/assets/images/go1 side_COMPLETE.jpeg" alt="go_VIEW" width="600"/>
 </div>
 
-
+<br> <!-- Add a space here -->
 
 ## Autonomous Exploration and Mapping
 
@@ -87,12 +88,14 @@ Key features include:
 Autonomous Exploration
 </div>
 
+<br> <!-- Add a space here -->
 
 <div align="center"><iframe width="720" height="400" src="https://www.youtube.com/embed/hL4MTG0u1K0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 <div align="center">
 Navigation and Obstacle Avoidance
 </div>
 
+<br> <!-- Add a space here -->
 
 ## Human Detection
 Human Detection and classification is done using the `YOLOv8` model which is a realtime object detection and segmentation model. The model is trained on the COCO dataset and is able to detect and classify 80 different classes of objects. This was filtered to only detect human beings. Utilizing the depth information from the realsense camera, the Unitree Go1 is able to accurately and reliably determine the position (x,y,z coordinates and distance from the robot) of the human beings in the environment. This is visualized as red cubic markers in Rviz2. 
@@ -105,6 +108,7 @@ Human Detection and classification is done using the `YOLOv8` model which is a r
     <img src="/assets/images/detection_marker2.png" alt="detection" width="700"/>
 </div>
 
+<br> <!-- Add a space here -->
 
 ## Facial Recognition
 
@@ -125,6 +129,7 @@ Implemented functionality includes:
 Facial Recognition
 </div>
 
+<br> <!-- Add a space here -->
 
 ## Future Work
 Although this project has achieved significant milestones, there are several areas that require further development. These include:
