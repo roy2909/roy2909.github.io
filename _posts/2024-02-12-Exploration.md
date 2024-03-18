@@ -2,7 +2,7 @@
 layout: post
 title:  "Autonomous Exploration and Detection in an Unknown Environment with a Quadruped Robot (Unitree Go1)"
 categories: [Deep learning , ROS 2 , C++, 3D SLAM, RTAB-Map, Unitree Go1, Frontier Exploration, Object Detection, YOLOv8]
-image: assets/images/Rob(1).gif
+image: assets/images/Rob(3).gif
 featured: false
 hidden: false
 ---
