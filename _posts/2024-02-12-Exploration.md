@@ -85,14 +85,14 @@ Key features include:
 <div align="center"><iframe width="720" height="400" src="https://www.youtube.com/embed/n7Kt4mNeu5E " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 <div align="center">
-Autonomous Exploration
+<em>Autonomous Exploration</em>
 </div>
 
 <br> <!-- Add a space here -->
 
 <div align="center"><iframe width="720" height="400" src="https://www.youtube.com/embed/hL4MTG0u1K0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 <div align="center">
-Navigation and Obstacle Avoidance
+<em>Navigation and Obstacle Avoidance</em>
 </div>
 
 <br> <!-- Add a space here -->
@@ -126,7 +126,7 @@ Implemented functionality includes:
 <div align="center"><iframe width="720" height="400" src="https://www.youtube.com/embed/PvZz6a3rL4k  " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 <div align="center">
-Facial Recognition
+<em>Facial Recognition</em>
 </div>
 
 <br> <!-- Add a space here -->
