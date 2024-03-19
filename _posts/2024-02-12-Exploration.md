@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Autonomous Exploration and Detection in an Unknown Environment with a Quadruped Robot (Unitree Go1)"
-categories: [Deep learning , ROS 2 , C++, 3D SLAM, RTAB-Map, Unitree Go1, Frontier Exploration, Object Detection, YOLOv8]
+categories: [Deep learning , ROS 2 , C++, 3D SLAM, RTAB-Map, Unitree Go1, Frontier Exploration, Object Detection, YOLOv8, Facial Recognition, DeepFace]
 image: assets/images/Rob(3).gif
-featured: false
+featured: true
 hidden: false
 ---
 Programmed a Unitree Go1 robot to autonomously explore an unknown environment while searching for human beings in C++, Python and ROS 2 using 3D SLAM and Computer Vison.

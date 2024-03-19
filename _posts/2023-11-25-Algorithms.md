@@ -6,7 +6,7 @@ image: assets/images/rrt_obs.gif
 featured: false
 hidden: false
 ---
-Programmed path planning algorithms including Probabilistic roadmap with obstacles, Rapidly-exploring Random Tree and Rapidly-exploring Random Tree  with obstacles.
+Programmed path planning algorithms including Probabilistic roadmap with obstacles, Rapidly-exploring Random Tree and Rapidly-exploring Random Tree  with obstacles in Python and ROS 2.
 
 ## Probabilistic Roadmaps (PRM)
 
