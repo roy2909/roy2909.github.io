@@ -7,13 +7,14 @@ comments: false
 
 # Contact
 
-#### rahulroy2024@u.northwestern.edu
+#### <a href="mailto:rahulroy2024@u.northwestern.edu">rahulroy2024@u.northwestern.edu</a>
 
 #### [GitHub](https://github.com/roy2909)
 
 #### [LinkedIn](https://www.linkedin.com/in/rahul-roy2909/) 
 
+#### [Download Resume as a PDF](rahul_symb.pdf)
+
 <iframe src="_pages/rahul_symb.pdf" width="100%" height="1500px">
 </iframe>
 
-## [Download Resume as a PDF](rahul_symb.pdf)
