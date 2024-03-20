@@ -13,8 +13,8 @@ comments: false
 
 #### [LinkedIn](https://www.linkedin.com/in/rahul-roy2909/) 
 
-#### [Download Resume as a PDF](rahul_symb.pdf)
+#### [Download Resume as a PDF](rahul_updated.pdf)
 
-<iframe src="_pages/rahul_symb.pdf" width="100%" height="1500px">
+<iframe src="_pages/rahul_updated.pdf" width="100%" height="1500px">
 </iframe>
 

@@ -6,12 +6,12 @@ image: assets/images/Rob(3).gif
 featured: true
 hidden: false
 ---
-Programmed a Unitree Go1 robot to autonomously explore an unknown environment while searching for human beings in C++, Python and ROS 2 using 3D SLAM and Computer Vison.
+Programmed a Unitree Go1 robot to autonomously explore an unknown environment while searching for human beings in C++, Python and ROS 2 using 3D SLAM.
 
 ## Overview
 Rescue missions in disaster-stricken areas pose significant challenges due to their dangerous and unpredictable nature. The intricacies of these environments make it difficult to send humans for exploration, necessitating the utilization of ground robots or aerial robots. While conventional robots encounter limitations such as maneuvering through tight spaces and overcoming obstacles, quadrupeds offer promising solutions with their superior mobility.
 
-To address this challenge, I have programmed a [Unitree Go1](https://shop.unitree.com/products/robunitreeyushutechnologydog-artificial-intelligence-companion-bionic-companion-intelligent-robot-go1-quadruped-robot-dog) robot to autonomously explore unknown environments and search for survivors in disaster zones. Equipped with facial recognition capabilities, the robot can efficiently navigate through confined spaces and hazardous terrain, enhancing the effectiveness of rescue operations.
+To address this challenge, I programmed a [Unitree Go1](https://shop.unitree.com/products/robunitreeyushutechnologydog-artificial-intelligence-companion-bionic-companion-intelligent-robot-go1-quadruped-robot-dog) robot to autonomously explore unknown environments and search for survivors in disaster zones. Equipped with facial recognition capabilities, the robot can efficiently navigate through confined spaces and hazardous terrain, enhancing the effectiveness of rescue operations.
 
 <div align="center"><iframe width="720" height="400" src="https://www.youtube.com/embed/zlveyBEczUs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
@@ -105,7 +105,14 @@ Human Detection and classification is done using the `YOLOv8` model which is a r
 </div>
 
 <div align="center">
+<em>Human detection displayed as Red Markers</em>
+</div>
+<br> <!-- Add a space here -->
+<div align="center">
     <img src="/assets/images/detection_marker2.png" alt="detection" width="700"/>
+</div>
+<div align="center">
+<em>Human detection displayed as Red Markers</em>
 </div>
 
 <br> <!-- Add a space here -->
@@ -134,9 +141,9 @@ Implemented functionality includes:
 ## Future Work
 Although this project has achieved significant milestones, there are several areas that require further development. These include:
 1. **Exploration Algorithm Optimization**: The current exploration algorithm can be further optimized to enhance its efficiency and robustness. This can be done by adding an information gain metric and an object classifier to provde the robot with more information about the environment and determine exactly which areas it should give priority to explore.
-2. **Human Detection and Recognition**: Currently, the human detection system operates by capturing still frames during exploration, interrupting the process to take, process, and return the position of detected humans. This method was adopted due to limitations with the Jetson Orin Nano's inability to process video streams in real-time accurately while running RTAB Map and the Nav2 stack.
+2. **Human Detection and Recognition**: Currently, the human detection system operates by capturing still frames during exploration, interrupting the process to capture, process, and return the position of detected humans. This method was adopted due to the inability to process video streams in real-time accurately while running RTAB Map and the Nav2 stack simultaneously. The position of the human detected was displayed inaccurately using this method and hence was not used in the final implementation.
 For real-world scenarios, an efficient solution would entail real-time human detection and classification, along with determining their position and distance while the robot moves around. One viable approach would involve downsizing the model and deploying it on a more powerful system.
-1. **Facial Recognition**: Although I successfully developed a package for accurate face storage and recognition, I aimed to integrate facial recognition into the entire pipeline. This enhancement would allow the robot to store the face of a specific person it intends to find and search for that individual within an unknown environment. Such a feature would be invaluable in scenarios like searching for specific individuals in disaster zones. Unfortunately, due to time constraints, I couldn't implement this feature.
+3. **Facial Recognition**: Although I successfully developed a package for accurate face storage and recognition, I aimed to integrate facial recognition into the entire pipeline. This enhancement would allow the robot to store the face of a specific person it intends to find and search for that individual within an unknown environment. Such a feature would be invaluable in scenarios like searching for specific individuals in disaster zones. Unfortunately, due to time constraints, I couldn't implement this feature.
 
 
 <div align="center"><h4> <a href="https://github.com/roy2909/QuadrupedSearchandRescue">View Project on Github</a></h4></div>
