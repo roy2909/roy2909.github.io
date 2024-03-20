@@ -9,7 +9,7 @@ hidden: false
 Programmed a Unitree Go1 robot to autonomously explore an unknown environment while searching for human beings in C++, Python and ROS 2 using 3D SLAM.
 
 ## Overview
-Rescue missions in disaster-stricken areas pose significant challenges due to their dangerous and unpredictable nature. The intricacies of these environments make it difficult to send humans for exploration, necessitating the utilization of ground robots or aerial robots. While conventional robots encounter limitations such as maneuvering through tight spaces and overcoming obstacles, quadrupeds offer promising solutions with their superior mobility.
+Rescue missions in disaster-stricken areas pose significant challenges due to their dangerous and unpredictable nature. The intricacies of these environments make it difficult to send humans for exploration, necessitating the utilization of ground robots or aerial drones. While conventional robots encounter limitations such as maneuvering through tight spaces and overcoming obstacles, quadrupeds offer promising solutions with their superior mobility.
 
 To address this challenge, I programmed a [Unitree Go1](https://shop.unitree.com/products/robunitreeyushutechnologydog-artificial-intelligence-companion-bionic-companion-intelligent-robot-go1-quadruped-robot-dog) robot to autonomously explore unknown environments and search for survivors in disaster zones. Equipped with facial recognition capabilities, the robot can efficiently navigate through confined spaces and hazardous terrain, enhancing the effectiveness of rescue operations.
 
@@ -17,7 +17,7 @@ To address this challenge, I programmed a [Unitree Go1](https://shop.unitree.com
 
 <br> <!-- Add a space here -->
 
-The project is divided into three main sections:
+The project is divided into **Three** main sections:
 
 [Autonomous Exploration and Mapping](#autonomous-exploration-and-mapping)
 
