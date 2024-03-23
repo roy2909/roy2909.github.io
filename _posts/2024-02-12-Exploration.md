@@ -6,7 +6,7 @@ image: assets/images/Rob1.gif
 featured: true
 hidden: false
 ---
-Programmed a Unitree Go1 robot to autonomously explore an unknown environment while searching for human beings in C++, Python and ROS 2 using 3D SLAM.
+Programmed a Unitree Go1 robot for autonomous exploration and human detection in an unknown environment using C++, Python, ROS 2, and 3D SLAM.
 
 ## Overview
 Rescue missions in disaster-stricken areas pose significant challenges due to their dangerous and unpredictable nature. The intricacies of these environments make it difficult to send humans for exploration, necessitating the utilization of ground robots or aerial drones. While conventional robots encounter limitations such as maneuvering through tight spaces and overcoming obstacles, quadrupeds offer promising solutions with their superior mobility.
