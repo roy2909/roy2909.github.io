@@ -26,7 +26,7 @@ comments: false
 
   .logo-and-links a {
     display: block;
-    color: purple;
+    color: blue;
     margin-bottom: 10px; /* Adjust as needed */
     font-weight: bold; /* Make the links bold */
     font-size: 18px; /* Increase the font size of the links */
