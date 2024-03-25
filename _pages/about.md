@@ -47,9 +47,9 @@ comments: false
     <p>I received my Bachelor's degree in Mechatronics Engineering from Manipal Institute of Technology, India, and am currently pursuing a Master's degree in Robotics from Northwestern University.</p>
 
     <p>During my internships at the Centre for Artificial Intelligence and Robotics, Defense Research and Development Organisation (India), and the Central Research Laboratory, BEL (India), I worked in a team building practical robotic navigation projects. I worked on implementing core algorithms like trilateration and triangulation while learning about various communication protocols like CAN, UDP, and TCP.
-      For my final undergraduate project, I worked on implementing autonomous navigation through waypoints on a Husky A200 robot while comparing planner algorithms like the Dynamic Window Approach (DWA) planner and the Timed Elastic Band (TEB) planner.</p>
+      For my final undergraduate project, I worked on implementing autonomous navigation through waypoints on a Husky A200 robot while comparing motion planner algorithms like the Dynamic Window Approach (DWA) planner and the Timed Elastic Band (TEB) planner.</p>
 
-    <p>The journey of pursuing my Master's in robotics at Northwestern has been tremendously stimulating and rewarding thus far. I've had the opportunity to engage in several compelling projects, notably working on a Motion Controlled Differential Drive Robot with an IR sensor Operated Gripper and, prominently, a 7 DOF Emika Franka arm capable of autonomously scanning, aiming, and knocking down colored bowling pins.</p>
+    <p>The journey of pursuing my Master's in robotics at Northwestern has been tremendously stimulating and rewarding thus far. I've had the opportunity to engage in several compelling projects, notably working on an Autonomous Search and Rescue agent that can autonomously explore an unknown environment while searching for survivors.</p>
 
     <p>I have a broad skill set covering Python and C programming, complemented by hands-on experience in ROS 2/(ROS), Gazebo, MoveIt2, OpenCV, SLAM, Computer Vision, YOLO, and Embedded Systems. Additionally, I'm proficient in Linux, Git, CMake, and Unit Testing. </p>
 
