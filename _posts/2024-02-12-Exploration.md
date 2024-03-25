@@ -6,6 +6,11 @@ image: assets/images/Rob1.gif
 featured: true
 hidden: false
 ---
+<style>
+  a {
+    color: blue ; /* Set the color of links to purple */
+  }
+</style>
 Programmed a Unitree Go1 robot for autonomous exploration and human detection in an unknown environment using C++, Python, ROS 2, and 3D SLAM.
 
 ## Overview
