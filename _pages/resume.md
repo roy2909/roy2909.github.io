@@ -6,6 +6,11 @@ comments: false
 ---
 
 # Contact
+<style>
+  a {
+    color: blue; /* Set the color of links to purple */
+  }
+</style>
 
 #### <a href="mailto:rahulroy2024@u.northwestern.edu">rahulroy2024@u.northwestern.edu</a>
 
