@@ -16,7 +16,7 @@ A virtual canvas to draw, sketch and manipulate shapes using OpenCv and Mediapip
 ## Overview
 Traditional digital sketch and painting applications often rely on physical input devices such as tablets, styluses, or mouse input, which can limit the natural flow and expressiveness/creativity of the artistic process. By leveraging computer vision techniques, we can develop a virtual sketching system that allows users to sketch and draw using their hands, providing a more immersive and engaging experience. This is what this project aims to achieve. It is an interactive application that allows users to draw and sketch on a virtual canvas using hand gestures captured by a camera. It leverages computer vision techniques to detect and track hand movements, enabling a touchless drawing experience.
 
-<div align="center"><iframe width="720" height="400" src="https://youtu.be/ct6n1MnmGfk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div align="center"><iframe width="720" height="400" src="https://www.youtube.com/embed/ct6n1MnmGfk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 ## Design and Implementation
 
@@ -24,6 +24,9 @@ The system
 
 <div style="margin-top: 20px;" align="center">
     <img src="/assets/images/sketch+test.png" alt="go_VIEW" width="600"/>
+</div>
+<div align="center">
+<em>Starting Interface</em>
 </div>
 
 &nbsp;
@@ -55,6 +58,9 @@ The fill tool allows users to color the interior of closed shapes, similar to Mi
 
 <div style="margin-top: 20px;" align="center">
     <img src="/assets/images/fill.png" alt="go_VIEW" width="600"/>
+</div>
+<div align="center">
+<em>Tools</em>
 </div>
 &nbsp;
 
