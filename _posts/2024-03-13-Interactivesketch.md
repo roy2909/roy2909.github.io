@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Interactive Sketcing using OpenCV and Python"
+title:  "Interactive Sketching using OpenCV and Python"
 categories: [ OpenCV, Python, Computer Vision, Google MediaPipe ]
 image: assets/images/cv.gif
 featured: false
