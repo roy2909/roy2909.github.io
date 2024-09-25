@@ -42,16 +42,11 @@ comments: false
   </div>
 
   <div class="col-md-8">
-    <p>I am Rahul Roy, a robotics engineer with a passion for solving real-world complex problems through cutting-edge robotic solutions. I am driven to fuse software and hardware, crafting sustainable robotic solutions for a better world.</p>
+    <p>Hi there! I'm Rahul, a robotics engineer with a passion for solving complex problems through innovative robotic solutions. Whether it's programming a quadruped to explore unknown territories or teaching a robot arm to knock down bowling pins, I love pushing the boundaries of what's possible in robotics.</p>
 
-    <p>I received my Bachelor's degree in Mechatronics Engineering from Manipal Institute of Technology, India, and am currently pursuing a Master's degree in Robotics from Northwestern University.</p>
+    <p>My journey has taken me from watching R2D2 on TV to bringing robots to life at Walt Disney Imagineering. From underwater robots to quadrupeds, I've dipped my toes (and servos) into diverse robotic realms, always seeking the next exciting challenge</p>
 
-    <p>During my internships at the Centre for Artificial Intelligence and Robotics, Defense Research and Development Organisation (India), and the Central Research Laboratory, BEL (India), I worked in a team building practical robotic navigation projects. I worked on implementing core algorithms like trilateration and triangulation while learning about various communication protocols like CAN, UDP, and TCP.
-      For my final undergraduate project, I worked on implementing autonomous navigation through waypoints on a Husky A200 robot while comparing motion planner algorithms like the Dynamic Window Approach (DWA) planner and the Timed Elastic Band (TEB) planner.</p>
-
-    <p>The journey of pursuing my Master's in robotics at Northwestern has been tremendously stimulating and rewarding thus far. I've had the opportunity to engage in several compelling projects, notably working on an Autonomous Search and Rescue agent using a quadruped that can autonomously explore an unknown environment while searching for survivors.</p>
-
-    <p>I have a broad skill set covering Python and C programming, complemented by hands-on experience in ROS 2/(ROS), Gazebo, MoveIt2, OpenCV, SLAM, Computer Vision, YOLO, and Embedded Systems. Additionally, I'm proficient in Linux, Git, CMake, and Unit Testing. </p>
+    <p>I have a broad skill set covering Python and C programming, complemented by hands-on experience in ROS 2/(ROS), Gazebo, MoveIt2, OpenCV, SLAM, Computer Vision, YOLO, and Embedded Systems. Additionally, I'm proficient in Linux, Git, CMake, and Unit Testing.</p>
 
     <hr>
   </div>
