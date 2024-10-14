@@ -42,13 +42,21 @@ comments: false
   </div>
 
   <div class="col-md-8">
-    <p>Hi there! I'm Rahul, a robotics engineer with a passion for solving complex problems through innovative robotic solutions. Whether it's programming a quadruped to explore unknown territories or teaching a robot arm to knock down bowling pins, I love pushing the boundaries of what's possible in robotics.</p>
+    <p>Hi! I'm Rahul, a robotics engineer passionate about solving complex problems through innovative robotic solutions. Whether programming a quadruped to explore unknown territories or teaching a robot arm to knock down bowling pins, I thrive on pushing the boundaries of what's possible in robotics.</p>
 
-    <p>My journey has taken me from watching R2D2 on TV to bringing robots to life at Walt Disney Imagineering. From underwater robots to quadrupeds, I've dipped my toes (and servos) into diverse robotic realms, always seeking the next exciting challenge.</p>
+  <p>My journey began with watching R2-D2 on TV and has evolved into bringing robots to life at Walt Disney Imagineering. From underwater robots to quadrupeds, I've immersed myself in diverse robotic realms, always seeking the next exciting challenge.</p>
 
-    <p>I have a broad skill set covering Python and C programming, complemented by hands-on experience in ROS 2/(ROS), Gazebo, MoveIt2, OpenCV, SLAM, Computer Vision, YOLO, and Embedded Systems. Additionally, I'm proficient in Linux, Git, CMake, and Unit Testing.</p>
+  <p>My technical expertise includes:</p>
+  <ul>
+    <li>Programming Languages: Python, C++, C, MATLAB</li>
+    <li>Robotics Frameworks: ROS 2/(ROS), Gazebo, MoveIt2</li>
+    <li>Computer Vision: OpenCV, YOLO, SLAM</li>
+    <li>Embedded Systems and more</li>
+  </ul>
+  <p>Additionally, I'm proficient in Linux, Git, CMake, and Unit Testing. I'm dedicated to continuous learning and eager to contribute to cutting-edge projects that shape the future of robotics.</p>
 
-    <hr>
+
+  <hr>
   </div>
 
 </div>
