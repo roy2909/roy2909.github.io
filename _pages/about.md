@@ -187,16 +187,6 @@ comments: false
   </div>
 
   <div class="about-block">
-    <h3>Selected Projects</h3>
-    <ul class="project-list">
-      <li><strong>Autonomous Exploration with a Unitree Go1</strong><br>Frontier-based exploration and human detection in unknown environments using ROS 2, 3D SLAM (RTAB-Map), and YOLOv8.</li>
-      <li><strong>Vision-Based Control of a Franka Emika 7-DOF Arm</strong><br>Detection and motion planning to autonomously knock down targets, built on ROS 2 and MoveIt.</li>
-      <li><strong>EKF SLAM from Scratch</strong><br>C++/ROS 2 implementation of Extended Kalman Filter SLAM for a TurtleBot3, validated in a custom RViz2 simulation.</li>
-      <li><strong>Explainable AI for Hand Gesture Recognition</strong><br>sEMG signal classification with transfer learning, using Shapley values for interpretability.</li>
-    </ul>
-  </div>
-
-  <div class="about-block">
     <h3>Things I Work With</h3>
     <div class="skills-row">
       <span class="skill-pill">Python</span>
